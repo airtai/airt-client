@@ -99,14 +99,14 @@ jobs:
       CLICKHOUSE_PROTOCOL: ${{ secrets.CLICKHOUSE_PROTOCOL }}
       CLICKHOUSE_EVENTS_TABLE: ${{ secrets.CLICKHOUSE_EVENTS_TABLE }}
 
-      STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.GITHUB_SHA }}
-      AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.GITHUB_SHA }}
+      STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.sha }}
+      AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.sha }}
     services:
       airt-service:
         image: ghcr.io/airtai/airt-service:${{ github.GITHUB_REF_NAME == 'main' && 'latest' || 'dev'  }}
         env:
-          STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.GITHUB_SHA }}
-          AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.GITHUB_SHA }}
+          STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.sha }}
+          AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.sha }}
           DB_USERNAME: "root"
           DB_PASSWORD: "SuperSecretPassword"
           DB_HOST: "mysql"
@@ -154,6 +154,11 @@ jobs:
 
       - run: sleep 300
       - run: pip install -e ".[dev]"
+
+      - run: pip list
+      - run: env
+      - run: ls -la /github/home/.local/bin
+      - run: aws --help
 
       - name: Run test without failing
         id: run_test
