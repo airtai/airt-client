@@ -76,13 +76,13 @@ jobs:
 
       AIRT_SERVICE_SUPER_USER_PASSWORD: ${{ secrets.CI_AIRT_SERVICE_SUPER_USER_PASSWORD }}
       AIRT_TOKEN_SECRET_KEY: ${{ secrets.CI_AIRT_TOKEN_SECRET_KEY }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
-      AZURE_SUBSCRIPTION_ID: ${{ secrets.CI_AZURE_SUBSCRIPTION_ID }}
-      AZURE_TENANT_ID: ${{ secrets.CI_AZURE_TENANT_ID }}
-      AZURE_CLIENT_ID: ${{ secrets.CI_AZURE_CLIENT_ID }}
-      AZURE_CLIENT_SECRET: ${{ secrets.CI_AZURE_CLIENT_SECRET }}
-      AZURE_RESOURCE_GROUP: ${{ secrets.CI_AZURE_RESOURCE_GROUP }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+      AZURE_RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
       GOOGLE_CLIENT_ID: ${{ secrets.CI_GOOGLE_CLIENT_ID }}
       GOOGLE_CLIENT_SECRET: ${{ secrets.CI_GOOGLE_CLIENT_SECRET }}
       GITHUB_CLIENT_ID: ${{ secrets.CI_GITHUB_CLIENT_ID }}
@@ -118,13 +118,13 @@ jobs:
           JOB_EXECUTOR: "fastapi"
           AIRT_SERVICE_SUPER_USER_PASSWORD: ${{ secrets.CI_AIRT_SERVICE_SUPER_USER_PASSWORD }}
           AIRT_TOKEN_SECRET_KEY: ${{ secrets.CI_AIRT_TOKEN_SECRET_KEY }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.CI_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
-          AZURE_SUBSCRIPTION_ID: ${{ secrets.CI_AZURE_SUBSCRIPTION_ID }}
-          AZURE_TENANT_ID: ${{ secrets.CI_AZURE_TENANT_ID }}
-          AZURE_CLIENT_ID: ${{ secrets.CI_AZURE_CLIENT_ID }}
-          AZURE_CLIENT_SECRET: ${{ secrets.CI_AZURE_CLIENT_SECRET }}
-          AZURE_RESOURCE_GROUP: ${{ secrets.CI_AZURE_RESOURCE_GROUP }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          AZURE_RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
           GOOGLE_CLIENT_ID: ${{ secrets.CI_GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.CI_GOOGLE_CLIENT_SECRET }}
           GITHUB_CLIENT_ID: ${{ secrets.CI_GITHUB_CLIENT_ID }}
@@ -157,7 +157,8 @@ jobs:
 
       - run: pip list
       - run: env
-      - run: ls -la /github/home/.local/bin
+      - run: python3 -c 'import os,sysconfig;print(sysconfig.get_path("scripts",f"{os.name}_user"))'
+      - run: ls -la /github/home/
       - run: aws --help
 
       - name: Run test without failing
