@@ -58,7 +58,7 @@ jobs:
     defaults:
       run:
         shell: bash
-    needs: [sast, trivy, secrets_scan, detect_secrets]
+    # needs: [sast, trivy, secrets_scan, detect_secrets]
     container:
       image: ghcr.io/airtai/airt-service-dev:latest
     env:
