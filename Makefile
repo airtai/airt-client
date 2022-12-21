@@ -2,7 +2,7 @@ SRC = $(wildcard notebooks/*.ipynb)
 
 all: clean dist site
 
-airt: $(SRC) settings.ini .install_git_secrets_hooks .install_pre_commit_hooks
+airt: $(SRC) settings.ini .install_pre_commit_hooks
 	touch README.md
 	nbdev_export
 	touch airt
