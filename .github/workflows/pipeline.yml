@@ -9,14 +9,14 @@ env:
 jobs:
   sast:
     runs-on: ubuntu-22.04
-    container:
-      image: ubuntu:22.04
+    # container:
+    #   image: ubuntu:22.04
     steps:
       - uses: actions/checkout@v3
       # This is to fix GIT not liking owner of the checkout dir - https://github.com/actions/runner/issues/2033#issuecomment-1204205989
       - run: chown -R $(id -u):$(id -g) $PWD
       - run: echo "PATH=$PATH:/root/.local/bin" >> $GITHUB_ENV
-      - run: apt update && apt install -y build-essential python3-dev python3-pip default-libmysqlclient-dev git
+      - run: sudo apt update && sudo apt install -y build-essential python3-dev python3-pip default-libmysqlclient-dev git
       - run: pip install -e ".[dev]"
       # - run: make dist
       - run: make sast
@@ -47,14 +47,12 @@ jobs:
 
   detect_secrets:
     runs-on: ubuntu-22.04
-    container:
-      image: ubuntu:22.04
     steps:
       - uses: actions/checkout@v3
       # This is to fix GIT not liking owner of the checkout dir - https://github.com/actions/runner/issues/2033#issuecomment-1204205989
       - run: chown -R $(id -u):$(id -g) $PWD
       - run: echo "PATH=$PATH:/root/.local/bin" >> $GITHUB_ENV
-      - run: apt update && apt install -y build-essential python3-dev python3-pip default-libmysqlclient-dev git
+      - run: sudo apt update && sudo apt install -y build-essential python3-dev python3-pip default-libmysqlclient-dev git
       - run: pip install -e ".[dev]"
       # - run: make dist
       - run: make detect_secrets
