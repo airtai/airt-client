@@ -153,6 +153,7 @@ jobs:
       # - run: echo "AZURE_STORAGE_ACCOUNT_PREFIX=ghubairtc$(echo $RANDOM | md5sum | head -c 5)" >> $GITHUB_ENV
 
       - run: sleep 300
+      - run: pip install -e ".[dev]"
 
       - name: Run test without failing
         id: run_test
