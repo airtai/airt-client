@@ -2,7 +2,7 @@ SRC = $(wildcard notebooks/*.ipynb)
 
 all: clean dist site
 
-airt: $(SRC) settings.ini .install_git_secrets_hooks .add_allowed_git_secrets .install_pre_commit_hooks
+airt: $(SRC) settings.ini .install_git_secrets_hooks .install_pre_commit_hooks
 	touch README.md
 	nbdev_export
 	touch airt
@@ -82,7 +82,7 @@ clean:
 mypy: airt
 	mypy airt --ignore-missing-imports
     
-check_secrets:
+check_secrets: .add_allowed_git_secrets
 	git secrets --scan -r
 
 check: mypy check_secrets detect_secrets sast trivy_scan_repo

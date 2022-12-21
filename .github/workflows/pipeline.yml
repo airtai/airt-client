@@ -4,10 +4,7 @@ on: [push]
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  ACCESS_REP_TOKEN: ${{ secrets.ACCESS_REP_TOKEN }}
   AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-  PROD_CONFIG: ${{ secrets.PROD_CONFIG }}
-  STAGING_CONFIG: ${{ secrets.STAGING_CONFIG }}
 
 jobs:
   sast:
