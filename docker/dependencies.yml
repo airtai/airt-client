@@ -1,0 +1,12 @@
+version: "3"
+services:
+    mysql:
+        image: mysql:8.0.28
+        profiles: ["dev"]
+        hostname: $DB_HOST
+        container_name: $DB_HOST
+        ports:
+            - "${PORT_PREFIX}3306:3306"
+        environment:
+            MYSQL_DATABASE: $DB_DATABASE
+            MYSQL_ROOT_PASSWORD: $DB_PASSWORD
