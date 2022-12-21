@@ -60,7 +60,7 @@ jobs:
         shell: bash
     needs: [sast, trivy, secrets_scan, detect_secrets]
     container:
-      image: ghcr.io/airtai/airt-service-dev:${{ github.GITHUB_REF_NAME == 'main' && 'latest' || 'dev'  }}
+      image: ghcr.io/airtai/airt-service-dev:latest
     env:
       AIRT_SERVER_URL: "http://airt-service:6006"
       AIRT_SERVICE_USERNAME: "johndoe"
@@ -103,7 +103,7 @@ jobs:
       AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.GITHUB_SHA }}
     services:
       airt-service:
-        image: ghcr.io/airtai/airt-service:dev
+        image: ghcr.io/airtai/airt-service:${{ github.GITHUB_REF_NAME == 'main' && 'latest' || 'dev'  }}
         env:
           STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.GITHUB_SHA }}
           AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.GITHUB_SHA }}
