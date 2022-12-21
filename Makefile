@@ -107,3 +107,7 @@ check_git_history_for_secrets: .add_allowed_git_secrets
 
 detect_secrets: .install_pre_commit_hooks
 	git ls-files -z | xargs -0 detect-secrets-hook --baseline .secrets.baseline
+
+.PHONY: prepare
+prepare: all check test
+	nbdev_clean
