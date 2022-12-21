@@ -60,7 +60,7 @@ jobs:
         shell: bash
     needs: [sast, trivy, secrets_scan, detect_secrets]
     container:
-      image: ghcr.io/airtai/airt-service-dev:${{ github.GITHUB_REF_NAME == 'main' && latest || dev  }}
+      image: ghcr.io/airtai/airt-service-dev:${{ github.GITHUB_REF_NAME == 'main' && 'latest' || 'dev'  }}
     env:
       AIRT_SERVER_URL: "http://airt-service:6006"
       AIRT_SERVICE_SUPER_USER_PASSWORD: ${{ secrets.CI_AIRT_SERVICE_SUPER_USER_PASSWORD }}
