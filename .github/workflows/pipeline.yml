@@ -151,7 +151,7 @@ jobs:
       - run: echo "PATH=$PATH:$HOME/.local/bin" >> $GITHUB_ENV
 
       - run: sleep 300
-      # - run: pip install -e ".[dev]"
+      - run: pip install -e ".[dev]"
 
       - name: Run test without failing
         id: run_test
