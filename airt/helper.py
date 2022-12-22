@@ -49,7 +49,13 @@ def _get_json(response: requests.Response) -> Any:
     if response:
         return response.json()
     else:
-        raise ValueError(response.json()["detail"])
+        if (
+            response.headers.get("content-type") == "application/json"
+            and "detail" in response.json()
+        ):
+            raise ValueError(response.json()["detail"])
+        else:
+            raise ValueError(response.text)
 
 # %% ../notebooks/API_Helper.ipynb 11
 def get_base_url(server: Optional[str]) -> str:
