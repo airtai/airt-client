@@ -62,7 +62,8 @@ jobs:
     # container:
     #   image: ghcr.io/airtai/airt-service-dev:latest
     env:
-      AIRT_SERVER_URL: "http://airt-service:6006"
+      # AIRT_SERVER_URL: "http://airt-service:6006"
+      AIRT_SERVER_URL: "http://localhost:6006"
       AIRT_SERVICE_USERNAME: "johndoe"
       AIRT_SERVICE_PASSWORD: ${{ secrets.CI_AIRT_SERVICE_SUPER_USER_PASSWORD }}
       AIRT_SERVICE_SUPER_USER: "kumaran"
@@ -109,7 +110,8 @@ jobs:
           AZURE_STORAGE_ACCOUNT_PREFIX: ghac${{ github.run_id }}
           DB_USERNAME: "root"
           DB_PASSWORD: "SuperSecretPassword"
-          DB_HOST: "mysql"
+          # DB_HOST: "mysql"
+          DB_HOST: "localhost"
           DB_PORT: 3306
           DB_DATABASE: "airt_service"
           DB_DATABASE_SERVER: "mysql"
