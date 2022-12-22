@@ -99,14 +99,14 @@ jobs:
       CLICKHOUSE_PROTOCOL: ${{ secrets.CLICKHOUSE_PROTOCOL }}
       CLICKHOUSE_EVENTS_TABLE: ${{ secrets.CLICKHOUSE_EVENTS_TABLE }}
 
-      STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.sha }}
-      AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.sha }}
+      STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.run_id }}
+      AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.run_id }}
     services:
       airt-service:
         image: ghcr.io/airtai/airt-service:${{ github.GITHUB_REF_NAME == 'main' && 'latest' || 'dev'  }}
         env:
-          STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.sha }}
-          AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.sha }}
+          STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.run_id }}
+          AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.run_id }}
           DB_USERNAME: "root"
           DB_PASSWORD: "SuperSecretPassword"
           DB_HOST: "mysql"
