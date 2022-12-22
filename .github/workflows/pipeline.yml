@@ -100,13 +100,13 @@ jobs:
       CLICKHOUSE_EVENTS_TABLE: ${{ secrets.CLICKHOUSE_EVENTS_TABLE }}
 
       STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.run_id }}
-      AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.run_id }}
+      AZURE_STORAGE_ACCOUNT_PREFIX: ghac${{ github.run_id }}
     services:
       airt-service:
         image: ghcr.io/airtai/airt-service:${{ github.GITHUB_REF_NAME == 'main' && 'latest' || 'dev'  }}
         env:
           STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.run_id }}
-          AZURE_STORAGE_ACCOUNT_PREFIX: ghubairtc${{ github.run_id }}
+          AZURE_STORAGE_ACCOUNT_PREFIX: ghac${{ github.run_id }}
           DB_USERNAME: "root"
           DB_PASSWORD: "SuperSecretPassword"
           DB_HOST: "mysql"
@@ -167,6 +167,9 @@ jobs:
         continue-on-error: true
 
       - run: make empty_bucket
+
+      - run: docker logs "${{ job.services.airt-service.id }}"
+
       - name: Raise error if make test failed earlier
         if: steps.run_test.outcome != 'success'
         run: exit 1
