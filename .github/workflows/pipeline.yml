@@ -59,11 +59,11 @@ jobs:
       run:
         shell: bash
     # needs: [sast, trivy, secrets_scan, detect_secrets]
-    # container:
-    #   image: ghcr.io/airtai/airt-service-dev:latest
+    container:
+      image: ghcr.io/airtai/airt-service-dev:latest
     env:
-      # AIRT_SERVER_URL: "http://airt-service:6006"
-      AIRT_SERVER_URL: "http://localhost:6006"
+      AIRT_SERVER_URL: "http://airt-service:6006"
+      # AIRT_SERVER_URL: "http://localhost:6006"
       AIRT_SERVICE_USERNAME: "johndoe"
       AIRT_SERVICE_PASSWORD: ${{ secrets.CI_AIRT_SERVICE_SUPER_USER_PASSWORD }}
       AIRT_SERVICE_SUPER_USER: "kumaran"
@@ -110,8 +110,8 @@ jobs:
           AZURE_STORAGE_ACCOUNT_PREFIX: ghac${{ github.run_id }}
           DB_USERNAME: "root"
           DB_PASSWORD: "SuperSecretPassword"
-          # DB_HOST: "mysql"
-          DB_HOST: "localhost"
+          DB_HOST: "mysql"
+          # DB_HOST: "localhost"
           DB_PORT: 3306
           DB_DATABASE: "airt_service"
           DB_DATABASE_SERVER: "mysql"
@@ -154,7 +154,8 @@ jobs:
       # - run: echo "STORAGE_BUCKET_PREFIX=github-airt-client-testing-$(echo $RANDOM | md5sum | head -c 20)" >> $GITHUB_ENV
       # - run: echo "AZURE_STORAGE_ACCOUNT_PREFIX=ghubairtc$(echo $RANDOM | md5sum | head -c 5)" >> $GITHUB_ENV
 
-      - run: sudo apt update && sudo apt install -y build-essential python3-dev python3-pip default-libmysqlclient-dev git
+      # - run: sudo apt update && sudo apt install -y build-essential python3-dev python3-pip default-libmysqlclient-dev git
+      # - run: apt update && sudo apt install -y docker
       - run: sleep 300
       - run: pip install -e ".[dev]"
 
