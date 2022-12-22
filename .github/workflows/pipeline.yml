@@ -59,8 +59,8 @@ jobs:
       run:
         shell: bash
     # needs: [sast, trivy, secrets_scan, detect_secrets]
-    container:
-      image: ghcr.io/airtai/airt-service-dev:latest
+    # container:
+    #   image: ghcr.io/airtai/airt-service-dev:latest
     env:
       AIRT_SERVER_URL: "http://airt-service:6006"
       AIRT_SERVICE_USERNAME: "johndoe"
@@ -152,6 +152,7 @@ jobs:
       # - run: echo "STORAGE_BUCKET_PREFIX=github-airt-client-testing-$(echo $RANDOM | md5sum | head -c 20)" >> $GITHUB_ENV
       # - run: echo "AZURE_STORAGE_ACCOUNT_PREFIX=ghubairtc$(echo $RANDOM | md5sum | head -c 5)" >> $GITHUB_ENV
 
+      - run: sudo apt update && sudo apt install -y build-essential python3-dev python3-pip default-libmysqlclient-dev git docker
       - run: sleep 300
       - run: pip install -e ".[dev]"
 
@@ -163,13 +164,13 @@ jobs:
 
       - name: Run test without failing
         id: run_test
-        run: make test
+        # run: make test
+        run: nbdev_test --timing --do_print --pause 1
         continue-on-error: true
 
       - run: aws s3 ls | cut -d' ' -f3- | grep "^${STORAGE_BUCKET_PREFIX}"
       - run: az login --service-principal --username ${AZURE_CLIENT_ID} --tenant ${AZURE_TENANT_ID} --password ${AZURE_CLIENT_SECRET}
       - run: az storage account list --query "[*].name" -o tsv
-      - run: az storage account list --query "[*].name" -o tsv | grep "^${AZURE_STORAGE_ACCOUNT_PREFIX}"
 
       - run: make empty_bucket
 
