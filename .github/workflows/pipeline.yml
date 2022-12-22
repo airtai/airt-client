@@ -152,7 +152,7 @@ jobs:
       # - run: echo "STORAGE_BUCKET_PREFIX=github-airt-client-testing-$(echo $RANDOM | md5sum | head -c 20)" >> $GITHUB_ENV
       # - run: echo "AZURE_STORAGE_ACCOUNT_PREFIX=ghubairtc$(echo $RANDOM | md5sum | head -c 5)" >> $GITHUB_ENV
 
-      - run: sudo apt update && sudo apt install -y build-essential python3-dev python3-pip default-libmysqlclient-dev git docker
+      - run: sudo apt update && sudo apt install -y build-essential python3-dev python3-pip default-libmysqlclient-dev git
       - run: sleep 300
       - run: pip install -e ".[dev]"
 
