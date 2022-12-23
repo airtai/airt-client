@@ -131,7 +131,7 @@ jobs:
         run: nbdev_mkdocs docs
       - name: Enable GitHub Pages
         shell: bash
-        run: python3 -c """import ghapi.core,nbdev.config,sys; ghapi.core.GhApi(owner=nbdev.config.get_config().user, repo=nbdev.config.get_config().repo, token="${{inputs.ghtoken}}").enable_pages(branch='gh-pages')"""
+        run: python3 -c 'import ghapi.core,nbdev.config,sys; api = ghapi.core.GhApi(owner=nbdev.config.get_config().user, repo=nbdev.config.get_config().repo, token="${{inputs.ghtoken}}"); api.enable_pages(branch="gh-pages")'
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
