@@ -228,4 +228,4 @@ def evaluate(
 
     df = model.evaluate()
 
-    typer.echo(tabulate(df, headers="keys", tablefmt="plain"))
+    typer.echo(tabulate(df, headers="keys", tablefmt="plain"))  # type: ignore

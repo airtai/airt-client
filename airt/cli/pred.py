@@ -185,7 +185,7 @@ def to_pandas(
 
     df = pred.to_pandas()
 
-    typer.echo(tabulate(df, headers="keys", tablefmt="plain", showindex=False))
+    typer.echo(tabulate(df, headers="keys", tablefmt="plain", showindex=False))  # type: ignore
 
 # %% ../../notebooks/CLI_Pred.ipynb 32
 @app.command("to-s3")

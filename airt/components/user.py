@@ -861,9 +861,7 @@ class User:
         return pd.DataFrame(response, index=[0])
 
     @staticmethod
-    def enable_sso(
-        sso_provider: str, sso_email: str, otp: Optional[str] = None
-    ) -> pd.DataFrame:
+    def enable_sso(sso_provider: str, sso_email: str, otp: Optional[str] = None) -> str:
         """Enable Single sign-on (SSO) for the user
 
         Args:
@@ -922,7 +920,7 @@ class User:
         sso_provider: str,
         user: Optional[str] = None,
         otp: Optional[str] = None,
-    ) -> pd.DataFrame:
+    ) -> str:
         """Disable Single sign-on (SSO) for the user
 
         Please do not pass the user parameter unless you are a super user. Only

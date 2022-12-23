@@ -27,7 +27,7 @@ def version() -> None:
     try:
         df = pd.Series(Client.version(), name="Version").to_frame()
 
-        typer.echo(tabulate(df, headers="keys", tablefmt="plain"))
+        typer.echo(tabulate(df, headers="keys", tablefmt="plain"))  # type: ignore
 
     except Exception as e:
         typer.echo(message=f"Error: {e}", err=True)
