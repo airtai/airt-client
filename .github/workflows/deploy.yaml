@@ -130,6 +130,8 @@ jobs:
         shell: bash
         run: nbdev_mkdocs docs
       - run: apt update && apt install -y python2-dev python2
+      - run: which python2
+      - run: which python
       - name: Enable GitHub Pages
         shell: python
         run: |
