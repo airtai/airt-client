@@ -7,5 +7,90 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      AIRT_SERVER_URL: "http://airt-service:6006"
+      AIRT_SERVICE_USERNAME: "johndoe"
+      AIRT_SERVICE_PASSWORD: ${{ secrets.CI_AIRT_SERVICE_SUPER_USER_PASSWORD }}
+      AIRT_SERVICE_SUPER_USER: "kumaran"
+
+      DB_USERNAME: "root"
+      DB_PASSWORD: "SuperSecretPassword"
+      DB_HOST: "mysql"
+      DB_PORT: 3306
+      DB_DATABASE: "airt_service"
+      DB_DATABASE_SERVER: "mysql"
+
+      AIRT_SERVICE_SUPER_USER_PASSWORD: ${{ secrets.CI_AIRT_SERVICE_SUPER_USER_PASSWORD }}
+      AIRT_TOKEN_SECRET_KEY: ${{ secrets.CI_AIRT_TOKEN_SECRET_KEY }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+      AZURE_RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
+      GOOGLE_CLIENT_ID: ${{ secrets.CI_GOOGLE_CLIENT_ID }}
+      GOOGLE_CLIENT_SECRET: ${{ secrets.CI_GOOGLE_CLIENT_SECRET }}
+      GITHUB_CLIENT_ID: ${{ secrets.CI_GITHUB_CLIENT_ID }}
+      GITHUB_CLIENT_SECRET: ${{ secrets.CI_GITHUB_CLIENT_SECRET }}
+      INFOBIP_BASE_URL: ${{ secrets.CI_INFOBIP_BASE_URL }}
+      INFOBIP_API_KEY: ${{ secrets.CI_INFOBIP_API_KEY }}
+      INFOBIP_SENDER_ID: ${{ secrets.CI_INFOBIP_SENDER_ID }}
+
+      CLICKHOUSE_USERNAME: ${{ secrets.CLICKHOUSE_USERNAME }}
+      CLICKHOUSE_PASSWORD: ${{ secrets.CLICKHOUSE_PASSWORD }}
+      CLICKHOUSE_HOST: ${{ secrets.CLICKHOUSE_HOST }}
+      CLICKHOUSE_DATABASE: ${{ secrets.CLICKHOUSE_DATABASE }}
+      CLICKHOUSE_PORT: ${{ secrets.CLICKHOUSE_PORT }}
+      CLICKHOUSE_PROTOCOL: ${{ secrets.CLICKHOUSE_PROTOCOL }}
+      CLICKHOUSE_EVENTS_TABLE: ${{ secrets.CLICKHOUSE_EVENTS_TABLE }}
+
+      STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.run_id }}
+      AZURE_STORAGE_ACCOUNT_PREFIX: ghac${{ github.run_id }}
+    services:
+      airt-service:
+        image: ghcr.io/airtai/airt-service:${{ github.GITHUB_REF_NAME == 'main' && 'latest' || 'dev'  }}
+        env:
+          STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.run_id }}
+          AZURE_STORAGE_ACCOUNT_PREFIX: ghac${{ github.run_id }}
+          DB_USERNAME: "root"
+          DB_PASSWORD: "SuperSecretPassword"
+          DB_HOST: "mysql"
+          DB_PORT: 3306
+          DB_DATABASE: "airt_service"
+          DB_DATABASE_SERVER: "mysql"
+          AIRFLOW__CORE__SQL_ALCHEMY_CONN: "mysql+mysqldb://root:SuperSecretPassword@mysql:3306/airflow"
+          AIRFLOW_PASSWORD: ${{ secrets.CI_AIRFLOW_PASSWORD }}
+          JOB_EXECUTOR: "fastapi"
+          AIRT_SERVICE_SUPER_USER_PASSWORD: ${{ secrets.CI_AIRT_SERVICE_SUPER_USER_PASSWORD }}
+          AIRT_TOKEN_SECRET_KEY: ${{ secrets.CI_AIRT_TOKEN_SECRET_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          AZURE_RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
+          GOOGLE_CLIENT_ID: ${{ secrets.CI_GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.CI_GOOGLE_CLIENT_SECRET }}
+          GITHUB_CLIENT_ID: ${{ secrets.CI_GITHUB_CLIENT_ID }}
+          GITHUB_CLIENT_SECRET: ${{ secrets.CI_GITHUB_CLIENT_SECRET }}
+          INFOBIP_BASE_URL: ${{ secrets.CI_INFOBIP_BASE_URL }}
+          INFOBIP_API_KEY: ${{ secrets.CI_INFOBIP_API_KEY }}
+          INFOBIP_SENDER_ID: ${{ secrets.CI_INFOBIP_SENDER_ID }}
+        ports:
+          - 8080:8080
+          - 6006:6006
+      mysql:
+        image: mysql:8.0.27
+        env:
+          MYSQL_DATABASE: "airt_service"
+          MYSQL_USER: "airt"
+          MYSQL_PASSWORD: "SuperSecretPassword"
+          MYSQL_ROOT_PASSWORD: "SuperSecretPassword"
+        ports:
+          - 3306:3306
     steps:
+      - run: sleep 300
       - uses: airtai/workflows/nbdev-mkdocs-ghp@main
