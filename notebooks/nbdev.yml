@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "airt"
+  site-url: "https://airtai.github.io/airt-client"
+  description: "Python client for airt-service"
+  repo-branch: main
+  repo-url: "https://github.com/airtai/airt-client"

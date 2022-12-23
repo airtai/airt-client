@@ -1,0 +1,65 @@
+version: "3"
+services:
+    mysql:
+        networks:
+            - airt-client-network
+
+    airt-service:
+        image: $AIRT_SERVER_DOCKER
+        hostname: $USER-airt-service
+        container_name: $USER-airt-service
+        ports:
+            - "$AIRT_TB_PORT:6006"
+            - "${PORT_PREFIX}8080:8080"
+        networks:
+            - airt-client-network
+        env_file:
+            - ../.env.dev.config
+            - ../.env.dev.secrets
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                    - driver: nvidia
+                      device_ids: ['all']
+                      capabilities: [gpu]
+        depends_on:
+            - mysql
+        
+    airt-client:
+        image: $AIRT_CLIENT_DOCKER
+        hostname: $USER-airt-client
+        container_name: $USER-airt-client
+        volumes:
+            - ../../airt-client:/work/airt-client
+            - ../../airt-service:/work/airt-service
+            - /etc/passwd:/etc/passwd
+            - /etc/group:/etc/group
+            - /etc/shadow:/etc/shadow
+            - $HOME/.ssh:$HOME/.ssh
+            - $HOME/.gitconfig:$HOME/.gitconfig
+            - $HOME/.aws:$HOME/.aws
+        environment:
+            - JUPYTER_CONFIG_DIR=$HOME/.jupyter
+            - USER
+            - USERNAME
+            - AIRT_SERVER_URL=$AIRT_SERVER_URL
+            - AIRT_SERVICE_USERNAME=$AIRT_SERVICE_USERNAME
+            - AIRT_SERVICE_PASSWORD=$AIRT_SERVICE_SUPER_USER_PASSWORD
+            - AIRT_SERVICE_SUPER_USER=$AIRT_SERVICE_SUPER_USER
+            - PRESERVE_ENVS=$PRESERVE_ENVS
+        env_file:
+            - ../.env.dev.config
+            - ../.env.dev.secrets
+        ports:
+            - $AIRT_JUPYTER_PORT:8888
+            - $AIRT_SERVICE_PORT:6007
+            - $AIRT_DASK_PORT:8787
+            - $AIRT_DOCS_PORT:4000
+        networks:
+            - airt-client-network
+        depends_on:
+            - airt-service
+networks:
+    airt-client-network:
+        name: "${USER}-airt-client-network"
