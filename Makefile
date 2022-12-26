@@ -20,37 +20,12 @@ sast: .sast_bandit .sast_semgrep
 trivy_scan_repo:
 	./scripts/trivy_scan_repo.sh
 
-_docs/index.md: notebooks/index.ipynb dist
-	jupyter nbconvert --to markdown --stdout --RegexRemovePreprocessor.patterns="['\# hide', '\#hide']" notebooks/index.ipynb | sed "s/{{ get_airt_client_version }}/$$(pip show airt-client | grep Version | cut -d ":" -f 2 | xargs)/" > _docs/index.md
-    
-_docs/Tutorial.md: notebooks/Tutorial.ipynb dist
-	jupyter nbconvert --to markdown --stdout --RegexRemovePreprocessor.patterns="['\# hide', '\#hide']" notebooks/Tutorial.ipynb > _docs/Tutorial.md
-
-_docs/SUMMARY.md: generate_summary.ipynb dist
-	jupyter nbconvert --execute --stdout --to markdown generate_summary.ipynb > /dev/null
-
-_docs/API/cli: generate_cli_doc.ipynb _docs/SUMMARY.md dist
-	jupyter nbconvert --execute --stdout --to markdown generate_cli_doc.ipynb > /dev/null
-	touch _docs/API/cli
-
-README.md: _docs/index.md
-	cp _docs/index.md README.md
-
-_docs/RELEASE.md:
-	cp RELEASE.md _docs/
-
-_docs/rest_api_docs.md: rest_api_docs.md
-	cp rest_api_docs.md _docs/
-
-site: dist README.md _docs/index.md _docs/Tutorial.md _docs/SUMMARY.md \
-      _docs/RELEASE.md _docs/rest_api_docs.md mkdocs.yml \
-      _docs/API/cli
-	mkdocs build
-	touch site
+site: dist
+	nbdev_mkdocs docs
+	touch mkdocs/site
 
 docs_serve: site
-	python -m http.server 6007 --bind 0.0.0.0 --directory ./site/
-#	mkdocs serve -a 0.0.0.0:6007
+	nbdev_mkdocs preview --port 6007
 
 empty_bucket:
 	aws s3 ls | cut -d' ' -f3- | grep "^${STORAGE_BUCKET_PREFIX}" | xargs -I {} aws s3 rb --force s3://{}
@@ -71,8 +46,7 @@ dist: airt
 	touch dist
     
 clean:
-	rm -rf _docs/Tutorial.md _docs/index.md _docs/SUMMARY.md _docs/RELEASE.md _docs/rest_api_docs.md _docs/API
-	rm -rf site
+	rm -rf mkdocs/docs/ mkdocs/site/
 	rm -rf airt
 	rm -rf airt.egg-info
 	rm -rf build

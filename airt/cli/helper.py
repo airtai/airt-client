@@ -124,7 +124,7 @@ def get_example_output_format(df: pd.DataFrame) -> Dict[str, str]:
     Returns:
         The example output format for the dataframe
     """
-    return {c: get_example_for_type(df[c]) for c in df.columns}
+    return {c: get_example_for_type(df[c]) for c in df.columns}  # type: ignore
 
 # %% ../../notebooks/CLI_Helper.ipynb 28
 def customize_output_format(format_str: str, df: pd.DataFrame) -> pd.DataFrame:
@@ -183,7 +183,7 @@ def customize_output_format(format_str: str, df: pd.DataFrame) -> pd.DataFrame:
             err=True,
         )
         raise typer.Exit(code=1)
-    return df_copy[formatters.keys()]
+    return df_copy[formatters.keys()]  # type: ignore
 
 # %% ../../notebooks/CLI_Helper.ipynb 34
 def separate_integers_and_strings(xs: List[str]) -> List[Union[int, str]]:
@@ -205,7 +205,7 @@ def echo_formatted_output(df: pd.DataFrame):
         df: Input DataFrame
     """
     if len(df.columns) > 1:
-        typer.echo(tabulate(df, headers="keys", tablefmt="plain", showindex=False))
+        typer.echo(tabulate(df, headers="keys", tablefmt="plain", showindex=False))  # type: ignore
     else:
         single_col_results = df.iloc[:, 0].astype(str).to_list()
         typer.echo("\n".join(single_col_results))

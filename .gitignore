@@ -170,3 +170,8 @@ rabbitmq_data/
 
 _docs/
 _proc/
+
+
+# nbdev_mkdocs
+mkdocs/docs/
+mkdocs/site/
