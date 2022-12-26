@@ -67,7 +67,7 @@ theme:
   - search.share
   palette:
   - scheme: slate
-    primary: black
+    primary: deep orange
     accent: yellow
     toggle:
       icon: material/toggle-switch
