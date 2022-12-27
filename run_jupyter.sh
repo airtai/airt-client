@@ -13,9 +13,9 @@ else
 	export GPU_PARAMS=""
 fi
 
-echo Trying to download file from "https://gitlab.com/api/v4/projects/$AIRT_SERVER_GITLAB_ID/repository/files/$URI_ENCODED_FILE_PATH/raw?ref=$AIRT_SERVICE_FILE_BRANCH"
+echo Trying to download file from "https://raw.githubusercontent.com/airtai/airt-service/$AIRT_SERVICE_FILE_BRANCH/$URI_ENCODED_FILE_PATH"
 
-curl -o $DOWNLOAD_FILE_DESTINATION --header "PRIVATE-TOKEN: $ACCESS_REP_TOKEN" "https://gitlab.com/api/v4/projects/$AIRT_SERVER_GITLAB_ID/repository/files/$URI_ENCODED_FILE_PATH/raw?ref=$AIRT_SERVICE_FILE_BRANCH"
+curl -o $DOWNLOAD_FILE_DESTINATION "https://raw.githubusercontent.com/airtai/airt-service/$AIRT_SERVICE_FILE_BRANCH/$URI_ENCODED_FILE_PATH"
 
 echo Download Successful
 
