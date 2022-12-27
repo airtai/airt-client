@@ -160,12 +160,6 @@ echo AIRT_SERVER_URL variable set to $AIRT_SERVER_URL
 export AIRT_SERVER_GITLAB_ID=29120234
 echo AIRT_SERVER_GITLAB_ID variable set to $AIRT_SERVER_GITLAB_ID
 
-if test -z "$ACCESS_REP_TOKEN"
-then
-      echo 'ACCESS_REP_TOKEN variable not set in .env.dev.secrets file, exiting'
-      exit -1
-fi
-
 export URI_ENCODED_FILE_PATH="docker%2Fdependencies%2Eyml"
 echo URI_ENCODED_FILE_PATH variable set to $URI_ENCODED_FILE_PATH
 
