@@ -92,8 +92,8 @@ fi
 
 
 # Run envsubst for .env.dev.* files
-cp .env.dev.config /tmp/airt-service.env.dev.config && envsubst < /tmp/airt-service.env.dev.config > .env.dev.config && rm /tmp/airt-service.env.dev.config
-cp .env.dev.secrets /tmp/airt-service.env.dev.secrets && envsubst < /tmp/airt-service.env.dev.secrets > .env.dev.secrets && rm /tmp/airt-service.env.dev.secrets
+cp .env.dev.config /tmp/airt-client.env.dev.config && envsubst < /tmp/airt-client.env.dev.config > .env.dev.config && rm /tmp/airt-client.env.dev.config
+cp .env.dev.secrets /tmp/airt-client.env.dev.secrets && envsubst < /tmp/airt-client.env.dev.secrets > .env.dev.secrets && rm /tmp/airt-client.env.dev.secrets
 # Export values in .env.dev.* files as environment variables for validation
 set -a && source .env.dev.config && source .env.dev.secrets && set +a
 
