@@ -1,9 +1,4 @@
----
-output-file: index.html
-title: Python client for airt service 
-
----
-
+# Python client for airt service
 
 ## Docs
 
