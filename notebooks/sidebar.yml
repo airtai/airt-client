@@ -2,29 +2,4 @@ website:
   sidebar:
     contents:
       - index.ipynb
-      - API_Client.ipynb
-      - API_DataBlob.ipynb
-      - API_DataSource.ipynb
-      - API_Helper.ipynb
-      - API_Keys.ipynb
-      - API_Model.ipynb
-      - API_Prediction.ipynb
-      - API_ProgressStatus.ipynb
-      - API_User.ipynb
-      - ActivateTestingEnvironment.ipynb
-      - CLI.ipynb
-      - CLI_DataBlob.ipynb
-      - CLI_DataSource.ipynb
-      - CLI_Helper.ipynb
-      - CLI_Key.ipynb
-      - CLI_Model.ipynb
-      - CLI_Pred.ipynb
-      - CLI_Token.ipynb
-      - CLI_User.ipynb
-      - CLI_Version.ipynb
-      - Client.ipynb
-      - Constants.ipynb
-      - Docstring_helpers.ipynb
-      - Logger.ipynb
-      - Sanitize_Secrets.ipynb
       - Tutorial.ipynb
