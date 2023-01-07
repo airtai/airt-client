@@ -99,6 +99,9 @@ jobs:
       CLICKHOUSE_PROTOCOL: ${{ secrets.CLICKHOUSE_PROTOCOL }}
       CLICKHOUSE_EVENTS_TABLE: ${{ secrets.CLICKHOUSE_EVENTS_TABLE }}
 
+      KAFKA_HOSTNAME: kafka
+      KAFKA_PORT: 9092
+
       STORAGE_BUCKET_PREFIX: github-airt-client-testing-${{ github.run_id }}
       AZURE_STORAGE_ACCOUNT_PREFIX: ghac${{ github.run_id }}
     services:
@@ -145,6 +148,17 @@ jobs:
           MYSQL_ROOT_PASSWORD: "SuperSecretPassword"
         ports:
           - 3306:3306
+      zookeeper:
+        image: wurstmeister/zookeeper
+      kafka:
+        image: wurstmeister/kafka
+        env:
+          KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+          KAFKA_LISTENERS: "PLAINTEXT://:9092"
+          KAFKA_CREATE_TOPICS: "training_request:1:1,training_status:1:1,prediction_request:1:1,prediction_status:1:1"
+          KAFKA_ADVERTISED_HOST_NAME: "kafka"
+        ports:
+            - 9092:9092
     steps:
       - uses: actions/checkout@v3
       - run: chown -R $(id -u):$(id -g) $PWD
