@@ -136,6 +136,8 @@ jobs:
           INFOBIP_BASE_URL: ${{ secrets.CI_INFOBIP_BASE_URL }}
           INFOBIP_API_KEY: ${{ secrets.CI_INFOBIP_API_KEY }}
           INFOBIP_SENDER_ID: ${{ secrets.CI_INFOBIP_SENDER_ID }}
+          KAFKA_HOSTNAME: kafka
+          KAFKA_PORT: 9092
         ports:
           - 8080:8080
           - 6006:6006
