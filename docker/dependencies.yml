@@ -1,7 +1,7 @@
 version: "3"
 services:
     mysql:
-        image: mysql:8.0.28
+        image: mysql:8.0.31
         profiles: ["dev"]
         hostname: $DB_HOST
         container_name: $DB_HOST
