@@ -2,7 +2,7 @@ name: Deploy nbdev-mkdocs generated documentation to GitHub Pages
 
 on:
   push:
-    branches: [ "main", "master", "fix-clickhouse" ]
+    branches: [ "main", "master" ]
   workflow_dispatch:
 jobs:
   deploy:
@@ -110,52 +110,51 @@ jobs:
         ports:
             - 9092:9092
     steps:
-      # - uses: actions/checkout@v3
-      # - run: chown -R $(id -u):$(id -g) $PWD
+      - uses: actions/checkout@v3
+      - run: chown -R $(id -u):$(id -g) $PWD
       - run: echo "PATH=$PATH:$HOME/.local/bin" >> $GITHUB_ENV
       - run: sleep 300
-      - uses: airtai/workflows/nbdev-mkdocs-ghp@main
       # - run: pip install -e ".[dev]"
 
-      # - name: Install Dependencies
-      #   env:
-      #     USE_PRE: ${{ inputs.pre }}
-      #   shell: bash
-      #   run: |
-      #     set -ux
-      #     python3 -m pip install --upgrade pip
-      #     if [ $USE_PRE ]; then
-      #       pip install -Uq git+https://github.com/fastai/ghapi.git
-      #       pip install -Uq git+https://github.com/fastai/fastcore.git
-      #       pip install -Uq git+https://github.com/fastai/execnb.git
-      #       pip install -Uq git+https://github.com/fastai/nbdev.git
-      #       wget -q $(curl https://latest.fast.ai/pre/quarto-dev/quarto-cli/linux-amd64.deb)
-      #       sudo dpkg -i quarto*.deb
-      #     else
-      #       pip install -Uq nbdev
-      #       nbdev_install_quarto
-      #     fi
-      #     if [[ ${{ github.repository }} != "airtai/nbdev-mkdocs" ]]; then
-      #       pip install nbdev-mkdocs
-      #     fi
-      #     test -f setup.py && pip install -e ".[dev]"
-      # - name: Build nbdev docs
-      #   shell: bash
-      #   run: |
-      #     nbdev_docs --n_workers 1
-      # - name: Build mkdocs docs
-      #   shell: bash
-      #   run: nbdev_mkdocs docs
-      # - name: Enable GitHub Pages
-      #   shell: bash
-      #   run: python3 -c 'import ghapi.core,nbdev.config,sys; api = ghapi.core.GhApi(owner=nbdev.config.get_config().user, repo=nbdev.config.get_config().repo, token="${{secrets.GITHUB_TOKEN}}"); api.enable_pages(branch="gh-pages")'
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     force_orphan: true
-      #     publish_dir: ./mkdocs/site
-      #     # The following lines assign commit authorship to the official GH-Actions bot for deploys to `gh-pages` branch.
-      #     # You can swap them out with your own user credentials.
-      #     user_name: github-actions[bot]
-      #     user_email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Install Dependencies
+        env:
+          USE_PRE: ${{ inputs.pre }}
+        shell: bash
+        run: |
+          set -ux
+          python3 -m pip install --upgrade pip
+          if [ $USE_PRE ]; then
+            pip install -Uq git+https://github.com/fastai/ghapi.git
+            pip install -Uq git+https://github.com/fastai/fastcore.git
+            pip install -Uq git+https://github.com/fastai/execnb.git
+            pip install -Uq git+https://github.com/fastai/nbdev.git
+            wget -q $(curl https://latest.fast.ai/pre/quarto-dev/quarto-cli/linux-amd64.deb)
+            sudo dpkg -i quarto*.deb
+          else
+            pip install -Uq nbdev
+            nbdev_install_quarto
+          fi
+          if [[ ${{ github.repository }} != "airtai/nbdev-mkdocs" ]]; then
+            pip install nbdev-mkdocs
+          fi
+          test -f setup.py && pip install -e ".[dev]"
+      - name: Build nbdev docs
+        shell: bash
+        run: |
+          nbdev_docs --n_workers 1
+      - name: Build mkdocs docs
+        shell: bash
+        run: nbdev_mkdocs docs
+      - name: Enable GitHub Pages
+        shell: bash
+        run: python3 -c 'import ghapi.core,nbdev.config,sys; api = ghapi.core.GhApi(owner=nbdev.config.get_config().user, repo=nbdev.config.get_config().repo, token="${{secrets.GITHUB_TOKEN}}"); api.enable_pages(branch="gh-pages")'
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force_orphan: true
+          publish_dir: ./mkdocs/site
+          # The following lines assign commit authorship to the official GH-Actions bot for deploys to `gh-pages` branch.
+          # You can swap them out with your own user credentials.
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
