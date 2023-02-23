@@ -9,13 +9,13 @@ from typing import *
 
 # %% ../notebooks/API_Helper.ipynb 3
 import os
-import requests
-from types import MethodType
 import textwrap
+from types import MethodType
 
 import pandas as pd
+import requests
 
-from airt.constant import SERVER_URL, PROD_URL
+from airt.constant import PROD_URL, SERVER_URL
 
 # %% ../notebooks/API_Helper.ipynb 5
 def ensure_is_instance(o: Any, cls: Type):

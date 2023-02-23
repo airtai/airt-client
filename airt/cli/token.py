@@ -7,22 +7,23 @@ __all__ = ['logger']
 from typing import *
 
 # %% ../../notebooks/CLI_Token.ipynb 4
-import os
-import typer
 import logging
+import os
 import time
 from datetime import datetime, timedelta
 
-from airt.client import Client, User
-from airt.logger import get_logger, set_level
-from airt.constant import (
-    SERVER_URL,
-    SERVICE_USERNAME,
-    SERVICE_PASSWORD,
-    CLIENT_NAME,
-    SERVICE_TOKEN,
-)
+import typer
+
 from airt.cli import helper
+from airt.client import Client, User
+from airt.constant import (
+    CLIENT_NAME,
+    SERVER_URL,
+    SERVICE_PASSWORD,
+    SERVICE_TOKEN,
+    SERVICE_USERNAME,
+)
+from airt.logger import get_logger, set_level
 
 # %% ../../notebooks/CLI_Token.ipynb 6
 SESSION_TIME_LIMIT = 10  # mins

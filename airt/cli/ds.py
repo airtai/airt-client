@@ -7,16 +7,16 @@ __all__ = ['logger']
 from typing import *
 
 # %% ../../notebooks/CLI_DataSource.ipynb 4
+import datetime as dt
 import os
 
-import typer
-from typer import echo
-from tabulate import tabulate
-import datetime as dt
 import pandas as pd
+import typer
+from tabulate import tabulate
+from typer import echo
 
-from airt.client import Client
 from airt.cli import helper
+from airt.client import Client
 from airt.logger import get_logger, set_level
 
 # %% ../../notebooks/CLI_DataSource.ipynb 6
@@ -198,8 +198,9 @@ def train(
 ):
     """Train a model against the datasource."""
 
-    from airt.client import DataSource
     from datetime import timedelta
+
+    from airt.client import DataSource
 
     ds = DataSource(uuid=uuid)
 

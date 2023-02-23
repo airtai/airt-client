@@ -7,10 +7,11 @@ __all__ = ['logger']
 from typing import *
 
 # %% ../../notebooks/CLI_Version.ipynb 4
-import typer
 import logging
-from tabulate import tabulate
+
 import pandas as pd
+import typer
+from tabulate import tabulate
 
 from airt.client import Client
 from airt.logger import get_logger, set_level

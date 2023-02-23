@@ -7,25 +7,25 @@ __all__ = ['Client']
 from typing import *
 
 # %% ../../notebooks/API_Client.ipynb 5
-import os
 import importlib
-import urllib.parse
 import json
+import os
 import secrets
+import urllib.parse
 
-from fastcore.foundation import patch
 import pandas as pd
+from fastcore.foundation import patch
 
 import airt
-from airt.logger import get_logger, set_level
-from airt.helper import get_data, post_data, delete_data, get_base_url
 from airt.constant import (
-    SERVICE_USERNAME,
-    SERVICE_PASSWORD,
-    SERVER_URL,
     CLIENT_NAME,
+    SERVER_URL,
+    SERVICE_PASSWORD,
     SERVICE_TOKEN,
+    SERVICE_USERNAME,
 )
+from airt.helper import delete_data, get_base_url, get_data, post_data
+from airt.logger import get_logger, set_level
 
 # %% ../../notebooks/API_Client.ipynb 7
 logger = get_logger(__name__)
