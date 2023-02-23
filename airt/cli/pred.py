@@ -8,15 +8,15 @@ from typing import *
 
 # %% ../../notebooks/CLI_Pred.ipynb 4
 import os
-import typer
 
-from typer import echo
-from tabulate import tabulate
 import pandas as pd
+import typer
+from tabulate import tabulate
+from typer import echo
 
 from airt.cli import helper
+from airt.constant import CLIENT_DB_PASSWORD, CLIENT_DB_USERNAME
 from airt.logger import get_logger, set_level
-from airt.constant import CLIENT_DB_USERNAME, CLIENT_DB_PASSWORD
 
 # %% ../../notebooks/CLI_Pred.ipynb 6
 app = typer.Typer(

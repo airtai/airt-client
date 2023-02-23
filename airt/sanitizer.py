@@ -12,10 +12,9 @@ from logging import Logger
 from typing import *
 
 import IPython
+from fastcore.utils import patch
 
 from .logger import get_logger
-
-from fastcore.utils import patch
 
 # %% ../notebooks/Sanitize_Secrets.ipynb 9
 def sanitize_secrets(s: str) -> str:
@@ -79,7 +78,7 @@ def new_publish_display_data(
     source=IPython.core.display_functions._sentinel,
     *,
     transient=None,
-    **kwargs
+    **kwargs,
 ):
     sanitized_data = {
         k: sanitize_secrets(v.__repr__() if not isinstance(v, str) else v)
