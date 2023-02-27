@@ -7,19 +7,19 @@ __all__ = ['logger']
 from typing import *
 
 # %% ../../notebooks/CLI_DataBlob.ipynb 4
-import os
-import json
-
-import typer
-from typer import echo
-from tabulate import tabulate
 import datetime as dt
-import pandas as pd
+import json
+import os
 
-from airt.client import Client
+import pandas as pd
+import typer
+from tabulate import tabulate
+from typer import echo
+
 from airt.cli import helper
+from airt.client import Client
+from airt.constant import CLIENT_DB_PASSWORD, CLIENT_DB_USERNAME
 from airt.logger import get_logger, set_level
-from airt.constant import CLIENT_DB_USERNAME, CLIENT_DB_PASSWORD
 
 # %% ../../notebooks/CLI_DataBlob.ipynb 6
 app = typer.Typer(

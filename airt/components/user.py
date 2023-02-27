@@ -10,22 +10,21 @@ from typing import *
 import os
 
 import pandas as pd
-from fastcore.foundation import patch
 import qrcode
+from fastcore.foundation import patch
 from qrcode.image.pil import PilImage
 
-from airt.logger import get_logger, set_level
+from airt.components.client import Client
 from airt.helper import (
-    get_data,
-    post_data,
+    check_and_append_otp_query_param,
     delete_data,
     generate_df,
     get_attributes_from_instances,
-    check_and_append_otp_query_param,
+    get_data,
+    post_data,
     standardize_phone_number,
 )
-
-from airt.components.client import Client
+from airt.logger import get_logger, set_level
 
 # %% ../../notebooks/API_User.ipynb 7
 logger = get_logger(__name__)

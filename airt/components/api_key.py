@@ -8,23 +8,22 @@ from typing import *
 
 # %% ../../notebooks/API_Keys.ipynb 5
 import os
-
-from datetime import datetime, timedelta, date
+from datetime import date, datetime, timedelta
 
 import pandas as pd
 from fastcore.foundation import patch
 
 from airt.components.client import Client
 from airt.components.user import User
-from airt.logger import get_logger, set_level
 from airt.helper import (
-    get_data,
-    post_data,
+    check_and_append_otp_query_param,
     delete_data,
     generate_df,
     get_attributes_from_instances,
-    check_and_append_otp_query_param,
+    get_data,
+    post_data,
 )
+from airt.logger import get_logger, set_level
 
 # %% ../../notebooks/API_Keys.ipynb 7
 logger = get_logger(__name__)

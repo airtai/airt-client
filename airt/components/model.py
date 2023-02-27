@@ -12,20 +12,19 @@ import os
 import pandas as pd
 from fastcore.foundation import patch
 
-from airt.logger import get_logger, set_level
+from airt.components.client import Client
+from airt.components.prediction import Prediction
+from airt.components.progress_status import ProgressStatus
 from airt.helper import (
-    get_data,
-    post_data,
-    delete_data,
+    add_example_to_docs,
     add_ready_column,
+    delete_data,
     generate_df,
     get_attributes_from_instances,
-    add_example_to_docs,
+    get_data,
+    post_data,
 )
-
-from airt.components.client import Client
-from airt.components.progress_status import ProgressStatus
-from airt.components.prediction import Prediction
+from airt.logger import get_logger, set_level
 
 # %% ../../notebooks/API_Model.ipynb 7
 logger = get_logger(__name__)

@@ -4,15 +4,14 @@
 __all__ = ['Client', 'DataSource', 'DataBlob', 'ProgressStatus', 'Model', 'Prediction', 'User', 'APIKey']
 
 # %% ../notebooks/Client.ipynb 2
+from .components.api_key import APIKey as _APIKey
 from .components.client import Client as _Client
-from .components.datasource import DataSource as _DataSource
 from .components.datablob import DataBlob as _DataBlob
-from .components.progress_status import ProgressStatus as _ProgressStatus
+from .components.datasource import DataSource as _DataSource
 from .components.model import Model as _Model
 from .components.prediction import Prediction as _Prediction
+from .components.progress_status import ProgressStatus as _ProgressStatus
 from .components.user import User as _User
-from .components.api_key import APIKey as _APIKey
-
 
 Client = _Client
 DataSource = _DataSource

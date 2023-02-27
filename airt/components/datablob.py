@@ -8,31 +8,30 @@ from typing import *
 
 # %% ../../notebooks/API_DataBlob.ipynb 5
 import os
-import requests
 from contextlib import contextmanager
-
-import pandas as pd
-from fastcore.foundation import patch
 from datetime import datetime, timedelta
 from pathlib import Path
-from tqdm import tqdm
 
-from airt.logger import get_logger, set_level
-from airt.helper import (
-    get_data,
-    post_data,
-    delete_data,
-    add_ready_column,
-    generate_df,
-    get_values_from_item,
-    get_attributes_from_instances,
-    add_example_to_docs,
-)
+import pandas as pd
+import requests
+from fastcore.foundation import patch
+from tqdm import tqdm
 
 from airt.components.client import Client
 from airt.components.datasource import DataSource
 from airt.components.progress_status import ProgressStatus
-from airt.constant import CLIENT_DB_USERNAME, CLIENT_DB_PASSWORD
+from airt.constant import CLIENT_DB_PASSWORD, CLIENT_DB_USERNAME
+from airt.helper import (
+    add_example_to_docs,
+    add_ready_column,
+    delete_data,
+    generate_df,
+    get_attributes_from_instances,
+    get_data,
+    get_values_from_item,
+    post_data,
+)
+from airt.logger import get_logger, set_level
 
 # %% ../../notebooks/API_DataBlob.ipynb 7
 logger = get_logger(__name__)

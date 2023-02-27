@@ -4,16 +4,14 @@
 __all__ = ['run_examples_from_docstring']
 
 # %% ../../notebooks/Docstring_helpers.ipynb 3
-from typing import *
-import sys
 import os
-
 import re
-
+import sys
 import textwrap
-from subprocess import run, CalledProcessError  # nosec: B404
-from tempfile import TemporaryDirectory
 from pathlib import Path
+from subprocess import CalledProcessError, run  # nosec: B404
+from tempfile import TemporaryDirectory
+from typing import *
 
 from rich import print
 from rich.console import Group
@@ -99,7 +97,7 @@ def run_examples_from_docstring(
     supress_stdout: bool = False,
     supress_stderr: bool = False,
     sub_dict: Optional[Dict[str, str]] = None,
-    **kwargs
+    **kwargs,
 ):
     """Runs example from a docstring
 
