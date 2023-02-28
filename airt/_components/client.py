@@ -17,15 +17,15 @@ import pandas as pd
 from fastcore.foundation import patch
 
 import airt
-from airt.constant import (
+from airt._constant import (
     CLIENT_NAME,
     SERVER_URL,
     SERVICE_PASSWORD,
     SERVICE_TOKEN,
     SERVICE_USERNAME,
 )
-from airt.helper import delete_data, get_base_url, get_data, post_data
-from airt.logger import get_logger, set_level
+from airt._helper import delete_data, get_base_url, get_data, post_data
+from airt._logger import get_logger, set_level
 
 # %% ../../notebooks/API_Client.ipynb 7
 logger = get_logger(__name__)

@@ -13,8 +13,8 @@ from time import sleep
 from fastcore.foundation import patch
 from tqdm import tqdm
 
-from airt.components.client import Client
-from airt.logger import get_logger, set_level
+from airt._components.client import Client
+from airt._logger import get_logger, set_level
 
 # %% ../../notebooks/API_ProgressStatus.ipynb 6
 logger = get_logger(__name__)

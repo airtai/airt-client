@@ -14,8 +14,8 @@ import typer
 from tabulate import tabulate
 from typer import echo
 
-from airt.cli import helper
-from airt.logger import get_logger, set_level
+from airt._cli import helper
+from airt._logger import get_logger, set_level
 
 # %% ../../notebooks/CLI_Model.ipynb 6
 app = typer.Typer(

@@ -14,7 +14,7 @@ from typing import *
 import IPython
 from fastcore.utils import patch
 
-from .logger import get_logger
+from ._logger import get_logger
 
 # %% ../notebooks/Sanitize_Secrets.ipynb 9
 def sanitize_secrets(s: str) -> str:

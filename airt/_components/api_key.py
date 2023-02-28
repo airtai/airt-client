@@ -13,9 +13,9 @@ from datetime import date, datetime, timedelta
 import pandas as pd
 from fastcore.foundation import patch
 
-from airt.components.client import Client
-from airt.components.user import User
-from airt.helper import (
+from airt._components.client import Client
+from airt._components.user import User
+from airt._helper import (
     check_and_append_otp_query_param,
     delete_data,
     generate_df,
@@ -23,7 +23,7 @@ from airt.helper import (
     get_data,
     post_data,
 )
-from airt.logger import get_logger, set_level
+from airt._logger import get_logger, set_level
 
 # %% ../../notebooks/API_Keys.ipynb 7
 logger = get_logger(__name__)
