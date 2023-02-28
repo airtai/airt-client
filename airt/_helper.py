@@ -15,7 +15,7 @@ from types import MethodType
 import pandas as pd
 import requests
 
-from airt.constant import PROD_URL, SERVER_URL
+from airt._constant import PROD_URL, SERVER_URL
 
 # %% ../notebooks/API_Helper.ipynb 5
 def ensure_is_instance(o: Any, cls: Type):

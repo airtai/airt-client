@@ -10,10 +10,10 @@ from typing import *
 # %% ../../notebooks/CLI.ipynb 4
 import typer
 
-from airt.cli import api_key, db, ds, model, pred, user
-from airt.cli.token import token
-from airt.cli.version import version
-from airt.logger import get_logger, set_level
+from airt._cli import api_key, db, ds, model, pred, user
+from airt._cli.token import token
+from airt._cli.version import version
+from airt._logger import get_logger, set_level
 
 # %% ../../notebooks/CLI.ipynb 6
 logger = get_logger(__name__)

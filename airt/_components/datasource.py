@@ -15,10 +15,10 @@ import pandas as pd
 import requests
 from fastcore.foundation import patch
 
-from airt.components.client import Client
-from airt.components.model import Model
-from airt.components.progress_status import ProgressStatus
-from airt.helper import (
+from airt._components.client import Client
+from airt._components.model import Model
+from airt._components.progress_status import ProgressStatus
+from airt._helper import (
     add_example_to_docs,
     add_ready_column,
     delete_data,
@@ -28,7 +28,7 @@ from airt.helper import (
     get_values_from_item,
     post_data,
 )
-from airt.logger import get_logger, set_level
+from airt._logger import get_logger, set_level
 
 # %% ../../notebooks/API_DataSource.ipynb 7
 logger = get_logger(__name__)
