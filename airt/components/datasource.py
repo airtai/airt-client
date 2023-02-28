@@ -8,29 +8,27 @@ from typing import *
 
 # %% ../../notebooks/API_DataSource.ipynb 5
 import os
-
-import pandas as pd
-from fastcore.foundation import patch
 from datetime import datetime, timedelta
 from pathlib import Path
+
+import pandas as pd
 import requests
-
-from airt.logger import get_logger, set_level
-from airt.helper import (
-    get_data,
-    post_data,
-    delete_data,
-    add_ready_column,
-    get_values_from_item,
-    generate_df,
-    dict_to_df,
-    add_example_to_docs,
-)
-
+from fastcore.foundation import patch
 
 from airt.components.client import Client
-from airt.components.progress_status import ProgressStatus
 from airt.components.model import Model
+from airt.components.progress_status import ProgressStatus
+from airt.helper import (
+    add_example_to_docs,
+    add_ready_column,
+    delete_data,
+    dict_to_df,
+    generate_df,
+    get_data,
+    get_values_from_item,
+    post_data,
+)
+from airt.logger import get_logger, set_level
 
 # %% ../../notebooks/API_DataSource.ipynb 7
 logger = get_logger(__name__)

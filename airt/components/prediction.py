@@ -8,28 +8,27 @@ from typing import *
 
 # %% ../../notebooks/API_Prediction.ipynb 5
 import os
-import requests
-
+import textwrap
 from pathlib import Path
+
 import pandas as pd
+import requests
 from fastcore.foundation import patch
 from tqdm import tqdm
-import textwrap
-
-from airt.logger import get_logger, set_level
-from airt.helper import (
-    get_data,
-    post_data,
-    delete_data,
-    add_ready_column,
-    generate_df,
-    get_attributes_from_instances,
-    add_example_to_docs,
-)
 
 from airt.components.client import Client
 from airt.components.progress_status import ProgressStatus
-from airt.constant import CLIENT_DB_USERNAME, CLIENT_DB_PASSWORD
+from airt.constant import CLIENT_DB_PASSWORD, CLIENT_DB_USERNAME
+from airt.helper import (
+    add_example_to_docs,
+    add_ready_column,
+    delete_data,
+    generate_df,
+    get_attributes_from_instances,
+    get_data,
+    post_data,
+)
+from airt.logger import get_logger, set_level
 
 # %% ../../notebooks/API_Prediction.ipynb 7
 logger = get_logger(__name__)

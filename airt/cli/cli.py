@@ -4,13 +4,13 @@
 __all__ = ['logger', 'app']
 
 # %% ../../notebooks/CLI.ipynb 3
-from typing import *
 import logging
+from typing import *
 
 # %% ../../notebooks/CLI.ipynb 4
 import typer
 
-from airt.cli import ds, db, model, pred, user, api_key
+from airt.cli import api_key, db, ds, model, pred, user
 from airt.cli.token import token
 from airt.cli.version import version
 from airt.logger import get_logger, set_level

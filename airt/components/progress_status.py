@@ -7,12 +7,11 @@ __all__ = ['ProgressStatus']
 from typing import *
 
 # %% ../../notebooks/API_ProgressStatus.ipynb 4
-from time import sleep
 from datetime import datetime, timedelta
-
-from tqdm import tqdm
+from time import sleep
 
 from fastcore.foundation import patch
+from tqdm import tqdm
 
 from airt.components.client import Client
 from airt.logger import get_logger, set_level

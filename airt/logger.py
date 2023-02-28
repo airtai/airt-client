@@ -4,11 +4,12 @@
 __all__ = ['should_supress_timestamps', 'supress_timestamps', 'get_logger', 'set_level']
 
 # %% ../notebooks/Logger.ipynb 2
-from typing import *
 import logging
+from typing import *
 
 # %% ../notebooks/Logger.ipynb 3
 import logging.config
+
 from typer import echo
 
 # %% ../notebooks/Logger.ipynb 4

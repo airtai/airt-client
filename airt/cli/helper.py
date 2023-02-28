@@ -10,20 +10,20 @@ import logging
 from typing import *
 
 # %% ../../notebooks/CLI_Helper.ipynb 4
-import os
-from contextlib import contextmanager
-import functools
 import ast
 import datetime as dt
+import functools
+import os
+from contextlib import contextmanager
 
+import humanize
 import pandas as pd
 import typer
-import humanize
 from tabulate import tabulate
 
 from airt.client import Client, User
+from airt.constant import CLIENT_NAME, SERVER_URL, SERVICE_TOKEN, SERVICE_USERNAME
 from airt.logger import get_logger, set_level
-from airt.constant import SERVER_URL, CLIENT_NAME, SERVICE_TOKEN, SERVICE_USERNAME
 
 # %% ../../notebooks/CLI_Helper.ipynb 6
 logger = get_logger(__name__)
