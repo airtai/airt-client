@@ -8,7 +8,7 @@ def activated() -> bool:
     return True
 
 # %% ../../notebooks/ActivateTestingEnvironment.ipynb 3
-from airt.logger import get_logger, set_level, supress_timestamps  # type: ignore
+from airt._logger import get_logger, set_level, supress_timestamps  # type: ignore
 
 supress_timestamps()
 

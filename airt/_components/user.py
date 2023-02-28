@@ -14,8 +14,8 @@ import qrcode
 from fastcore.foundation import patch
 from qrcode.image.pil import PilImage
 
-from airt.components.client import Client
-from airt.helper import (
+from airt._components.client import Client
+from airt._helper import (
     check_and_append_otp_query_param,
     delete_data,
     generate_df,
@@ -24,7 +24,7 @@ from airt.helper import (
     post_data,
     standardize_phone_number,
 )
-from airt.logger import get_logger, set_level
+from airt._logger import get_logger, set_level
 
 # %% ../../notebooks/API_User.ipynb 7
 logger = get_logger(__name__)

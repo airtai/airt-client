@@ -22,8 +22,8 @@ import typer
 from tabulate import tabulate
 
 from airt.client import Client, User
-from airt.constant import CLIENT_NAME, SERVER_URL, SERVICE_TOKEN, SERVICE_USERNAME
-from airt.logger import get_logger, set_level
+from airt._constant import CLIENT_NAME, SERVER_URL, SERVICE_TOKEN, SERVICE_USERNAME
+from airt._logger import get_logger, set_level
 
 # %% ../../notebooks/CLI_Helper.ipynb 6
 logger = get_logger(__name__)
