@@ -13,8 +13,8 @@ import pandas as pd
 import typer
 from tabulate import tabulate
 
-from airt.client import Client
 from airt._logger import get_logger, set_level
+from airt.client import Client
 
 # %% ../../notebooks/CLI_Version.ipynb 6
 app = typer.Typer()

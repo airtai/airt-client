@@ -17,9 +17,9 @@ from tabulate import tabulate
 from typer import echo
 
 from airt._cli import helper
-from airt.client import Client
 from airt._constant import CLIENT_DB_PASSWORD, CLIENT_DB_USERNAME
 from airt._logger import get_logger, set_level
+from airt.client import Client
 
 # %% ../../notebooks/CLI_DataBlob.ipynb 6
 app = typer.Typer(
