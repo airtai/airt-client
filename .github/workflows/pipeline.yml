@@ -43,12 +43,13 @@ jobs:
 
   detect_secrets:
     runs-on: ubuntu-22.04
+    container:
+      image: ghcr.io/airtai/airt-service-dev:latest
     steps:
       - uses: actions/checkout@v3
       # This is to fix GIT not liking owner of the checkout dir - https://github.com/actions/runner/issues/2033#issuecomment-1204205989
       - run: chown -R $(id -u):$(id -g) $PWD
       - run: echo "PATH=$PATH:/root/.local/bin" >> $GITHUB_ENV
-      - run: sudo apt update && sudo apt install -y build-essential python3-dev python3-pip default-libmysqlclient-dev git
       - run: pip install -e ".[dev]"
       - run: make detect_secrets
 
