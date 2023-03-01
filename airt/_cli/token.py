@@ -15,7 +15,6 @@ from datetime import datetime, timedelta
 import typer
 
 from airt._cli import helper
-from airt.client import Client, User
 from airt._constant import (
     CLIENT_NAME,
     SERVER_URL,
@@ -24,6 +23,7 @@ from airt._constant import (
     SERVICE_USERNAME,
 )
 from airt._logger import get_logger, set_level
+from airt.client import Client, User
 
 # %% ../../notebooks/CLI_Token.ipynb 6
 SESSION_TIME_LIMIT = 10  # mins

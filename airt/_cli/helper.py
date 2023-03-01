@@ -21,9 +21,9 @@ import pandas as pd
 import typer
 from tabulate import tabulate
 
-from airt.client import Client, User
 from airt._constant import CLIENT_NAME, SERVER_URL, SERVICE_TOKEN, SERVICE_USERNAME
 from airt._logger import get_logger, set_level
+from airt.client import Client, User
 
 # %% ../../notebooks/CLI_Helper.ipynb 6
 logger = get_logger(__name__)
@@ -42,7 +42,6 @@ def requires_auth_token(func):
     @functools.wraps(func)
     def wrapper_decorator(*args, **kwargs):
         try:
-
             if ("debug" in kwargs) and kwargs["debug"]:
                 set_level(logging.DEBUG)
             else:
@@ -216,7 +215,6 @@ def display_formated_table(func):
 
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
-
         # Do something before
         result_dict = func(*args, **kwargs)
         # Do something after
