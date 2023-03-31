@@ -134,9 +134,6 @@ jobs:
             pip install -Uq nbdev
             nbdev_install_quarto
           fi
-          if [[ ${{ github.repository }} != "airtai/nbdev-mkdocs" ]]; then
-            pip install nbdev-mkdocs
-          fi
           test -f setup.py && pip install -e ".[dev]"
       - name: Build nbdev docs
         shell: bash
@@ -145,10 +142,20 @@ jobs:
       - name: Build mkdocs docs
         shell: bash
         run: nbdev_mkdocs docs
+      - name: Read docs_versioning value from settings.ini
+        shell: bash
+        run: |
+          docs_versioning=$( { grep '^docs_versioning[[:space:]]*=' settings.ini || [[ $? == 1 ]]; } | awk -F = '{print $2}' | xargs)
+          if ! [[ "$docs_versioning" =~ ^(None|minor|patch|)$ ]]; then
+            echo "Error: Invalid value set for 'docs_versioning' in settings.ini file: $docs_versioning. Allowed values are None, minor and patch." >&2
+            exit 1
+          fi        
+          echo "DOCS_VERSIONING=$docs_versioning" >> $GITHUB_ENV
       - name: Enable GitHub Pages
         shell: bash
         run: python3 -c 'import ghapi.core,nbdev.config,sys; api = ghapi.core.GhApi(owner=nbdev.config.get_config().user, repo=nbdev.config.get_config().repo, token="${{secrets.GITHUB_TOKEN}}"); api.enable_pages(branch="gh-pages")'
       - name: Deploy to GitHub Pages
+        if: ${{ env.DOCS_VERSIONING == '' || env.DOCS_VERSIONING == 'None' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -158,3 +165,26 @@ jobs:
           # You can swap them out with your own user credentials.
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
+      - name: Deploy to GitHub Pages using mike
+        if: ${{ env.DOCS_VERSIONING != '' && env.DOCS_VERSIONING != 'None' }}
+        shell: bash
+        run: |
+          git fetch origin gh-pages --depth=1
+          git config user.name github-bot
+          git config user.email github-bot@@users.noreply.github.com
+          
+          project_version=$(grep '^version[[:space:]]*=' settings.ini | awk -F = '{print $2}' | xargs)
+          doc_deployment_version="$project_version"
+          doc_deployment_tag="dev"
+          
+          pat="^[0-9]+([.][0-9]+)*$"
+          if [[ $project_version =~ $pat ]]; then
+            doc_deployment_tag="latest"
+            if [[ $DOCS_VERSIONING == "minor" ]]; then
+              doc_deployment_version="$(echo "$project_version" | sed 's/\.[^.]*$//')"
+            fi
+          fi
+          
+          echo "mike deploy --config-file mkdocs/mkdocs.yml --update-aliases $doc_deployment_version $doc_deployment_tag"
+          mike deploy --config-file mkdocs/mkdocs.yml --update-aliases $doc_deployment_version $doc_deployment_tag
+          mike set-default --push --config-file mkdocs/mkdocs.yml latest || mike set-default --push --config-file mkdocs/mkdocs.yml dev
