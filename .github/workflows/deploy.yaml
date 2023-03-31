@@ -2,7 +2,7 @@ name: Deploy nbdev-mkdocs generated documentation to GitHub Pages
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "main", "master", "fix-failing-docs" ]
   workflow_dispatch:
 jobs:
   deploy:
@@ -113,7 +113,7 @@ jobs:
       - uses: actions/checkout@v3
       - run: chown -R $(id -u):$(id -g) $PWD
       - run: echo "PATH=$PATH:$HOME/.local/bin" >> $GITHUB_ENV
-      - run: sleep 300
+      - run: sleep 600
       # - run: pip install -e ".[dev]"
 
       - name: Install Dependencies
