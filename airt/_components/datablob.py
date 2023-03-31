@@ -1066,7 +1066,6 @@ def set_default_cloud_provider(
 def _get_default_provider_and_regions(
     cls: DataBlob,
 ) -> Tuple[Optional[str], Optional[str]]:
-
     if len(cls._default_provider_and_regions) == 0:
         return None, None
 
@@ -1082,7 +1081,6 @@ def _get_cloud_provider_and_region(
     set_source_region: Optional[bool] = False,
     default_cloud_provider: str = "aws",
 ) -> Tuple[str, Optional[str]]:
-
     if (cloud_provider is None) and (region is not None):
         raise ValueError(
             "You must specify a cloud_provider if are specifying a region."

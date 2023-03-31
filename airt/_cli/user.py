@@ -17,9 +17,9 @@ from tabulate import tabulate
 from typer import echo
 
 from airt._cli import helper
-from airt.client import Client
 from airt._constant import SERVICE_PASSWORD
 from airt._logger import get_logger, set_level
+from airt.client import Client
 
 # %% ../../notebooks/CLI_User.ipynb 6
 app = typer.Typer(
@@ -554,7 +554,6 @@ def reset_password(
         typer.echo(f"\n{status}")
 
         if os.environ.get(SERVICE_PASSWORD) is not None:
-
             typer.echo(
                 f"\nPlease don't forget to set the updated password in the `{SERVICE_PASSWORD}` environment variable"
             )
@@ -594,7 +593,6 @@ def enable(
     typer.echo(qr.print_ascii())
 
     for i in range(3):
-
         try:
             activation_otp = typer.prompt(
                 "Please enter the OTP displayed in the authenticator app"

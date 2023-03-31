@@ -10,35 +10,38 @@ services:
         environment:
             MYSQL_DATABASE: $DB_DATABASE
             MYSQL_ROOT_PASSWORD: $DB_PASSWORD
-    zookeeper:
-        image: wurstmeister/zookeeper
-        profiles: ["dev"]
-        hostname: $USER-zookeeper
-        container_name: $USER-zookeeper
 
-    kafka:
-        image: wurstmeister/kafka
+    redpanda:
+        image: docker.redpanda.com/redpandadata/redpanda:v23.1.2
+        container_name: $USER-redpanda
         profiles: ["dev"]
-        deploy:
-            replicas: 3
-        environment:
-            HOSTNAME_COMMAND: "docker info | grep ^Name: | cut -d' ' -f 2"
-            KAFKA_ZOOKEEPER_CONNECT: "${USER}-zookeeper:2181"
-            KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTER:PLAINTEXT
-            KAFKA_ADVERTISED_LISTENERS: INTER://_{HOSTNAME_COMMAND}:9092
-            KAFKA_LISTENERS: INTER://_{HOSTNAME_COMMAND}:9092
-            KAFKA_INTER_BROKER_LISTENER_NAME: INTER
-            KAFKA_CREATE_TOPICS: >-
-              training_request:${NUM_PARTITIONS:-6}:${REPLICATION_FACTOR:-3},
-              training_status:${NUM_PARTITIONS:-6}:${REPLICATION_FACTOR:-3},
-              prediction_request:${NUM_PARTITIONS:-6}:${REPLICATION_FACTOR:-3},
-              prediction_status:${NUM_PARTITIONS:-6}:${REPLICATION_FACTOR:-3}
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-        depends_on:
-            - zookeeper
-        healthcheck:
-            test: [ "CMD", "kafka-topics.sh", "--list", "--zookeeper", "${USER}-zookeeper:2181" ]
-            interval: 5s
-            timeout: 10s
-            retries: 5
+        command:
+            - redpanda
+            - start
+            - --kafka-addr internal://0.0.0.0:9092,external://0.0.0.0:19092
+            # Address the broker advertises to clients that connect to the Kafka API.
+            # Use the internal addresses to connect to the Redpanda brokers'
+            # from inside the same Docker network.
+            # Use the external addresses to connect to the Redpanda brokers'
+            # from outside the Docker network.
+            - --advertise-kafka-addr internal://redpanda:9092,external://localhost:19092
+            - --pandaproxy-addr internal://0.0.0.0:8082,external://0.0.0.0:18082
+            # Address the broker advertises to clients that connect to the HTTP Proxy.
+            - --advertise-pandaproxy-addr internal://redpanda-0:8082,external://localhost:18082
+            - --schema-registry-addr internal://0.0.0.0:8081,external://0.0.0.0:18081
+            # Redpanda brokers use the RPC API to communicate with eachother internally.
+            - --rpc-addr redpanda:33145
+            - --advertise-rpc-addr redpanda:33145
+            # Tells Seastar (the framework Redpanda uses under the hood) to use 1 core on the system.
+            - --smp 1
+            # The amount of memory to make available to Redpanda.
+            - --memory 1G
+            # Mode dev-container uses well-known configuration properties for development in containers.
+            - --mode dev-container
+            # enable logs for debugging.
+            - --default-log-level=debug
+        ports:
+            - 18081:18081
+            - 18082:18082
+            - 19092:19092
+            - 19644:9644

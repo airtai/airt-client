@@ -15,9 +15,9 @@ from tabulate import tabulate
 from typer import echo
 
 from airt._cli import helper
-from airt.client import Client
 from airt._constant import CLIENT_NAME, SERVICE_TOKEN
 from airt._logger import get_logger, set_level
+from airt.client import Client
 
 # %% ../../notebooks/CLI_Key.ipynb 7
 app = typer.Typer(

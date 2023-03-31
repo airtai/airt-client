@@ -79,7 +79,6 @@ def get_logger(name: str) -> logging.Logger:
 
 # %% ../notebooks/Logger.ipynb 9
 def set_level(level: int):
-
     # Getting all loggers that has either airt or __main__ in the name
     loggers = [
         logging.getLogger(name)
