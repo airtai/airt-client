@@ -138,6 +138,7 @@ jobs:
           INFOBIP_SENDER_ID: ${{ secrets.CI_INFOBIP_SENDER_ID }}
           KAFKA_HOSTNAME: kafka
           KAFKA_PORT: 9092
+          NUM_WORKERS: 1
         ports:
           - 8080:8080
           - 6006:6006
