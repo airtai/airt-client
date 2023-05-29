@@ -30,6 +30,7 @@ from airt._helper import (
     get_data,
     get_values_from_item,
     post_data,
+    export,
 )
 from airt._logger import get_logger, set_level
 
@@ -41,6 +42,7 @@ DEFAULT_AZURE_BLOB_STORAGE_REGION = "westeurope"
 DEFAULT_S3_REGION = "eu-west-1"
 
 # %% ../../notebooks/API_DataBlob.ipynb 11
+@export("airt.client")
 class DataBlob:
     """A class for importing and processing data from sources such as CSV/parquet files, databases, AWS S3 buckets, and Azure Blob Storage.
 

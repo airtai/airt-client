@@ -27,6 +27,7 @@ from airt._helper import (
     get_attributes_from_instances,
     get_data,
     post_data,
+    export,
 )
 from airt._logger import get_logger, set_level
 
@@ -34,6 +35,7 @@ from airt._logger import get_logger, set_level
 logger = get_logger(__name__)
 
 # %% ../../notebooks/API_Prediction.ipynb 10
+@export("airt.client")
 class Prediction(ProgressStatus):
     """A class to manage and download the predictions.
 

@@ -23,6 +23,7 @@ from airt._helper import (
     get_data,
     post_data,
     standardize_phone_number,
+    export,
 )
 from airt._logger import get_logger, set_level
 
@@ -30,6 +31,7 @@ from airt._logger import get_logger, set_level
 logger = get_logger(__name__)
 
 # %% ../../notebooks/API_User.ipynb 10
+@export("airt.client")
 class User:
     """A class for creating, managing, and updating users on the server.
 

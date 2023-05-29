@@ -24,7 +24,7 @@ from airt._constant import (
     SERVICE_TOKEN,
     SERVICE_USERNAME,
 )
-from airt._helper import delete_data, get_base_url, get_data, post_data
+from airt._helper import delete_data, get_base_url, get_data, post_data, export
 from airt._logger import get_logger, set_level
 
 # %% ../../notebooks/API_Client.ipynb 7
@@ -73,6 +73,7 @@ def _get_credentials(
     return (username, password)
 
 # %% ../../notebooks/API_Client.ipynb 15
+@export("airt.client")
 class Client:
     """A class for authenticating and accessing the airt service.
 

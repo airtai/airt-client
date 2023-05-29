@@ -27,6 +27,7 @@ from airt._helper import (
     get_data,
     get_values_from_item,
     post_data,
+    export,
 )
 from airt._logger import get_logger, set_level
 
@@ -34,6 +35,7 @@ from airt._logger import get_logger, set_level
 logger = get_logger(__name__)
 
 # %% ../../notebooks/API_DataSource.ipynb 10
+@export("airt.client")
 class DataSource:
     """A class for managing datasources and training ML models on them.
 
