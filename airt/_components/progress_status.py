@@ -16,10 +16,13 @@ from tqdm import tqdm
 from airt._components.client import Client
 from airt._logger import get_logger, set_level
 
+from airt._helper import export
+
 # %% ../../notebooks/API_ProgressStatus.ipynb 6
 logger = get_logger(__name__)
 
 # %% ../../notebooks/API_ProgressStatus.ipynb 9
+@export("airt.client")
 class ProgressStatus:
     """A base class for querying status of a remote operation.
 
