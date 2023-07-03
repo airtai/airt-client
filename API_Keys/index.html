@@ -1,0 +1,1634 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python client for airt-service">
+      
+      
+        <meta name="author" content="airt.ai">
+      
+      
+        <link rel="canonical" href="https://airtai.github.io/airt-client/API_Keys/">
+      
+      
+      
+      <link rel="icon" href="../overrides/images/airt_icon_blue.svg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>API_Keys - airt</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../overrides/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-H6EV08GRK5"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-H6EV08GRK5",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-H6EV08GRK5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+  
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="airt - API_Keys" />
+  <meta property="og:description" content="Python client for airt-service" />
+  <meta property="og:url" content="https://airtai.github.io/airt-client/API_Keys/" />
+  <meta property="og:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="airt - API_Keys" />
+  <meta name="twitter:description" content="Python client for airt-service" />
+  <meta name="twitter:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api_keys" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="airt" class="md-header__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            airt
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API_Keys
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="airt" class="md-nav__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    airt
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Python client for airt service
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial/" class="md-nav__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_api_docs/airt/client/" class="md-nav__link">
+        airt.client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_cli_docs/airt/" class="md-nav__link">
+        airt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apikey" class="md-nav__link">
+    APIKey
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="api_keys">API_Keys<a class="headerlink" href="#api_keys" title="Permanent link">¤</a></h1>
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+
+<p>Note:</p>
+<p>While writing doc strings, please use the below syntax for linking
+methods/classes. So that the methods/classes gets highlighted in the
+browser and clicking on it will take the user to the linked function</p>
+<div class="highlight"><pre><span></span><code>- To link a method from the class same file please use the `method_name` format.
+- To link a method from a different Class (can in a seperate file also) please use `Classname.method_name` format.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">airt._testing</span> <span class="kn">import</span> <span class="n">activate_by_import</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[INFO] airt.testing.activate_by_import: Testing environment activated.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">string</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">import</span> <span class="nn">airt._sanitizer</span>
+<span class="kn">from</span> <span class="nn">airt._constant</span> <span class="kn">import</span> <span class="n">SERVICE_PASSWORD</span><span class="p">,</span> <span class="n">SERVICE_USERNAME</span>
+<span class="kn">from</span> <span class="nn">airt._docstring.helpers</span> <span class="kn">import</span> <span class="n">run_examples_from_docstring</span>
+<span class="kn">from</span> <span class="nn">airt.client</span> <span class="kn">import</span> <span class="n">User</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">display</span><span class="p">(</span><span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">())</span>
+<span class="k">assert</span> <span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">()</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;This is a debug message&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;This is an info&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;This is a warning&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;This is an error&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>20
+
+[INFO] __main__: This is an info
+[WARNING] __main__: This is a warning
+[ERROR] __main__: This is an error
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">RANDOM_UUID_FOR_TESTING</span> <span class="o">=</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mask</span><span class="p">(</span><span class="n">s</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+
+<span class="k">assert</span> <span class="n">mask</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;****&quot;</span>
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/api_key.py#L32"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="apikey">APIKey<a class="headerlink" href="#apikey" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> APIKey (uuid:str, name:Optional[str]=None, expiry:Optional[str]=None,
+         disabled:Optional[bool]=None, created:Optional[str]=None)
+</code></pre></div>
+</blockquote>
+<p>A class for managing the APIKeys in the server.</p>
+<p>Both the APIKey and the token can be used for accessing the airt
+services. However, there is a slight difference in generating and
+managing the two.</p>
+<p>For generating the APIKey, you first need to get the developer token.
+Please refer to
+<a href="https://airtai.github.io/airt-client/api_client.html#client.get_token"><code>Client.get_token</code></a>
+method documentation to generate one.</p>
+<p>After logging in with your developer token, you can create any number of
+new APIKeys and can set an expiration date individually. You can also
+access other methods available in the APIKey class to list, revoke the
+APIKey at any time.</p>
+<p>Here’s an example of how to use the APIKey class to create a new key and
+use it to access the airt service.</p>
+<p>Example: ```python # Importing necessary libraries from airt.client
+import Client, APIKey, User</p>
+<div class="highlight"><pre><span></span><code># Authenticate
+Client.get_token(username=&quot;{fill in username}&quot;, password=&quot;{fill in password}&quot;)
+
+# Create a new key with the given name
+key_name = &quot;{fill in key_name}&quot;
+new_key = APIKey.create(name=key_name)
+
+# Display the details of the newly created key
+print(APIKey.details(apikey=key_name))
+
+# Call the set_token method to set the newly generated key
+Client.set_token(token=new_key[&quot;access_token&quot;])
+
+# Print the logged-in user details
+# If set_token fails, the line below will throw an error.
+print(User.details())
+```
+</code></pre></div>
+<p>``` python</p>
+<h1 id="tests-for-_get_key_names">tests for _get_key_names<a class="headerlink" href="#tests-for-_get_key_names" title="Permanent link">¤</a></h1>
+<p>_input = "key_name"
+expected = "key_name"
+actual = APIKey._get_key_names(_input)
+display(actual)</p>
+<p>_input = ["key_name_1", "key_name_2", "key_name_3"]
+expected = ["key_name_1", "key_name_2", "key_name_3"]
+actual = APIKey._get_key_names(_input)
+display(actual)</p>
+<p>class T:
+    name = "key_name"</p>
+<p>_input = [T(), T(), T()]
+expected = ["key_name", "key_name", "key_name"]
+actual = APIKey._get_key_names(_input)
+display(actual)
+<div class="highlight"><pre><span></span><code>    [&#39;key_name&#39;]
+
+    [&#39;key_name_1&#39;, &#39;key_name_2&#39;, &#39;key_name_3&#39;]
+
+    [&#39;key_name&#39;, &#39;key_name&#39;, &#39;key_name&#39;]
+
+``` python
+def generate_random_name(size=15, chars=string.ascii_uppercase + string.digits):
+    return &quot;&quot;.join(random.choice(chars) for _ in range(size))
+
+
+assert len(generate_random_name()) == 15
+assert type(generate_random_name()) == str
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run example for APIKey</span>
+
+<span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_USERNAME</span><span class="p">]</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_PASSWORD</span><span class="p">]</span>
+
+<span class="n">run_examples_from_docstring</span><span class="p">(</span>
+    <span class="n">APIKey</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">key_name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">(),</span>
+<span class="p">)</span>
+</code></pre></div>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Example:                                                                                                        │
+│                                                                                                                 │
+│     # Importing necessary libraries                                                                             │
+│     from  airt.client import Client, APIKey, User                                                               │
+│                                                                                                                 │
+│     # Authenticate                                                                                              │
+│     Client.get_token(username="{fill in username}", password="{fill in password}")                              │
+│                                                                                                                 │
+│     # Create a new key with the given name                                                                      │
+│     key_name = "{fill in key_name}"                                                                             │
+│     new_key = APIKey.create(name=key_name)                                                                      │
+│                                                                                                                 │
+│     # Display the details of the newly created key                                                              │
+│     print(APIKey.details(apikey=key_name))                                                                      │
+│                                                                                                                 │
+│     # Call the set_token method to set the newly generated key                                                  │
+│     Client.set_token(token=new_key["access_token"])                                                             │
+│                                                                                                                 │
+│     # Print the logged-in user details                                                                          │
+│     # If set_token fails, the line below will throw an error.                                                   │
+│     print(User.details())                                                                                       │
+│                                                                                                                 │
+│ ╭────────────────────────────────────────────────── stdout ───────────────────────────────────────────────────╮ │
+│ │                                    uuid             name  ... expiry disabled                               │ │
+│ │ 0  5fd74b8e-b4a0-4055-a2e2-1b8192733d63  I1LMY6MZAH7CGPS  ...   None    False                               │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 5 columns]                                                                                        │ │
+│ │ {'username': 'johndoe', 'first_name': 'John', 'last_name': 'Doe', 'email': 'johndoe@airt.ai',               │ │
+│ │ 'subscription_type': 'small', 'super_user': False, 'phone_number': None, 'uuid':                            │ │
+│ │ '06a385d1-66a1-4ffc-8306-7f5821902fcc', 'disabled': False, 'created': '2022-11-02T08:17:09',                │ │
+│ │ 'is_phone_number_verified': False, 'is_mfa_active': False}                                                  │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│ ╭────────────────────────────────────────────────── stderr ───────────────────────────────────────────────────╮ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Run example for APIKey.create</span>
+
+<span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_USERNAME</span><span class="p">]</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_PASSWORD</span><span class="p">]</span>
+
+<span class="n">run_examples_from_docstring</span><span class="p">(</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">key_name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">(),</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&lt;module&gt;:13: No type or annotation for parameter &#39;name&#39;
+&lt;module&gt;:14: No type or annotation for parameter &#39;expiry&#39;
+&lt;module&gt;:17: No type or annotation for parameter &#39;otp&#39;
+&lt;module&gt;:21: No type or annotation for returned value 1
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+</code></pre></div>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Example:                                                                                                        │
+│                                                                                                                 │
+│     # Importing necessary libraries                                                                             │
+│     from  airt.client import Client, APIKey                                                                     │
+│                                                                                                                 │
+│     # Authenticate                                                                                              │
+│     Client.get_token(username="{fill in username}", password="{fill in password}")                              │
+│                                                                                                                 │
+│     # Create a key with the given name and set the expiry to 10 days from now.                                  │
+│     # If the expiry parameter is not specified, a key with no expiry date is created.                           │
+│     key_name = "{fill in key_name}"                                                                             │
+│     new_key_details = APIKey.create(name=key_name, expiry=10)                                                   │
+│                                                                                                                 │
+│     # Display the details of the newly created key                                                              │
+│     print(APIKey.details(apikey=key_name))                                                                      │
+│                                                                                                                 │
+│     # If a new key with the same name is created, an exception will be raised.                                  │
+│     # However, you can create a new key with the name of a revoked key.                                         │
+│     try:                                                                                                        │
+│         APIKey.create(name=key_name, expiry=10)                                                                 │
+│         print("Should not print this, the above line should raise an exception")                                │
+│         raise RuntimeException()                                                                                │
+│                                                                                                                 │
+│     except ValueError as e:                                                                                     │
+│         print("Expected to fail, everything is fine")                                                           │
+│                                                                                                                 │
+│     # Finally, either call the below method to set the newly generated key                                      │
+│     # or store it in the AIRT_SERVICE_TOKEN environment variable.                                               │
+│     Client.set_token(token=new_key_details["access_token"])                                                     │
+│                                                                                                                 │
+│     # If set_token fails, the line below will throw an error.                                                   │
+│     print(APIKey.details(apikey=key_name))                                                                      │
+│                                                                                                                 │
+│ ╭────────────────────────────────────────────────── stdout ───────────────────────────────────────────────────╮ │
+│ │                                    uuid  ... disabled                                                       │ │
+│ │ 0  653905a5-a385-4510-b207-44868ef29fae  ...    False                                                       │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 5 columns]                                                                                        │ │
+│ │ Expected to fail, everything is fine                                                                        │ │
+│ │                                    uuid  ... disabled                                                       │ │
+│ │ 0  653905a5-a385-4510-b207-44868ef29fae  ...    False                                                       │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 5 columns]                                                                                        │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│ ╭────────────────────────────────────────────────── stderr ───────────────────────────────────────────────────╮ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Run example for APIKey.as_df</span>
+
+<span class="n">run_examples_from_docstring</span><span class="p">(</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">as_df</span><span class="p">,</span> <span class="n">key_name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">(),</span> <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&lt;module&gt;:3: No type or annotation for parameter &#39;ax&#39;
+&lt;module&gt;:6: No type or annotation for returned value 1
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+</code></pre></div>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Example:                                                                                                        │
+│                                                                                                                 │
+│     # Importing necessary libraries                                                                             │
+│     from  airt.client import Client, APIKey                                                                     │
+│                                                                                                                 │
+│     # Authenticate                                                                                              │
+│     Client.get_token(username="{fill in username}", password="{fill in password}")                              │
+│                                                                                                                 │
+│     # Create a key without an expiry date in the given name                                                     │
+│     key_name = "{fill in key_name}"                                                                             │
+│     APIKey.create(name=key_name)                                                                                │
+│                                                                                                                 │
+│     # Display all the APIKey instance details in a pandas dataframe                                             │
+│     df = APIKey.as_df(APIKey.ls())                                                                              │
+│     print(df)                                                                                                   │
+│                                                                                                                 │
+│ ╭────────────────────────────────────────────────── stdout ───────────────────────────────────────────────────╮ │
+│ │                                     uuid  ... disabled                                                      │ │
+│ │ 0   37c644b3-4a18-4689-881e-30ed5b6bd1c7  ...    False                                                      │ │
+│ │ 1   9c0d3637-15d9-4a8f-ab71-8fc188ab4492  ...    False                                                      │ │
+│ │ 2   3d1a2643-440a-4d89-916f-63540b6e9edc  ...    False                                                      │ │
+│ │ 3   5bfcbe9e-0dd8-4475-baf1-360228348353  ...    False                                                      │ │
+│ │ 4   8b58a44a-1bb0-4d91-8753-be392bdbb613  ...    False                                                      │ │
+│ │ 5   2a5759d3-2995-439c-9914-b55579aa9bd8  ...    False                                                      │ │
+│ │ 6   5fe476d8-48c3-4464-b57d-bf4f1109710d  ...    False                                                      │ │
+│ │ 7   b6d27167-38d5-492c-86aa-8920fafcba5c  ...    False                                                      │ │
+│ │ 8   77207e77-5453-4055-a8bf-f3379ea4a1fb  ...    False                                                      │ │
+│ │ 9   2a85864e-74d7-4392-8415-9703454ecce1  ...    False                                                      │ │
+│ │ 10  4e577454-aa0a-4c1e-9fe8-240b03f5cb18  ...    False                                                      │ │
+│ │ 11  7b25cd3b-ea98-4bdd-8336-48104536010d  ...    False                                                      │ │
+│ │ 12  bd66c94f-0033-4506-8353-2785cc6623b2  ...    False                                                      │ │
+│ │ 13  f45edd6a-9eb6-4854-b1a0-064078cd006f  ...    False                                                      │ │
+│ │ 14  55263b34-fbd2-4ebb-87ee-e842acb4e8ed  ...    False                                                      │ │
+│ │ 15  9305ae9b-8cd3-467d-8b5e-bb7a244ae720  ...    False                                                      │ │
+│ │ 16  559391e6-20a7-4603-bd90-47506c5474d1  ...    False                                                      │ │
+│ │ 17  0c9b02cf-a890-43d0-8bb5-d730b92fdadf  ...    False                                                      │ │
+│ │ 18  a27e01d9-fe4a-464f-9a6f-4ec7d99059e5  ...    False                                                      │ │
+│ │ 19  5fd74b8e-b4a0-4055-a2e2-1b8192733d63  ...    False                                                      │ │
+│ │ 20  653905a5-a385-4510-b207-44868ef29fae  ...    False                                                      │ │
+│ │ 21  3877c87d-564b-43eb-b782-4fa726d4c72e  ...    False                                                      │ │
+│ │                                                                                                             │ │
+│ │ [22 rows x 5 columns]                                                                                       │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│ ╭────────────────────────────────────────────────── stderr ───────────────────────────────────────────────────╮ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Run example for APIKey.ls</span>
+
+<span class="n">run_examples_from_docstring</span><span class="p">(</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">,</span> <span class="n">key_name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">(),</span> <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&lt;module&gt;:6: No type or annotation for parameter &#39;user&#39;
+&lt;module&gt;:8: No type or annotation for parameter &#39;offset&#39;
+&lt;module&gt;:9: No type or annotation for parameter &#39;limit&#39;
+&lt;module&gt;:10: No type or annotation for parameter &#39;include_disabled&#39;
+&lt;module&gt;:13: No type or annotation for returned value 1
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+</code></pre></div>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Example:                                                                                                        │
+│                                                                                                                 │
+│     # Importing necessary libraries                                                                             │
+│     from  airt.client import Client, APIKey                                                                     │
+│                                                                                                                 │
+│     # Authenticate                                                                                              │
+│     Client.get_token(username="{fill in username}", password="{fill in password}")                              │
+│                                                                                                                 │
+│     # Create a key without an expiry date in the given name                                                     │
+│     key_name = "{fill in key_name}"                                                                             │
+│     APIKey.create(name=key_name)                                                                                │
+│                                                                                                                 │
+│     # Get the list of all APIKey instances created by the currently logged-in user.                             │
+│     # If you are a super user, you can view the APIkeys created by other users by                               │
+│     # passing their uuid/username in the user parameter.                                                        │
+│     ax = APIKey.ls()                                                                                            │
+│     print(ax)                                                                                                   │
+│                                                                                                                 │
+│     # Display the details of the instances in a pandas dataframe                                                │
+│     df = APIKey.as_df(ax)                                                                                       │
+│     print(df)                                                                                                   │
+│                                                                                                                 │
+│ ╭────────────────────────────────────────────────── stdout ───────────────────────────────────────────────────╮ │
+│ │ [&lt;airt.client.APIKey object at 0x7fba8b563040&gt;, &lt;airt.client.APIKey object at 0x7fba8b667be0&gt;,              │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba8b58a070&gt;, &lt;airt.client.APIKey object at 0x7fba8b58a9a0&gt;,               │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba8b58aa00&gt;, &lt;airt.client.APIKey object at 0x7fba7b2fa8e0&gt;,               │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba7b2faf40&gt;, &lt;airt.client.APIKey object at 0x7fba7b2fa940&gt;,               │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba7b2fa820&gt;, &lt;airt.client.APIKey object at 0x7fba7b2fa9a0&gt;,               │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba7b2fab20&gt;, &lt;airt.client.APIKey object at 0x7fba7b2fa9d0&gt;,               │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba7b2faa30&gt;, &lt;airt.client.APIKey object at 0x7fba7b2faa60&gt;,               │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba7b2fa850&gt;, &lt;airt.client.APIKey object at 0x7fba7b2fa910&gt;,               │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba7b2faa90&gt;, &lt;airt.client.APIKey object at 0x7fba7b28b820&gt;,               │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba7b28b8e0&gt;, &lt;airt.client.APIKey object at 0x7fba7b28b9d0&gt;,               │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba7b28ba00&gt;, &lt;airt.client.APIKey object at 0x7fba7b28bac0&gt;,               │ │
+│ │ &lt;airt.client.APIKey object at 0x7fba7b28b760&gt;]                                                              │ │
+│ │                                     uuid  ... disabled                                                      │ │
+│ │ 0   37c644b3-4a18-4689-881e-30ed5b6bd1c7  ...    False                                                      │ │
+│ │ 1   9c0d3637-15d9-4a8f-ab71-8fc188ab4492  ...    False                                                      │ │
+│ │ 2   3d1a2643-440a-4d89-916f-63540b6e9edc  ...    False                                                      │ │
+│ │ 3   5bfcbe9e-0dd8-4475-baf1-360228348353  ...    False                                                      │ │
+│ │ 4   8b58a44a-1bb0-4d91-8753-be392bdbb613  ...    False                                                      │ │
+│ │ 5   2a5759d3-2995-439c-9914-b55579aa9bd8  ...    False                                                      │ │
+│ │ 6   5fe476d8-48c3-4464-b57d-bf4f1109710d  ...    False                                                      │ │
+│ │ 7   b6d27167-38d5-492c-86aa-8920fafcba5c  ...    False                                                      │ │
+│ │ 8   77207e77-5453-4055-a8bf-f3379ea4a1fb  ...    False                                                      │ │
+│ │ 9   2a85864e-74d7-4392-8415-9703454ecce1  ...    False                                                      │ │
+│ │ 10  4e577454-aa0a-4c1e-9fe8-240b03f5cb18  ...    False                                                      │ │
+│ │ 11  7b25cd3b-ea98-4bdd-8336-48104536010d  ...    False                                                      │ │
+│ │ 12  bd66c94f-0033-4506-8353-2785cc6623b2  ...    False                                                      │ │
+│ │ 13  f45edd6a-9eb6-4854-b1a0-064078cd006f  ...    False                                                      │ │
+│ │ 14  55263b34-fbd2-4ebb-87ee-e842acb4e8ed  ...    False                                                      │ │
+│ │ 15  9305ae9b-8cd3-467d-8b5e-bb7a244ae720  ...    False                                                      │ │
+│ │ 16  559391e6-20a7-4603-bd90-47506c5474d1  ...    False                                                      │ │
+│ │ 17  0c9b02cf-a890-43d0-8bb5-d730b92fdadf  ...    False                                                      │ │
+│ │ 18  a27e01d9-fe4a-464f-9a6f-4ec7d99059e5  ...    False                                                      │ │
+│ │ 19  5fd74b8e-b4a0-4055-a2e2-1b8192733d63  ...    False                                                      │ │
+│ │ 20  653905a5-a385-4510-b207-44868ef29fae  ...    False                                                      │ │
+│ │ 21  3877c87d-564b-43eb-b782-4fa726d4c72e  ...    False                                                      │ │
+│ │ 22  3be53309-2863-4502-a28e-14526041ece9  ...    False                                                      │ │
+│ │                                                                                                             │ │
+│ │ [23 rows x 5 columns]                                                                                       │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│ ╭────────────────────────────────────────────────── stderr ───────────────────────────────────────────────────╮ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Run example for APIKey.details</span>
+<span class="n">run_examples_from_docstring</span><span class="p">(</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">details</span><span class="p">,</span>
+    <span class="n">key_name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">(),</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&lt;module&gt;:3: No type or annotation for parameter &#39;apikey&#39;
+&lt;module&gt;:6: No type or annotation for returned value 1
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+</code></pre></div>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Example:                                                                                                        │
+│                                                                                                                 │
+│     # Importing necessary libraries                                                                             │
+│     from  airt.client import Client, APIKey                                                                     │
+│                                                                                                                 │
+│     # Authenticate                                                                                              │
+│     Client.get_token(username="{fill in username}", password="{fill in password}")                              │
+│                                                                                                                 │
+│     # Create a key without an expiry date in the given name                                                     │
+│     key_name = "{fill in key_name}"                                                                             │
+│     APIKey.create(name=key_name)                                                                                │
+│                                                                                                                 │
+│     # Display the details of the newly created key                                                              │
+│     print(APIKey.details(apikey=key_name))                                                                      │
+│                                                                                                                 │
+│     # To display the details of all keys created by the user, use the method below.                             │
+│     df = APIKey.as_df(APIKey.ls())                                                                              │
+│     print(df)                                                                                                   │
+│                                                                                                                 │
+│ ╭────────────────────────────────────────────────── stdout ───────────────────────────────────────────────────╮ │
+│ │                                    uuid             name  ... expiry disabled                               │ │
+│ │ 0  941cb4ea-b453-4f52-808a-ce6a4d06755c  618R65M0PTOWIF6  ...   None    False                               │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 5 columns]                                                                                        │ │
+│ │                                     uuid  ... disabled                                                      │ │
+│ │ 0   37c644b3-4a18-4689-881e-30ed5b6bd1c7  ...    False                                                      │ │
+│ │ 1   9c0d3637-15d9-4a8f-ab71-8fc188ab4492  ...    False                                                      │ │
+│ │ 2   3d1a2643-440a-4d89-916f-63540b6e9edc  ...    False                                                      │ │
+│ │ 3   5bfcbe9e-0dd8-4475-baf1-360228348353  ...    False                                                      │ │
+│ │ 4   8b58a44a-1bb0-4d91-8753-be392bdbb613  ...    False                                                      │ │
+│ │ 5   2a5759d3-2995-439c-9914-b55579aa9bd8  ...    False                                                      │ │
+│ │ 6   5fe476d8-48c3-4464-b57d-bf4f1109710d  ...    False                                                      │ │
+│ │ 7   b6d27167-38d5-492c-86aa-8920fafcba5c  ...    False                                                      │ │
+│ │ 8   77207e77-5453-4055-a8bf-f3379ea4a1fb  ...    False                                                      │ │
+│ │ 9   2a85864e-74d7-4392-8415-9703454ecce1  ...    False                                                      │ │
+│ │ 10  4e577454-aa0a-4c1e-9fe8-240b03f5cb18  ...    False                                                      │ │
+│ │ 11  7b25cd3b-ea98-4bdd-8336-48104536010d  ...    False                                                      │ │
+│ │ 12  bd66c94f-0033-4506-8353-2785cc6623b2  ...    False                                                      │ │
+│ │ 13  f45edd6a-9eb6-4854-b1a0-064078cd006f  ...    False                                                      │ │
+│ │ 14  55263b34-fbd2-4ebb-87ee-e842acb4e8ed  ...    False                                                      │ │
+│ │ 15  9305ae9b-8cd3-467d-8b5e-bb7a244ae720  ...    False                                                      │ │
+│ │ 16  559391e6-20a7-4603-bd90-47506c5474d1  ...    False                                                      │ │
+│ │ 17  0c9b02cf-a890-43d0-8bb5-d730b92fdadf  ...    False                                                      │ │
+│ │ 18  a27e01d9-fe4a-464f-9a6f-4ec7d99059e5  ...    False                                                      │ │
+│ │ 19  5fd74b8e-b4a0-4055-a2e2-1b8192733d63  ...    False                                                      │ │
+│ │ 20  653905a5-a385-4510-b207-44868ef29fae  ...    False                                                      │ │
+│ │ 21  3877c87d-564b-43eb-b782-4fa726d4c72e  ...    False                                                      │ │
+│ │ 22  3be53309-2863-4502-a28e-14526041ece9  ...    False                                                      │ │
+│ │ 23  941cb4ea-b453-4f52-808a-ce6a4d06755c  ...    False                                                      │ │
+│ │                                                                                                             │ │
+│ │ [24 rows x 5 columns]                                                                                       │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│ ╭────────────────────────────────────────────────── stderr ───────────────────────────────────────────────────╮ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Run example for APIKey.revoke</span>
+
+<span class="c1"># Create a new user and revoke all their apikeys</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AIRT_SERVICE_SUPER_USER&quot;</span><span class="p">])</span>
+
+<span class="n">random_name</span> <span class="o">=</span> <span class="n">generate_random_name</span><span class="p">()</span>
+<span class="n">_user_name</span> <span class="o">=</span> <span class="n">random_name</span>
+<span class="n">_password</span> <span class="o">=</span> <span class="n">random_name</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_name</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+<span class="n">response_df</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">_user_name</span><span class="p">,</span>
+    <span class="n">first_name</span><span class="o">=</span><span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="n">last_name</span><span class="o">=</span><span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="n">_email</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">_password</span><span class="p">,</span>
+    <span class="n">super_user</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">subscription_type</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">assert</span> <span class="n">response_df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">USER_COLS</span><span class="p">))</span>
+
+<span class="n">run_examples_from_docstring</span><span class="p">(</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">key_name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">(),</span>
+    <span class="n">super_user_username</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AIRT_SERVICE_SUPER_USER&quot;</span><span class="p">],</span>
+    <span class="n">super_user_password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">other_username</span><span class="o">=</span><span class="n">_user_name</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># loggin in back as default user</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&lt;module&gt;:6: No type or annotation for parameter &#39;keys&#39;
+&lt;module&gt;:7: No type or annotation for parameter &#39;user&#39;
+&lt;module&gt;:9: No type or annotation for parameter &#39;otp&#39;
+&lt;module&gt;:13: No type or annotation for returned value 1
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+Failed to parse annotation from &#39;Name&#39; node: &#39;NoneType&#39; object has no attribute &#39;resolve&#39;
+</code></pre></div>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Example:                                                                                                        │
+│                                                                                                                 │
+│     # Importing necessary libraries                                                                             │
+│     from  airt.client import Client, APIKey                                                                     │
+│                                                                                                                 │
+│     # Authenticate                                                                                              │
+│     Client.get_token(username="{fill in username}", password="{fill in password}")                              │
+│                                                                                                                 │
+│     # Create a key without an expiry date in the given name                                                     │
+│     key_name = "{fill in key_name}"                                                                             │
+│     APIKey.create(name=key_name)                                                                                │
+│                                                                                                                 │
+│     # Check that the newly created key exists                                                                   │
+│     print()                                                                                                     │
+│                                                                                                                 │
+│     # Revoke the newly created key                                                                              │
+│     # To delete multiple keys, pass a list of key names or key instances                                        │
+│     APIKey.revoke(keys=key_name)                                                                                │
+│                                                                                                                 │
+│     # Check that the newly created key does not exists                                                          │
+│     print()                                                                                                     │
+│                                                                                                                 │
+│ ╭────────────────────────────────────────────────── stdout ───────────────────────────────────────────────────╮ │
+│ │ ['SRHE6D4DNOPZON6', 'YY96A5USMFKVLR2', 'Z8D61SQQIBBPTDA', 'D7WPXUSL7HSE39U', 'MLQAANQ3JG2P2LE',             │ │
+│ │ 'HYEWVV6LGVYP8XE', '1XSBMNX2LS4W4ET', '14SMS5QRUJ78YPX', '47QN5TNTD9L773E', 'BK1ED7XSCYZD4DH',              │ │
+│ │ 'YV7UAHEPG9KBJ05', 'N7LWCXWLDWBN89P', 'PHS18A5DNBYBIAF', 'XACPIZ1XC179M1L', 'QUUF17ZMWFJ9UQK',              │ │
+│ │ 'PYQF1BXXM4R3L8K', 'MZP7KPGTWYY9E17', 'CXW83S6H53OTGJ3', '7BSAGI37I8MDIPJ', 'I1LMY6MZAH7CGPS',              │ │
+│ │ 'IQ37Y5NEMKAIKPZ', 'ZN5H0ZE9AIVV3CQ', '2R85BB4WSKEBXD8', '618R65M0PTOWIF6', 'NR2ZYP83JT7M0EZ']              │ │
+│ │ ['SRHE6D4DNOPZON6', 'YY96A5USMFKVLR2', 'Z8D61SQQIBBPTDA', 'D7WPXUSL7HSE39U', 'MLQAANQ3JG2P2LE',             │ │
+│ │ 'HYEWVV6LGVYP8XE', '1XSBMNX2LS4W4ET', '14SMS5QRUJ78YPX', '47QN5TNTD9L773E', 'BK1ED7XSCYZD4DH',              │ │
+│ │ 'YV7UAHEPG9KBJ05', 'N7LWCXWLDWBN89P', 'PHS18A5DNBYBIAF', 'XACPIZ1XC179M1L', 'QUUF17ZMWFJ9UQK',              │ │
+│ │ 'PYQF1BXXM4R3L8K', 'MZP7KPGTWYY9E17', 'CXW83S6H53OTGJ3', '7BSAGI37I8MDIPJ', 'I1LMY6MZAH7CGPS',              │ │
+│ │ 'IQ37Y5NEMKAIKPZ', 'ZN5H0ZE9AIVV3CQ', '2R85BB4WSKEBXD8', '618R65M0PTOWIF6']                                 │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│ ╭────────────────────────────────────────────────── stderr ───────────────────────────────────────────────────╮ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Example:                                                                                                        │
+│                                                                                                                 │
+│     # Importing necessary libraries                                                                             │
+│     from  airt.client import Client, APIKey                                                                     │
+│                                                                                                                 │
+│     # Authenticate with super user privileges                                                                   │
+│     Client.get_token(                                                                                           │
+│         username="{fill in super_user_username}",                                                               │
+│         password="{fill in super_user_password}"                                                                │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # List the APIKeys generated by a specific user                                                             │
+│     user = "{fill in other_username}"                                                                           │
+│     ax = APIKey.ls(user=user)                                                                                   │
+│     print()                                                                                                     │
+│                                                                                                                 │
+│     # Revoke the APIKeys                                                                                        │
+│     APIKey.revoke(keys=ax, user=user)                                                                           │
+│                                                                                                                 │
+│     # Check that all APIkeys have been revoked                                                                  │
+│     print()                                                                                                     │
+│                                                                                                                 │
+│ ╭────────────────────────────────────────────────── stdout ───────────────────────────────────────────────────╮ │
+│ │ []                                                                                                          │ │
+│ │ []                                                                                                          │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│ ╭────────────────────────────────────────────────── stderr ───────────────────────────────────────────────────╮ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKeys.create</span>
+<span class="c1"># Positive scenario. Passing the expiry as int</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">(),</span> <span class="n">expiry</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mask</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;access_token&#39;</span><span class="p">])</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;mask(res[&#39;access_token&#39;])=&#39;*************************************************************************************************************************************************************************************************&#39;&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKeys.create</span>
+<span class="c1"># Positive scenario. Passing the expiry as timedelta</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">(),</span> <span class="n">expiry</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mask</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;access_token&#39;</span><span class="p">])</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;mask(res[&#39;access_token&#39;])=&#39;*************************************************************************************************************************************************************************************************&#39;&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKeys.create</span>
+<span class="c1"># Positive scenario. Passing the expiry as datetime</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">(),</span> <span class="n">expiry</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mask</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;access_token&#39;</span><span class="p">])</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;mask(res[&#39;access_token&#39;])=&#39;*************************************************************************************************************************************************************************************************&#39;&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKeys.create</span>
+<span class="c1"># Positive scenario. Passing the expiry as datetime</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">(),</span> <span class="n">expiry</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mask</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;access_token&#39;</span><span class="p">])</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;mask(res[&#39;access_token&#39;])=&#39;*************************************************************************************************************************************************************************************************&#39;&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKeys.create</span>
+<span class="c1"># Positive scenario. Not passing expiry date</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">())</span>
+
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mask</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;access_token&#39;</span><span class="p">])</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="s2">&quot;access_token&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;mask(res[&#39;access_token&#39;])=&#39;***************************************************************************************************************************************************************************&#39;&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKeys.create</span>
+<span class="c1"># Negative scenario. Passing existing key name</span>
+
+<span class="n">key_name</span> <span class="o">=</span> <span class="n">generate_random_name</span><span class="p">()</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">key_name</span><span class="p">,</span> <span class="n">expiry</span><span class="o">=</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">17</span><span class="p">))</span>
+
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">key_name</span><span class="p">,</span> <span class="n">expiry</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+<span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;An Api-key with the same name already exists&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;An Api-key with the same name already exists&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKeys.create</span>
+<span class="c1"># Negative scenario. Non-MFA user passing OTP parameter while creating new API key</span>
+
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">random_otp</span> <span class="o">=</span> <span class="mi">123456</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">key_name</span><span class="p">,</span> <span class="n">expiry</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">otp</span><span class="o">=</span><span class="n">random_otp</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;MFA is not activated for the account. Please pass the OTP only after activating the MFA for your account.&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.ls</span>
+
+<span class="n">apikeys</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">apikeys</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">apikeys</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">APIKey</span><span class="p">)</span>
+
+<span class="c1"># Testing list without offset and limit</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">())</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Testing list with offset and limit</span>
+<span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">limit</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">))</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">limit</span>
+
+<span class="c1"># Testing list with invalid offset and limit</span>
+<span class="n">offset</span> <span class="o">=</span> <span class="mi">1_000_000_000</span>
+<span class="n">limit</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>0     37c644b3-4a18-4689-881e-30ed5b6bd1c7
+1     9c0d3637-15d9-4a8f-ab71-8fc188ab4492
+2     3d1a2643-440a-4d89-916f-63540b6e9edc
+3     5bfcbe9e-0dd8-4475-baf1-360228348353
+4     8b58a44a-1bb0-4d91-8753-be392bdbb613
+5     2a5759d3-2995-439c-9914-b55579aa9bd8
+6     5fe476d8-48c3-4464-b57d-bf4f1109710d
+7     b6d27167-38d5-492c-86aa-8920fafcba5c
+8     77207e77-5453-4055-a8bf-f3379ea4a1fb
+9     2a85864e-74d7-4392-8415-9703454ecce1
+10    4e577454-aa0a-4c1e-9fe8-240b03f5cb18
+11    7b25cd3b-ea98-4bdd-8336-48104536010d
+12    bd66c94f-0033-4506-8353-2785cc6623b2
+13    f45edd6a-9eb6-4854-b1a0-064078cd006f
+14    55263b34-fbd2-4ebb-87ee-e842acb4e8ed
+15    9305ae9b-8cd3-467d-8b5e-bb7a244ae720
+16    559391e6-20a7-4603-bd90-47506c5474d1
+17    0c9b02cf-a890-43d0-8bb5-d730b92fdadf
+18    a27e01d9-fe4a-464f-9a6f-4ec7d99059e5
+19    5fd74b8e-b4a0-4055-a2e2-1b8192733d63
+20    653905a5-a385-4510-b207-44868ef29fae
+21    3877c87d-564b-43eb-b782-4fa726d4c72e
+22    3be53309-2863-4502-a28e-14526041ece9
+23    941cb4ea-b453-4f52-808a-ce6a4d06755c
+24    5ee654ea-6b58-4527-accb-7a6f40f2ac8b
+25    3add1b09-bda9-449f-a04f-c3d57068ff2f
+26    62304b89-9532-4417-9787-88ae8c01e655
+27    5af35914-f081-41a5-af57-bfb4946d49ab
+28    311685ca-a88c-4954-8d52-2141590c6495
+29    bc716550-ba83-4917-adcc-13d379a68c33
+Name: uuid, dtype: object
+
+0    37c644b3-4a18-4689-881e-30ed5b6bd1c7
+1    9c0d3637-15d9-4a8f-ab71-8fc188ab4492
+2    3d1a2643-440a-4d89-916f-63540b6e9edc
+Name: uuid, dtype: object
+
+Series([], Name: uuid, dtype: float64)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.ls</span>
+<span class="c1"># Negative scenario. Normal user accessing other&#39;s apikey</span>
+
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+<span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Insufficient permission to access other user&#39;s data&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;Insufficient permission to access other user&#39;s data&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.ls</span>
+<span class="c1"># Positive scenario. Super user accessing other&#39;s apikey</span>
+
+<span class="c1"># logging in as normal user</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">())</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">normal_user_uuid</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">details</span><span class="p">()[</span><span class="s2">&quot;uuid&quot;</span><span class="p">]</span>
+<span class="n">normal_user_name</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">details</span><span class="p">()[</span><span class="s2">&quot;username&quot;</span><span class="p">]</span>
+
+<span class="c1"># logging in as super user</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AIRT_SERVICE_SUPER_USER&quot;</span><span class="p">])</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">normal_user_uuid</span><span class="p">))</span><span class="o">.</span><span class="n">shape</span>
+<span class="k">assert</span> <span class="n">actual</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">actual</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">expected</span><span class="si">=}</span><span class="s2">&quot;</span>
+<span class="n">expected</span>
+
+<span class="n">actual</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">normal_user_name</span><span class="p">))</span><span class="o">.</span><span class="n">shape</span>
+<span class="k">assert</span> <span class="n">actual</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">actual</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">expected</span><span class="si">=}</span><span class="s2">&quot;</span>
+<span class="n">expected</span>
+
+<span class="c1"># Negative scenario. Super user accessing invalid user&#39;s apikey</span>
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+
+<span class="c1"># login back as normal user</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;The user uuid is incorrect. Please try again.&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.details</span>
+<span class="c1"># Getting details by passing api_key name</span>
+
+<span class="n">APIKey</span><span class="o">.</span><span class="n">details</span><span class="p">(</span><span class="n">apikey</span><span class="o">=</span><span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | uuid                                 | name            | created             | expiry | disabled |
+|-----|--------------------------------------|-----------------|---------------------|--------|----------|
+| 0   | 37c644b3-4a18-4689-881e-30ed5b6bd1c7 | SRHE6D4DNOPZON6 | 2022-11-02T08:46:49 | None   | False    |
+
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.details</span>
+<span class="c1"># Testing negative scenario. Passing invalid key</span>
+
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">details</span><span class="p">(</span><span class="n">apikey</span><span class="o">=</span><span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ValueError(&#39;No such apikey or not enough authorization to access the apikey.&#39;)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.revoke</span>
+<span class="c1"># revoking by passing key_name and id</span>
+
+<span class="c1"># creating sample keys</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">())</span>
+
+<span class="n">key_name</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<span class="n">key_uuid</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">uuid</span>
+<span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">key_name</span><span class="p">,</span> <span class="n">key_uuid</span><span class="p">])</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | uuid                                 | name            | created             | expiry              | disabled |
+|-----|--------------------------------------|-----------------|---------------------|---------------------|----------|
+| 0   | 37c644b3-4a18-4689-881e-30ed5b6bd1c7 | SRHE6D4DNOPZON6 | 2022-11-02T08:46:49 | None                | True     |
+| 1   | 9c0d3637-15d9-4a8f-ab71-8fc188ab4492 | YY96A5USMFKVLR2 | 2022-11-02T08:46:49 | 2022-11-07T08:46:00 | True     |
+
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.revoke</span>
+<span class="c1"># Passing list of api key ids</span>
+<span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">uuid</span><span class="p">])</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | uuid                                 | name            | created             | expiry              | disabled |
+|-----|--------------------------------------|-----------------|---------------------|---------------------|----------|
+| 0   | 3d1a2643-440a-4d89-916f-63540b6e9edc | Z8D61SQQIBBPTDA | 2022-11-02T08:46:50 | 2022-11-07T08:46:00 | True     |
+| 1   | 5bfcbe9e-0dd8-4475-baf1-360228348353 | D7WPXUSL7HSE39U | 2022-11-02T08:46:50 | 2022-05-17T00:00:00 | True     |
+| 2   | 8b58a44a-1bb0-4d91-8753-be392bdbb613 | MLQAANQ3JG2P2LE | 2022-11-02T08:46:50 | 2022-05-17T00:00:00 | True     |
+
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.revoke</span>
+<span class="c1"># revoking by passing key_name and id</span>
+
+<span class="c1"># cerating sample keys</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">())</span>
+
+<span class="n">key_name</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<span class="n">key_uuid</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">uuid</span>
+<span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="n">key_name</span><span class="p">,</span> <span class="n">key_uuid</span><span class="p">])</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | uuid                                 | name            | created             | expiry              | disabled |
+|-----|--------------------------------------|-----------------|---------------------|---------------------|----------|
+| 0   | 2a5759d3-2995-439c-9914-b55579aa9bd8 | HYEWVV6LGVYP8XE | 2022-11-02T08:46:50 | None                | True     |
+| 1   | 5fe476d8-48c3-4464-b57d-bf4f1109710d | 1XSBMNX2LS4W4ET | 2022-11-02T08:46:50 | 2022-05-17T00:00:00 | True     |
+
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.revoke</span>
+<span class="c1"># Testing negative scenario. Passing invalid key</span>
+
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ValueError(&#39;No such apikey or not enough authorization to access the apikey.&#39;)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.revoke</span>
+<span class="c1"># Testing negative scenario. Normal user deleting other user&#39;s key</span>
+
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">random_user_id</span> <span class="o">=</span> <span class="n">RANDOM_UUID_FOR_TESTING</span>
+    <span class="n">random_key_id</span> <span class="o">=</span> <span class="n">RANDOM_UUID_FOR_TESTING</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="n">random_key_id</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">random_user_id</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Insufficient permission to access other user&#39;s data&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ValueError(&quot;Insufficient permission to access other user&#39;s data&quot;)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.revoke</span>
+<span class="c1"># Positive scenario. Super user deleting other&#39;s apikey</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+<span class="n">normal_user_uuid</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">details</span><span class="p">()[</span><span class="s2">&quot;uuid&quot;</span><span class="p">]</span>
+<span class="n">expected_api_key_uuid</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">uuid</span>
+
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">expected_api_key_uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AIRT_SERVICE_SUPER_USER&quot;</span><span class="p">])</span>
+<span class="n">actual_api_key_uuid</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">(</span>
+    <span class="n">keys</span><span class="o">=</span><span class="n">expected_api_key_uuid</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">normal_user_uuid</span>
+<span class="p">)</span><span class="o">.</span><span class="n">uuid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">assert</span> <span class="p">(</span>
+    <span class="n">actual_api_key_uuid</span> <span class="o">==</span> <span class="n">expected_api_key_uuid</span>
+<span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">actual_api_key_uuid</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">expected_api_key_uuid</span><span class="si">=}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Negative scenario. Super user accessing invalid apikey</span>
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">normal_user_uuid</span><span class="p">)</span>
+
+
+<span class="c1"># Negative scenario. Super user accessing invalid user</span>
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="n">expected_api_key_uuid</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">)</span>
+
+
+<span class="c1"># loggin back as normal user</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;expected_api_key_uuid=&#39;b6d27167-38d5-492c-86aa-8920fafcba5c&#39;&quot;
+
+&#39;OK&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for APIKey.revoke</span>
+<span class="c1"># Testing negative scenario. Non-MFA user passing otp</span>
+
+
+<span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">())</span>
+<span class="n">key_name</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">random_otp</span> <span class="o">=</span> <span class="mi">123456</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="n">key_name</span><span class="p">,</span> <span class="n">otp</span><span class="o">=</span><span class="n">random_otp</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>ValueError(&#39;MFA is not activated for the account. Please pass the OTP only after activating the MFA for your account.&#39;)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Positive scenario: Super user revoking all keys created by a specific user</span>
+
+<span class="c1"># login as super user</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AIRT_SERVICE_SUPER_USER&quot;</span><span class="p">])</span>
+<span class="c1"># create a new user</span>
+<span class="n">random_name</span> <span class="o">=</span> <span class="n">generate_random_name</span><span class="p">()</span>
+<span class="n">_user_name</span> <span class="o">=</span> <span class="n">random_name</span>
+<span class="n">_password</span> <span class="o">=</span> <span class="n">random_name</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_name</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+<span class="n">response_df</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">_user_name</span><span class="p">,</span>
+    <span class="n">first_name</span><span class="o">=</span><span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="n">last_name</span><span class="o">=</span><span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="n">email</span><span class="o">=</span><span class="n">_email</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">_password</span><span class="p">,</span>
+    <span class="n">super_user</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">subscription_type</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">response_df</span><span class="p">[[</span><span class="s2">&quot;uuid&quot;</span><span class="p">,</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span> <span class="s2">&quot;created&quot;</span><span class="p">]])</span>
+<span class="k">assert</span> <span class="n">response_df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">User</span><span class="o">.</span><span class="n">USER_COLS</span><span class="p">))</span>
+
+<span class="c1"># login as new user</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">_user_name</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">_password</span><span class="p">)</span>
+<span class="c1"># create new apikeys</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">APIKey</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">generate_random_name</span><span class="p">())</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">APIKey</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">ax</span><span class="p">))</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="c1"># login as super user</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AIRT_SERVICE_SUPER_USER&quot;</span><span class="p">])</span>
+<span class="c1"># List the APIKeys generated by a specific user</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">_user_name</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">APIKey</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">ax</span><span class="p">))</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+<span class="c1"># Revoke the APIKeys</span>
+<span class="n">APIKey</span><span class="o">.</span><span class="n">revoke</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">_user_name</span><span class="p">)</span>
+<span class="c1"># Check that all APIkeys have been revoked</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">APIKey</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">_user_name</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">APIKey</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">ax</span><span class="p">))</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="c1"># loggin back with default user credentials</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | uuid                                 | username        | created             |
+|-----|--------------------------------------|-----------------|---------------------|
+| 0   | 1469d528-6900-49a2-8c77-a64470e54f5c | IT5PYBZWFZINKFH | 2022-11-02T08:49:34 |
+
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | uuid                                 | name            | created             | expiry | disabled |
+|-----|--------------------------------------|-----------------|---------------------|--------|----------|
+| 0   | 31b8a072-3baa-4113-b1f0-c4c3799f42c9 | 3AXQ1P9VGEF2H3K | 2022-11-02T08:49:35 | None   | False    |
+| 1   | 7439b44b-0ed7-44ac-b70e-27a81057b392 | IGUWJDAMIPMS9CN | 2022-11-02T08:49:35 | None   | False    |
+| 2   | 4db4e416-76b6-4279-b61a-3222892c2019 | 0ATEMGYO7SS6PER | 2022-11-02T08:49:35 | None   | False    |
+
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | uuid                                 | name            | created             | expiry | disabled |
+|-----|--------------------------------------|-----------------|---------------------|--------|----------|
+| 0   | 31b8a072-3baa-4113-b1f0-c4c3799f42c9 | 3AXQ1P9VGEF2H3K | 2022-11-02T08:49:35 | None   | False    |
+| 1   | 7439b44b-0ed7-44ac-b70e-27a81057b392 | IGUWJDAMIPMS9CN | 2022-11-02T08:49:35 | None   | False    |
+| 2   | 4db4e416-76b6-4279-b61a-3222892c2019 | 0ATEMGYO7SS6PER | 2022-11-02T08:49:35 | None   | False    |
+
+</div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | uuid | name | created | expiry | disabled |
+|-----|------|------|---------|--------|----------|
+
+</div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022 onwards, airt.ai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    and 
+    <a href="https://nbdev-mkdocs.airt.ai/" target="_blank" rel="noopener">
+      Material for nbdev
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../overrides/js/extra.js"></script>
+        
+      
+        
+          <script src="../overrides/js/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1410 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python client for airt-service">
+      
+      
+        <meta name="author" content="airt.ai">
+      
+      
+        <link rel="canonical" href="https://airtai.github.io/airt-client/CLI_DataBlob/">
+      
+      
+      
+      <link rel="icon" href="../overrides/images/airt_icon_blue.svg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>CLI_DataBlob - airt</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../overrides/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-H6EV08GRK5"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-H6EV08GRK5",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-H6EV08GRK5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+  
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="airt - CLI_DataBlob" />
+  <meta property="og:description" content="Python client for airt-service" />
+  <meta property="og:url" content="https://airtai.github.io/airt-client/CLI_DataBlob/" />
+  <meta property="og:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="airt - CLI_DataBlob" />
+  <meta name="twitter:description" content="Python client for airt-service" />
+  <meta name="twitter:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cli_datablob" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="airt" class="md-header__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            airt
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CLI_DataBlob
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="airt" class="md-nav__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    airt
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Python client for airt service
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial/" class="md-nav__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_api_docs/airt/client/" class="md-nav__link">
+        airt.client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_cli_docs/airt/" class="md-nav__link">
+        airt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="cli_datablob">CLI_DataBlob<a class="headerlink" href="#cli_datablob" title="Permanent link">¤</a></h1>
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">airt._testing</span> <span class="kn">import</span> <span class="n">activate_by_import</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[INFO] airt._testing.activate_by_import: Testing environment activated.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">quote_plus</span> <span class="k">as</span> <span class="n">urlquote</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">azure.identity</span> <span class="kn">import</span> <span class="n">DefaultAzureCredential</span>
+<span class="kn">from</span> <span class="nn">azure.mgmt.storage</span> <span class="kn">import</span> <span class="n">StorageManagementClient</span>
+<span class="kn">from</span> <span class="nn">sqlmodel</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="nn">typer.testing</span> <span class="kn">import</span> <span class="n">CliRunner</span>
+
+<span class="kn">import</span> <span class="nn">airt._sanitizer</span>
+<span class="kn">from</span> <span class="nn">airt._constant</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">CLIENT_DB_PASSWORD</span><span class="p">,</span>
+    <span class="n">CLIENT_DB_USERNAME</span><span class="p">,</span>
+    <span class="n">CLIENT_NAME</span><span class="p">,</span>
+    <span class="n">SERVER_URL</span><span class="p">,</span>
+    <span class="n">SERVICE_PASSWORD</span><span class="p">,</span>
+    <span class="n">SERVICE_TOKEN</span><span class="p">,</span>
+    <span class="n">SERVICE_USERNAME</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">airt.client</span> <span class="kn">import</span> <span class="n">DataBlob</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">runner</span> <span class="o">=</span> <span class="n">CliRunner</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">set_level</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Testing logger settings</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">())</span>
+<span class="k">assert</span> <span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">()</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;This is a debug message&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;This is an info&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;This is a warning&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;This is an error&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>30
+
+[WARNING] __main__: This is a warning
+[ERROR] __main__: This is an error
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Helper context manager for testing</span>
+
+<span class="n">_airt_service_token</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">_airt_service_token</span>
+    <span class="k">if</span> <span class="n">_airt_service_token</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">display</span><span class="p">(</span><span class="s2">&quot;_airt_service_token is None, getting a token...&quot;</span><span class="p">)</span>
+
+        <span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_USERNAME</span><span class="p">]</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_PASSWORD</span><span class="p">]</span>
+
+        <span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+        <span class="n">_airt_service_token</span> <span class="o">=</span> <span class="n">Client</span><span class="o">.</span><span class="n">auth_token</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span> <span class="o">=</span> <span class="n">_airt_service_token</span>
+
+        <span class="k">yield</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">((</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">])))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;_airt_service_token is None, getting a token...&#39;
+
+&#39;*******************************************************************************************************************************&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">assert_has_help</span><span class="p">(</span><span class="n">xs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">xs</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">TEST_S3_URI</span> <span class="o">=</span> <span class="s2">&quot;s3://test-airt-service/ecommerce_behavior_notebooks&quot;</span>
+<span class="n">TEST_S3_CSV_URI</span> <span class="o">=</span> <span class="s2">&quot;s3://test-airt-service/ecommerce_behavior_csv&quot;</span>
+<span class="n">TEST_AZURE_URI</span> <span class="o">=</span> <span class="s2">&quot;https://testairtservice.blob.core.windows.net/test-container/ecommerce_behavior_notebooks&quot;</span>
+<span class="n">RANDOM_UUID_FOR_TESTING</span> <span class="o">=</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_hypens_from_id</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="nb">id</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">actual</span> <span class="o">=</span> <span class="n">remove_hypens_from_id</span><span class="p">(</span><span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">)</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">actual</span><span class="p">)</span> <span class="o">==</span> <span class="mi">32</span>
+<span class="n">actual</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;00000000000000000000000000000000&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># helper function to create a datablob</span>
+
+
+<span class="n">_db</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">generate_db</span><span class="p">(</span><span class="n">force_create</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">_db</span>
+
+    <span class="k">if</span> <span class="n">_db</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">force_create</span><span class="p">:</span>
+        <span class="n">_db</span> <span class="o">=</span> <span class="n">DataBlob</span><span class="o">.</span><span class="n">from_s3</span><span class="p">(</span>
+            <span class="n">uri</span><span class="o">=</span><span class="n">TEST_S3_URI</span><span class="p">,</span>
+            <span class="n">access_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_ACCESS_KEY_ID&quot;</span><span class="p">],</span>
+            <span class="n">secret_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_SECRET_ACCESS_KEY&quot;</span><span class="p">],</span>
+        <span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">_db</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">remove_hypens_from_id</span><span class="p">(</span><span class="n">_db</span><span class="o">.</span><span class="n">uuid</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+        <span class="n">_db</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="k">yield</span> <span class="n">_db</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for details</span>
+<span class="c1"># Testing positive scenario</span>
+
+<span class="c1"># Helper function to extract ID</span>
+
+
+<span class="k">def</span> <span class="nf">extract_id</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">r</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">generate_db</span><span class="p">()</span> <span class="k">as</span> <span class="n">db</span><span class="p">:</span>
+        <span class="n">db_uuid</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">uuid</span>
+
+        <span class="c1"># Getting Details of the data source</span>
+        <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;datablob_uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="n">db_uuid</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">])</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span> <span class="o">==</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">db_uuid</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="si">=}</span><span class="s2"> </span><span class="si">{</span><span class="n">db_uuid</span><span class="si">=}</span><span class="s2">&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;_db.uuid=&#39;823c12cd-1c46-4136-96f3-d22841a447c9&#39;&quot;
+
+100%|██████████| 1/1 [00:15&lt;00:00, 15.24s/it]
+
+&#39;823c12cd-1c46-4136-96f3-d22841a447c9\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Helper function to test multiple scenarios.</span>
+
+
+<span class="k">def</span> <span class="nf">assert_datablob</span><span class="p">(</span><span class="n">xs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+    <span class="c1"># Testing Negative scenario</span>
+    <span class="c1"># Creating datablob without token</span>
+
+    <span class="c1"># Clearing previously set env variables</span>
+    <span class="n">_token_flag</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">SERVICE_TOKEN</span><span class="p">):</span>
+        <span class="n">_token_flag</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">airt_service_token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span>
+        <span class="k">del</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">xs</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;KeyError: The environment variable &#39;</span><span class="si">{</span><span class="n">SERVICE_TOKEN</span><span class="si">}</span><span class="s2">&#39; is not set.</span><span class="se">\n\n</span><span class="s2">Please run the command &#39;</span><span class="si">{</span><span class="n">CLIENT_NAME</span><span class="si">}</span><span class="s2"> token&#39;&quot;</span>
+        <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">_token_flag</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span> <span class="o">=</span> <span class="n">airt_service_token</span>
+
+    <span class="c1"># Testing Positive scenario</span>
+    <span class="c1"># With and without quite</span>
+
+    <span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+        <span class="c1"># Without quiet (verbose)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">xs</span><span class="p">)</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="s2">&quot;Pulling datablob uuid:&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+
+        <span class="c1"># With quiet</span>
+        <span class="n">display</span><span class="p">(</span><span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="mi">120</span><span class="p">)</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">xs</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">remove_hypens_from_id</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span> <span class="o">==</span> <span class="mi">32</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Datablob s3</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;from-s3&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">TEST_S3_CSV_URI</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+
+<span class="n">assert_datablob</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;KeyError: The environment variable &#39;AIRT_SERVICE_TOKEN&#39; is not set.\n\nPlease run the command &#39;airt token&#39; to get the application token and set it in the environment variable `AIRT_SERVICE_TOKEN`.\n\nTry &#39;airt token --help&#39; for help.\n&quot;
+
+&#39;Pulling datablob uuid: f48bdad3-cbdf-4afc-9d35-38c626a58a2e\n\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r  0%|          | 0/1 [00:05&lt;?, ?it/s]\r  0%|          | 0/1 [00:10&lt;?, ?it/s]\r  0%|          | 0/1 [00:15&lt;?, ?it/s]\r  0%|          | 0/1 [00:20&lt;?, ?it/s]\r  0%|          | 0/1 [00:25&lt;?, ?it/s]\r  0%|          | 0/1 [00:30&lt;?, ?it/s]\r  0%|          | 0/1 [00:35&lt;?, ?it/s]\r100%|██████████| 1/1 [00:40&lt;00:00,  5.06s/it]\r100%|██████████| 1/1 [00:40&lt;00:00, 40.54s/it]\n&#39;
+
+&#39;************************************************************************************************************************&#39;
+
+&#39;6969f7a0-8a18-49a2-af7f-8d7b9f639c08\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;from-azure-blob-storage&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;Usage: root from-azure-blob-storage [OPTIONS] URI\n\n  Create and return a datablob that encapsulates the data from an Azure Blob\n  Storage.\n\nArguments:\n  URI  Azure Blob Storage URI of the source file.  [required]\n\nOptions:\n  -c, --credential TEXT       Credential to access the Azure Blob Storage.\n                              [required]\n  -cp, --cloud-provider TEXT  The destination cloud storage provider&#39;s name to\n                              store the datablob. Currently, the API only\n                              supports **aws** and **azure** as cloud storage\n                              providers. If **None** (default value), then\n                              **azure**  will be used as the cloud storage\n                              provider.\n  -r, --region TEXT           The destination cloud provider&#39;s region to save\n                              your datablob. If **None** (default value) then\n                              the default region will be assigned based on the\n                              cloud provider. In the case of **aws**, **eu-\n                              west-1** will be used and in the case of\n                              **azure**, **westeurope** will be used. The\n                              supported AWS regions are: ap-northeast-1, ap-\n                              northeast-2, ap-south-1, ap-southeast-1, ap-\n                              southeast-2, ca-central-1, eu-central-1, eu-\n                              north-1, eu-west-1, eu-west-2, eu-west-3, sa-\n                              east-1, us-east-1, us-east-2, us-west-1, us-\n                              west-2. The supported Azure Blob Storage regions\n                              are: australiacentral, australiacentral2,\n                              australiaeast, australiasoutheast, brazilsouth,\n                              canadacentral, canadaeast, centralindia,\n                              centralus, eastasia, eastus, eastus2,\n                              francecentral, francesouth, germanynorth,\n                              germanywestcentral, japaneast, japanwest,\n                              koreacentral, koreasouth, northcentralus,\n                              northeurope, norwayeast, norwaywest,\n                              southafricanorth, southafricawest, southcentralus,\n                              southeastasia, southindia, switzerlandnorth,\n                              switzerlandwest, uaecentral, uaenorth, uksouth,\n                              ukwest, westcentralus, westeurope, westindia,\n                              westus, westus2.\n  -t, --tag TEXT              A string to tag the datablob. If not passed, then\n                              the tag **latest** will be assigned to the\n                              datablob.\n  -q, --quiet                 Output datablob uuid only.\n  -d, --debug                 Set logger level to DEBUG and output everything.\n  --help                      Show this message and exit.\n&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for from-azure-blob-storage</span>
+<span class="c1"># Positive Scenario: Passing credential in arguments</span>
+
+<span class="n">storage_client</span> <span class="o">=</span> <span class="n">StorageManagementClient</span><span class="p">(</span>
+    <span class="n">DefaultAzureCredential</span><span class="p">(),</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AZURE_SUBSCRIPTION_ID&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">keys</span> <span class="o">=</span> <span class="n">storage_client</span><span class="o">.</span><span class="n">storage_accounts</span><span class="o">.</span><span class="n">list_keys</span><span class="p">(</span><span class="s2">&quot;test-airt-service&quot;</span><span class="p">,</span> <span class="s2">&quot;testairtservice&quot;</span><span class="p">)</span>
+<span class="n">credential</span> <span class="o">=</span> <span class="n">keys</span><span class="o">.</span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;from-azure-blob-storage&quot;</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">TEST_AZURE_URI</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--credential&quot;</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">credential</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">assert_datablob</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;KeyError: The environment variable &#39;AIRT_SERVICE_TOKEN&#39; is not set.\n\nPlease run the command &#39;airt token&#39; to get the application token and set it in the environment variable `AIRT_SERVICE_TOKEN`.\n\nTry &#39;airt token --help&#39; for help.\n&quot;
+
+&#39;Pulling datablob uuid: 82e15303-adcd-4f56-9347-0fb3dbf8b9d2\n\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r  0%|          | 0/1 [00:05&lt;?, ?it/s]\r  0%|          | 0/1 [00:10&lt;?, ?it/s]\r  0%|          | 0/1 [00:15&lt;?, ?it/s]\r  0%|          | 0/1 [00:20&lt;?, ?it/s]\r  0%|          | 0/1 [00:25&lt;?, ?it/s]\r  0%|          | 0/1 [00:30&lt;?, ?it/s]\r100%|██████████| 1/1 [00:35&lt;00:00,  5.06s/it]\r100%|██████████| 1/1 [00:35&lt;00:00, 35.50s/it]\n&#39;
+
+&#39;************************************************************************************************************************&#39;
+
+&#39;eb7d485d-6a9b-499a-9157-262077c1cbef\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for from-azure-blob-storage</span>
+<span class="c1"># Positive Scenario: Validating the default region</span>
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">region</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;westeurope&quot;</span><span class="p">,</span> <span class="s2">&quot;northeurope&quot;</span><span class="p">]:</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;from-azure-blob-storage&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">TEST_AZURE_URI</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--credential&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">credential</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--cloud-provider&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;azure&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--region&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">region</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+        <span class="n">db_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">db_uuid</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">remove_hypens_from_id</span><span class="p">(</span><span class="n">db_uuid</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;details&quot;</span><span class="p">,</span> <span class="n">db_uuid</span><span class="p">])</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="n">region</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;7acc7398-1d8e-4454-8ded-e355f8414c7a\n&#39;
+
+&#39;7acc7398-1d8e-4454-8ded-e355f8414c7a&#39;
+
+&#39;datablob_uuid                         datasource_uuids    type                source                                                                                     region      cloud_provider    tags    pulled_on      folder_size    user_uuid                             error    disabled    ready\n7acc7398-1d8e-4454-8ded-e355f8414c7a  &lt;none&gt;              azure_blob_storage  https://testairtservice.blob.core.windows.net/test-container/ecommerce_behavior_notebooks  westeurope  azure             latest  7 seconds ago  10.2 MB        4b5131a3-6562-413d-abf2-1103275bf945  &lt;none&gt;   False       True\n&#39;
+
+&#39;7c376650-5d91-4124-9057-9dfdd6984fbb\n&#39;
+
+&#39;7c376650-5d91-4124-9057-9dfdd6984fbb&#39;
+
+&#39;datablob_uuid                         datasource_uuids    type                source                                                                                     region       cloud_provider    tags    pulled_on       folder_size    user_uuid                             error    disabled    ready\n7c376650-5d91-4124-9057-9dfdd6984fbb  &lt;none&gt;              azure_blob_storage  https://testairtservice.blob.core.windows.net/test-container/ecommerce_behavior_notebooks  northeurope  azure             latest  11 seconds ago  10.2 MB        4b5131a3-6562-413d-abf2-1103275bf945  &lt;none&gt;   False       True\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;from-mysql&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root from-mysql [OPTIONS]\n\n  Create and return a datablob that encapsulates the data from a mysql database.\n\n  If the database requires authentication, pass the username/password as\n  commandline arguments or store it in the **AIRT_CLIENT_DB_USERNAME** and\n  **AIRT_CLIENT_DB_PASSWORD** environment variables.\n\nOptions:\n  --host TEXT                 Remote database host name.  [required]\n  --database TEXT             Database name.  [required]\n  --table TEXT                Table name.  [required]\n  --port INTEGER              Host port number. If not passed, then the default\n                              value **3306** will be used.  [default: 3306]\n  -cp, --cloud-provider TEXT  The destination cloud storage provider\&#39;s name to\n                              store the datablob. Currently, the API only\n                              supports **aws** and **azure** as cloud storage\n                              providers. If **None** (default value), then\n                              **aws**  will be used as the cloud storage\n                              provider.\n  -r, --region TEXT           The destination cloud provider\&#39;s region to save\n                              your datablob. If **None** (default value) then\n                              the default region will be assigned based on the\n                              cloud provider. In the case of **aws**, **eu-\n                              west-1** will be used and in the case of\n                              **azure**, **westeurope** will be used. The\n                              supported AWS regions are: ap-northeast-1, ap-\n                              northeast-2, ap-south-1, ap-southeast-1, ap-\n                              southeast-2, ca-central-1, eu-central-1, eu-\n                              north-1, eu-west-1, eu-west-2, eu-west-3, sa-\n                              east-1, us-east-1, us-east-2, us-west-1, us-\n                              west-2. The supported Azure Blob Storage regions\n                              are: australiacentral, australiacentral2,\n                              australiaeast, australiasoutheast, brazilsouth,\n                              canadacentral, canadaeast, centralindia,\n                              centralus, eastasia, eastus, eastus2,\n                              francecentral, francesouth, germanynorth,\n                              germanywestcentral, japaneast, japanwest,\n                              koreacentral, koreasouth, northcentralus,\n                              northeurope, norwayeast, norwaywest,\n                              southafricanorth, southafricawest, southcentralus,\n                              southeastasia, southindia, switzerlandnorth,\n                              switzerlandwest, uaecentral, uaenorth, uksouth,\n                              ukwest, westcentralus, westeurope, westindia,\n                              westus, westus2.\n  -u, --username TEXT         Database username. If not passed, the default\n                              value &quot;root&quot; will be used unless the value is\n                              explicitly set in the environment variable\n                              **AIRT_CLIENT_DB_USERNAME**.\n  -p, --password TEXT         Database password. If not passed, the default\n                              value &quot;&quot; will be used unless the value is\n                              explicitly set in the environment variable\n                              **AIRT_CLIENT_DB_PASSWORD**.\n  -t, --tag TEXT              A string to tag the datablob. If not passed, then\n                              the tag **latest** will be assigned to the\n                              datablob.\n  -q, --quiet                 Output datablob uuid only.\n  -d, --debug                 Set logger level to DEBUG and output everything.\n  --help                      Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for db. Testing negative scenario.</span>
+<span class="c1"># Passing invalid host address</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;from-mysql&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--host&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;db.staging.airt.ai&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--database&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--table&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="c1"># Without quiet (verbose)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot;Unknown MySQL server host &#39;db.staging.airt.ai&#39;&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Pulling datablob uuid: 1a76ae7a-7668-4def-b172-0d50484f2530\n\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r  0%|          | 0/1 [00:05&lt;?, ?it/s]\nError: (MySQLdb.OperationalError) (2005, &quot;Unknown MySQL server host \&#39;db.staging.airt.ai\&#39; (-2)&quot;)\n(Background on this error at: https://sqlalche.me/e/14/e3q8)\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for db. Testing positive scenario.</span>
+
+<span class="c1"># Helper function to create new table in the mysql db</span>
+
+
+<span class="k">def</span> <span class="nf">get_db_engine</span><span class="p">():</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_USERNAME&quot;</span><span class="p">]</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_PASSWORD&quot;</span><span class="p">]</span>
+    <span class="n">host</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_HOST&quot;</span><span class="p">]</span>
+    <span class="n">port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_PORT&quot;</span><span class="p">])</span>
+    <span class="n">database</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_DATABASE&quot;</span><span class="p">]</span>
+    <span class="n">database_server</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_DATABASE_SERVER&quot;</span><span class="p">]</span>
+
+    <span class="n">quoted_password</span> <span class="o">=</span> <span class="n">urlquote</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+    <span class="n">conn_str</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">database_server</span><span class="si">}</span><span class="s2">://</span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">quoted_password</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">port</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">database</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+    <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">conn_str</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">engine</span>
+
+
+<span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryDirectory</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;test_s3_download_&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+    <span class="err">!</span><span class="n">aws</span> <span class="n">s3</span> <span class="n">sync</span> <span class="p">{</span><span class="n">TEST_S3_URI</span><span class="p">}</span> <span class="p">{</span><span class="n">d</span><span class="p">}</span>
+    <span class="err">!</span><span class="n">ls</span> <span class="p">{</span><span class="n">d</span><span class="p">}</span>
+
+    <span class="n">engine</span> <span class="o">=</span> <span class="n">get_db_engine</span><span class="p">()</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s2">&quot;test_db_pull&quot;</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s2">&quot;fail&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">region</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;eu-west-1&quot;</span><span class="p">,</span> <span class="s2">&quot;eu-west-3&quot;</span><span class="p">]:</span>
+        <span class="c1"># Creating a new datasource</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;from-mysql&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--host&quot;</span><span class="p">,</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_HOST&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;--database&quot;</span><span class="p">,</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_DATABASE&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;--table&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;test_db_pull&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--username&quot;</span><span class="p">,</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_USERNAME&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;--password&quot;</span><span class="p">,</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_PASSWORD&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;--tag&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;v1.1.0&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+
+        <span class="n">cmd_q</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;from-mysql&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--host&quot;</span><span class="p">,</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_HOST&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;--database&quot;</span><span class="p">,</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_DATABASE&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;--table&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;test_db_pull&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--username&quot;</span><span class="p">,</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_USERNAME&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;--password&quot;</span><span class="p">,</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_PASSWORD&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;-cp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--region&quot;</span><span class="p">,</span>
+            <span class="n">region</span><span class="p">,</span>
+            <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+
+        <span class="c1"># Without quiet</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="s2">&quot;Pulling datablob uuid:&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+        <span class="c1"># With quiet</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd_q</span><span class="p">)</span>
+        <span class="n">db_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">db_uuid</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">remove_hypens_from_id</span><span class="p">(</span><span class="n">db_uuid</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;details&quot;</span><span class="p">,</span> <span class="n">db_uuid</span><span class="p">])</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="n">region</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>download: s3://test-airt-service/ecommerce_behavior_notebooks/_metadata to ../../../tmp/test_s3_download_s_7mrvfp/_metadata
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.16.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.16.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.17.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.17.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.18.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.18.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.19.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.19.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.2.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.2.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.4.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.4.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.3.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.3.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/_common_metadata to ../../../tmp/test_s3_download_s_7mrvfp/_common_metadata
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.5.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.5.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.10.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.10.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.9.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.9.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.13.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.13.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.12.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.12.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.8.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.8.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.15.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.15.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.7.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.7.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.0.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.0.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.1.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.1.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.11.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.11.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.14.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.14.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.6.parquet to ../../../tmp/test_s3_download_s_7mrvfp/part.6.parquet
+_common_metadata  part.12.parquet  part.18.parquet  part.6.parquet
+_metadata     part.13.parquet  part.19.parquet  part.7.parquet
+part.0.parquet    part.14.parquet  part.2.parquet   part.8.parquet
+part.1.parquet    part.15.parquet  part.3.parquet   part.9.parquet
+part.10.parquet   part.16.parquet  part.4.parquet
+part.11.parquet   part.17.parquet  part.5.parquet
+
+&#39;Pulling datablob uuid: d4b4b132-d5ef-4c41-ad31-0f2cc5fb5b02\n\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r  0%|          | 0/1 [00:05&lt;?, ?it/s]\r100%|██████████| 1/1 [00:10&lt;00:00,  5.05s/it]\r100%|██████████| 1/1 [00:10&lt;00:00, 10.15s/it]\n&#39;
+
+&#39;79652c84-fdaf-445f-a9cd-95e4901e0eb4&#39;
+
+&#39;datablob_uuid                         datasource_uuids    type    source                                               region     cloud_provider    tags    pulled_on      folder_size    user_uuid                             error    disabled    ready\n79652c84-fdaf-445f-a9cd-95e4901e0eb4  &lt;none&gt;              db      mysql://harish-mysql:3306/airt_service/test_db_pull  eu-west-1  aws               latest  3 seconds ago  8.0 MB         4b5131a3-6562-413d-abf2-1103275bf945  &lt;none&gt;   False       True\n&#39;
+
+&#39;Pulling datablob uuid: 155a1e9c-2e52-4639-ad26-b462dc0315c4\n\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r  0%|          | 0/1 [00:05&lt;?, ?it/s]\r  0%|          | 0/1 [00:10&lt;?, ?it/s]\r100%|██████████| 1/1 [00:15&lt;00:00,  5.06s/it]\r100%|██████████| 1/1 [00:15&lt;00:00, 15.50s/it]\n&#39;
+
+&#39;868229e8-0f95-4eb5-8db6-30e329654a0d&#39;
+
+&#39;datablob_uuid                         datasource_uuids    type    source                                               region     cloud_provider    tags    pulled_on      folder_size    user_uuid                             error    disabled    ready\n868229e8-0f95-4eb5-8db6-30e329654a0d  &lt;none&gt;              db      mysql://harish-mysql:3306/airt_service/test_db_pull  eu-west-3  aws               latest  3 seconds ago  8.0 MB         4b5131a3-6562-413d-abf2-1103275bf945  &lt;none&gt;   False       True\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;to-datasource&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root to-datasource [OPTIONS]\n\n  Process the datablob and return a datasource object.\n\nOptions:\n  --uuid TEXT                     Datablob uuid.  [required]\n  --file-type TEXT                The file type of the datablob. Currently, the\n                                  API only supports &quot;csv&quot; and &quot;parquet&quot; as file\n                                  types.  [required]\n  --index-column TEXT             The column to use as index (row labels).\n                                  [required]\n  --sort-by TEXT                  The column(s) to sort the data. Can either be\n                                  a string or a JSON encoded list of strings.\n                                  [required]\n  --deduplicate-data / --no-deduplicate-data\n                                  If set to **True** (default value **False**),\n                                  the datasource will be created with duplicate\n                                  rows removed.  [default: no-deduplicate-data]\n  --blocksize TEXT                The number of bytes used to split larger\n                                  files. If None, then the default value\n                                  **256MB** will be used.  [default: 256MB]\n  --kwargs-json TEXT              Additional JSON encoded dict arguments to use\n                                  while processing the data.e.g: To skip 100\n                                  lines from the bottom of file, pass\n                                  \&#39;{&quot;skipfooter&quot;: 100}\&#39;\n  -q, --quiet                     Output datasource uuid only.\n  -d, --debug                     Set logger level to DEBUG and output\n                                  everything.\n  --help                          Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for to-datasource</span>
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">generate_db</span><span class="p">()</span> <span class="k">as</span> <span class="n">db</span><span class="p">:</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;to-datasource&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--uuid&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--file-type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parquet&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--index-column&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--sort-by&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;event_time&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--kwargs-json&quot;</span><span class="p">,</span>
+            <span class="s1">&#39;{&quot;parse_dates&quot;: [&quot;event_time&quot;], &quot;skipfooter&quot;: 100}&#39;</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">exit_code</span><span class="si">=}</span><span class="s2">&quot;</span>
+        <span class="k">assert</span> <span class="p">(</span>
+            <span class="s2">&quot;Processing and pulling the datasource uuid:&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+        <span class="p">),</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+
+        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;to-datasource&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--uuid&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--file-type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parquet&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--index-column&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--sort-by&quot;</span><span class="p">,</span>
+            <span class="s1">&#39;[&quot;event_time&quot;, &quot;category_id&quot;]&#39;</span><span class="p">,</span>
+            <span class="s2">&quot;--kwargs-json&quot;</span><span class="p">,</span>
+            <span class="s1">&#39;{&quot;parse_dates&quot;: [&quot;event_time&quot;], &quot;skipfooter&quot;: 100}&#39;</span><span class="p">,</span>
+            <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">exit_code</span><span class="si">=}</span><span class="s2">&quot;</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Processing and pulling the datasource uuid: 53bf8fc2-31c2-4b35-b355-5dcec1d79b4d\n\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r  0%|          | 0/1 [00:05&lt;?, ?it/s]\r  0%|          | 0/1 [00:10&lt;?, ?it/s]\r  0%|          | 0/1 [00:15&lt;?, ?it/s]\r  0%|          | 0/1 [00:20&lt;?, ?it/s]\r  0%|          | 0/1 [00:25&lt;?, ?it/s]\r100%|██████████| 1/1 [00:30&lt;00:00,  5.06s/it]\r100%|██████████| 1/1 [00:30&lt;00:00, 30.43s/it]\n&#39;
+
+&#39;eb23a3bf-bf18-452e-a8db-1df7c52798b5\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for to-datasource. Passing wrong index and sort column names</span>
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">generate_db</span><span class="p">()</span> <span class="k">as</span> <span class="n">db</span><span class="p">:</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;to-datasource&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--uuid&quot;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--file-type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parquet&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--index-column&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;random-col&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--sort-by&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;random-col&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="s2">&quot;&#39;random-col&#39;&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Error: &quot;Data has no column \&#39;random-col\&#39;: use any column of [\&#39;event_time\&#39;, \&#39;event_type\&#39;, \&#39;product_id\&#39;, \&#39;category_id\&#39;, \&#39;category_code\&#39;, \&#39;brand\&#39;, \&#39;price\&#39;, \&#39;user_id\&#39;, \&#39;user_session\&#39;]&quot;\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;ls&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root ls [OPTIONS]\n\n  Return the list of datablobs.\n\nOptions:\n  -o, --offset INTEGER  The number of datablobs to offset at the beginning. If\n                        **None**, then the default value **0** will be used.\n                        [default: 0]\n  -l, --limit INTEGER   The maximum number of datablobs to return from the\n                        server. If **None**, then the default value **100** will\n                        be used.  [default: 100]\n  --disabled            If set to **True**, then only the deleted datablobs will\n                        be returned.Else, the default value **False** will be\n                        used to return only the listof active datablobs.\n  --completed           If set to **True**, then only the datablobs that are\n                        successfully downloadedto the server will be returned.\n                        Else, the default value **False** will be used toreturn\n                        all the datablobs.\n  -f, --format TEXT     Format output and show only the given column(s) values.\n  -q, --quiet           Output only datablob uuids separated by space\n  -d, --debug           Set logger level to DEBUG and output everything.\n  --help                Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for datasource_ls</span>
+<span class="c1"># Testing positive scenario. Saving the token in env variable</span>
+
+
+<span class="k">def</span> <span class="nf">get_uuids_from_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">uuid</span> <span class="k">for</span> <span class="n">uuid</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)]</span>
+
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="c1"># Without quiet</span>
+    <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;datablob_uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;type&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="s2">&quot;type&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># With quiet</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="n">uuids</span> <span class="o">=</span> <span class="n">get_uuids_from_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uuids</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;datablob_uuid                         type\n8ef21b49-8e4d-402b-a64c-f70e6487eb49  s3\nb7c1fe3f-8187-4874-bd5b-f5d8363fc2fe  s3\n823c12cd-1c46-4136-96f3-d22841a447c9  s3\nf48bdad3-cbdf-4afc-9d35-38c626a58a2e  s3\n6969f7a0-8a18-49a2-af7f-8d7b9f639c08  s3\n82e15303-adcd-4f56-9347-0fb3dbf8b9d2  azure_blob_storage\neb7d485d-6a9b-499a-9157-262077c1cbef  azure_blob_storage\n7acc7398-1d8e-4454-8ded-e355f8414c7a  azure_blob_storage\n7c376650-5d91-4124-9057-9dfdd6984fbb  azure_blob_storage\n1a76ae7a-7668-4def-b172-0d50484f2530  db\nd4b4b132-d5ef-4c41-ad31-0f2cc5fb5b02  db\n79652c84-fdaf-445f-a9cd-95e4901e0eb4  db\n155a1e9c-2e52-4639-ad26-b462dc0315c4  db\n868229e8-0f95-4eb5-8db6-30e329654a0d  db\n&#39;
+
+&#39;8ef21b49-8e4d-402b-a64c-f70e6487eb49\nb7c1fe3f-8187-4874-bd5b-f5d8363fc2fe\n823c12cd-1c46-4136-96f3-d22841a447c9\nf48bdad3-cbdf-4afc-9d35-38c626a58a2e\n6969f7a0-8a18-49a2-af7f-8d7b9f639c08\n82e15303-adcd-4f56-9347-0fb3dbf8b9d2\neb7d485d-6a9b-499a-9157-262077c1cbef\n7acc7398-1d8e-4454-8ded-e355f8414c7a\n7c376650-5d91-4124-9057-9dfdd6984fbb\n1a76ae7a-7668-4def-b172-0d50484f2530\nd4b4b132-d5ef-4c41-ad31-0f2cc5fb5b02\n79652c84-fdaf-445f-a9cd-95e4901e0eb4\n155a1e9c-2e52-4639-ad26-b462dc0315c4\n868229e8-0f95-4eb5-8db6-30e329654a0d\n&#39;
+
+&quot;uuids=[&#39;8ef21b49-8e4d-402b-a64c-f70e6487eb49&#39;, &#39;b7c1fe3f-8187-4874-bd5b-f5d8363fc2fe&#39;, &#39;823c12cd-1c46-4136-96f3-d22841a447c9&#39;, &#39;f48bdad3-cbdf-4afc-9d35-38c626a58a2e&#39;, &#39;6969f7a0-8a18-49a2-af7f-8d7b9f639c08&#39;, &#39;82e15303-adcd-4f56-9347-0fb3dbf8b9d2&#39;, &#39;eb7d485d-6a9b-499a-9157-262077c1cbef&#39;, &#39;7acc7398-1d8e-4454-8ded-e355f8414c7a&#39;, &#39;7c376650-5d91-4124-9057-9dfdd6984fbb&#39;, &#39;1a76ae7a-7668-4def-b172-0d50484f2530&#39;, &#39;d4b4b132-d5ef-4c41-ad31-0f2cc5fb5b02&#39;, &#39;79652c84-fdaf-445f-a9cd-95e4901e0eb4&#39;, &#39;155a1e9c-2e52-4639-ad26-b462dc0315c4&#39;, &#39;868229e8-0f95-4eb5-8db6-30e329654a0d&#39;]&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for datasource_ls</span>
+<span class="c1"># Testing positive scenario.</span>
+<span class="c1"># Testing by passing different values for  limit</span>
+
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">limit</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]:</span>
+        <span class="n">offset</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;--offset&quot;</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="s2">&quot;--limit&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+        <span class="n">uuids</span> <span class="o">=</span> <span class="n">get_uuids_from_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">uuids</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">limit</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">uuids</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;uuids=[&#39;b7c1fe3f-8187-4874-bd5b-f5d8363fc2fe&#39;]&quot;
+
+&quot;uuids=[&#39;b7c1fe3f-8187-4874-bd5b-f5d8363fc2fe&#39;, &#39;823c12cd-1c46-4136-96f3-d22841a447c9&#39;, &#39;f48bdad3-cbdf-4afc-9d35-38c626a58a2e&#39;, &#39;6969f7a0-8a18-49a2-af7f-8d7b9f639c08&#39;, &#39;82e15303-adcd-4f56-9347-0fb3dbf8b9d2&#39;, &#39;eb7d485d-6a9b-499a-9157-262077c1cbef&#39;, &#39;7acc7398-1d8e-4454-8ded-e355f8414c7a&#39;, &#39;7c376650-5d91-4124-9057-9dfdd6984fbb&#39;, &#39;1a76ae7a-7668-4def-b172-0d50484f2530&#39;, &#39;d4b4b132-d5ef-4c41-ad31-0f2cc5fb5b02&#39;]&quot;
+
+&quot;uuids=[&#39;b7c1fe3f-8187-4874-bd5b-f5d8363fc2fe&#39;, &#39;823c12cd-1c46-4136-96f3-d22841a447c9&#39;, &#39;f48bdad3-cbdf-4afc-9d35-38c626a58a2e&#39;, &#39;6969f7a0-8a18-49a2-af7f-8d7b9f639c08&#39;, &#39;82e15303-adcd-4f56-9347-0fb3dbf8b9d2&#39;, &#39;eb7d485d-6a9b-499a-9157-262077c1cbef&#39;, &#39;7acc7398-1d8e-4454-8ded-e355f8414c7a&#39;, &#39;7c376650-5d91-4124-9057-9dfdd6984fbb&#39;, &#39;1a76ae7a-7668-4def-b172-0d50484f2530&#39;, &#39;d4b4b132-d5ef-4c41-ad31-0f2cc5fb5b02&#39;, &#39;79652c84-fdaf-445f-a9cd-95e4901e0eb4&#39;, &#39;155a1e9c-2e52-4639-ad26-b462dc0315c4&#39;, &#39;868229e8-0f95-4eb5-8db6-30e329654a0d&#39;]&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for datasource_ls</span>
+<span class="c1"># Testing positive scenario.</span>
+<span class="c1"># Testing by passing large value for offset.</span>
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">1_000_000</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;--offset&quot;</span><span class="p">,</span> <span class="n">offset</span><span class="p">,</span> <span class="s2">&quot;--limit&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="p">])</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;datablob_uuid    datasource_uuids    type    source    region    cloud_provider    tags    pulled_on    folder_size    ready\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;rm&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root rm [OPTIONS] UUID\n\n  Delete a datablob from the server.\n\nArguments:\n  UUID  Datablob uuid.  [required]\n\nOptions:\n  -f, --format TEXT  Format output and show only the given column(s) values.\n  -q, --quiet        Output the deleted datablob uuid only.\n  -d, --debug        Set logger level to DEBUG and output everything.\n  --help             Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for datasource rm</span>
+<span class="c1"># Testing positive scenario with quite</span>
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">generate_db</span><span class="p">()</span> <span class="k">as</span> <span class="n">db</span><span class="p">:</span>
+        <span class="n">db_uuid</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">uuid</span>
+
+        <span class="c1"># Deleting the created data source from the server</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;rm&quot;</span><span class="p">,</span> <span class="n">db_uuid</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+        <span class="n">deleted_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="n">deleted_uuid</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="n">deleted_uuid</span> <span class="o">==</span> <span class="n">db_uuid</span>
+
+        <span class="c1"># List the existing data source ids in server and make sure the deleted id is not present in the server</span>
+        <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;datablob_uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+        <span class="n">ls_result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">])</span>
+        <span class="n">ls_uuids</span> <span class="o">=</span> <span class="n">get_uuids_from_result</span><span class="p">(</span><span class="n">ls_result</span><span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="n">ls_uuids</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">deleted_uuid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ls_uuids</span>
+
+        <span class="c1"># ls with quiet and disabled = True</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;--disabled&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+        <span class="n">disabled_db_uuids</span> <span class="o">=</span> <span class="n">get_uuids_from_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">disabled_db_uuids</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">deleted_uuid</span> <span class="ow">in</span> <span class="n">disabled_db_uuids</span>
+
+        <span class="c1"># Testing negative scenario. Deleting already deleted data source</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;rm&quot;</span><span class="p">,</span> <span class="n">deleted_uuid</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+
+        <span class="c1"># Testing negative scenario. Getting the details of the deleted data source</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;details&quot;</span><span class="p">,</span> <span class="n">deleted_uuid</span><span class="p">])</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;823c12cd-1c46-4136-96f3-d22841a447c9&#39;
+
+[&#39;8ef21b49-8e4d-402b-a64c-f70e6487eb49&#39;,
+ &#39;b7c1fe3f-8187-4874-bd5b-f5d8363fc2fe&#39;,
+ &#39;f48bdad3-cbdf-4afc-9d35-38c626a58a2e&#39;,
+ &#39;6969f7a0-8a18-49a2-af7f-8d7b9f639c08&#39;,
+ &#39;82e15303-adcd-4f56-9347-0fb3dbf8b9d2&#39;,
+ &#39;eb7d485d-6a9b-499a-9157-262077c1cbef&#39;,
+ &#39;7acc7398-1d8e-4454-8ded-e355f8414c7a&#39;,
+ &#39;7c376650-5d91-4124-9057-9dfdd6984fbb&#39;,
+ &#39;1a76ae7a-7668-4def-b172-0d50484f2530&#39;,
+ &#39;d4b4b132-d5ef-4c41-ad31-0f2cc5fb5b02&#39;,
+ &#39;79652c84-fdaf-445f-a9cd-95e4901e0eb4&#39;,
+ &#39;155a1e9c-2e52-4639-ad26-b462dc0315c4&#39;,
+ &#39;868229e8-0f95-4eb5-8db6-30e329654a0d&#39;]
+
+&#39;823c12cd-1c46-4136-96f3-d22841a447c9\n&#39;
+
+&quot;disabled_db_uuids=[&#39;823c12cd-1c46-4136-96f3-d22841a447c9&#39;]&quot;
+
+&#39;Error: The datablob has already been deleted.\n&#39;
+
+&#39;Error: The datablob has already been deleted.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for datasource rm</span>
+<span class="c1"># Testing negative scenario. Deleting invalid data source</span>
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="c1"># Testing negative scenario. Deleting already deleted data source</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;rm&quot;</span><span class="p">,</span> <span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Error: The datablob uuid is incorrect. Please try again.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;tag&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root tag [OPTIONS]\n\n  Tag an existing datablob in the server.\n\nOptions:\n  -uuid, --datablob_uuid TEXT  Datablob uuid in the server.  [required]\n  -n, --name TEXT              A string to tag the datablob.  [required]\n  -f, --format TEXT            Format output and show only the given column(s)\n                               values.\n  -d, --debug                  Set logger level to DEBUG and output everything.\n  --help                       Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for tag</span>
+<span class="c1"># Testing positive scenario</span>
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">generate_db</span><span class="p">(</span><span class="n">force_create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">db</span><span class="p">:</span>
+        <span class="n">db_uuid</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">uuid</span>
+
+        <span class="c1"># Tag the data source</span>
+        <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;datablob_uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;tags&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+            <span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;tag&quot;</span><span class="p">,</span> <span class="s2">&quot;-uuid&quot;</span><span class="p">,</span> <span class="n">db_uuid</span><span class="p">,</span> <span class="s2">&quot;-n&quot;</span><span class="p">,</span> <span class="s2">&quot;v1.1.0&quot;</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">assert</span> <span class="s2">&quot;v1.1.0&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;_db.uuid=&#39;f2e00205-6568-4249-8f0e-176142cc5ac2&#39;&quot;
+
+100%|██████████| 1/1 [00:10&lt;00:00, 10.16s/it]
+
+&#39;datablob_uuid                         tags\nf2e00205-6568-4249-8f0e-176142cc5ac2  latest, v1.1.0\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;from-local&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;Usage: root from-local [OPTIONS]\n\n  Create and return a datablob from local csv file.\n\n  The API currently allows users to create datablobs from CSV or Parquet files.\n  We intend to support additional file formats in future releases.\n\nOptions:\n  -p, --path TEXT             The relative or absolute path to a local\n                              CSV/parquet file or to a directory containing the\n                              CSV/parquet files.  [required]\n  -cp, --cloud-provider TEXT  The destination cloud storage provider&#39;s name to\n                              store the datablob. Currently, the API only\n                              supports **aws** and **azure** as cloud storage\n                              providers. If **None** (default value), then\n                              **aws**  will be used as the cloud storage\n                              provider.\n  -r, --region TEXT           The destination cloud provider&#39;s region to save\n                              your datablob. If **None** (default value) then\n                              the default region will be assigned based on the\n                              cloud provider. In the case of **aws**, **eu-\n                              west-1** will be used and in the case of\n                              **azure**, **westeurope** will be used. The\n                              supported AWS regions are: ap-northeast-1, ap-\n                              northeast-2, ap-south-1, ap-southeast-1, ap-\n                              southeast-2, ca-central-1, eu-central-1, eu-\n                              north-1, eu-west-1, eu-west-2, eu-west-3, sa-\n                              east-1, us-east-1, us-east-2, us-west-1, us-\n                              west-2. The supported Azure Blob Storage regions\n                              are: australiacentral, australiacentral2,\n                              australiaeast, australiasoutheast, brazilsouth,\n                              canadacentral, canadaeast, centralindia,\n                              centralus, eastasia, eastus, eastus2,\n                              francecentral, francesouth, germanynorth,\n                              germanywestcentral, japaneast, japanwest,\n                              koreacentral, koreasouth, northcentralus,\n                              northeurope, norwayeast, norwaywest,\n                              southafricanorth, southafricawest, southcentralus,\n                              southeastasia, southindia, switzerlandnorth,\n                              switzerlandwest, uaecentral, uaenorth, uksouth,\n                              ukwest, westcentralus, westeurope, westindia,\n                              westus, westus2.\n  -t, --tag TEXT              A string to tag the datablob. If not passed, then\n                              the tag **latest** will be assigned to the\n                              datablob.\n  -q, --quiet                 Output data id only.\n  -d, --debug                 Set logger level to DEBUG and output everything.\n  --help                      Show this message and exit.\n&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Testing single files upload.</span>
+
+<span class="c1"># Create temp directory</span>
+<span class="n">temp_dir</span><span class="p">,</span> <span class="n">csv_dirpath</span> <span class="o">=</span> <span class="n">get_test_csv_path</span><span class="p">()</span>
+
+<span class="c1"># Creating a new datasource</span>
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;from-local&quot;</span><span class="p">,</span> <span class="s2">&quot;--path&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">csv_dirpath</span> <span class="o">/</span> <span class="s2">&quot;file-1.csv&quot;</span><span class="p">)]</span>
+
+<span class="n">cmd_q</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;from-local&quot;</span><span class="p">,</span> <span class="s2">&quot;--path&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">csv_dirpath</span> <span class="o">/</span> <span class="s2">&quot;file-1.csv&quot;</span><span class="p">),</span> <span class="s2">&quot;-q&quot;</span><span class="p">]</span>
+
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="c1"># Without quiet</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot;Successfully pulled the datablob uuid:&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+    <span class="c1"># With quiet</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd_q</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">remove_hypens_from_id</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span> <span class="o">==</span> <span class="mi">32</span>
+
+
+<span class="c1"># Deleting the temp directory</span>
+<span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">temp_dir</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">temp_dir</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="ow">not</span> <span class="n">temp_dir</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>download: s3://test-airt-service/ecommerce_behavior_notebooks/_metadata to ../../../tmp/test_s3_download_58lkcuny/parquet/_metadata
+download: s3://test-airt-service/ecommerce_behavior_notebooks/_common_metadata to ../../../tmp/test_s3_download_58lkcuny/parquet/_common_metadata
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.16.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.16.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.12.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.12.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.1.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.1.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.11.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.11.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.18.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.18.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.14.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.14.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.13.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.13.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.15.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.15.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.0.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.0.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.19.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.19.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.17.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.17.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.10.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.10.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.4.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.4.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.5.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.5.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.2.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.2.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.7.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.7.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.6.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.6.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.3.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.3.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.8.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.8.parquet
+download: s3://test-airt-service/ecommerce_behavior_notebooks/part.9.parquet to ../../../tmp/test_s3_download_58lkcuny/parquet/part.9.parquet
+
+[Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-1.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-15.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-6.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-8.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-17.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-19.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-18.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-5.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-14.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-0.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-10.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-7.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-12.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-4.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-2.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-3.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-16.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-13.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-9.csv&#39;),
+ Path(&#39;/tmp/test_s3_download_58lkcuny/csv/file-11.csv&#39;)]
+
+&#39;\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r100%|██████████| 1/1 [00:00&lt;00:00,  1.68it/s]\r100%|██████████| 1/1 [00:00&lt;00:00,  1.68it/s]\nSuccessfully pulled the datablob uuid: 8feeb4d7-3343-4f1e-a25e-8f39822ee440.\n&#39;
+
+&#39;bdfe2e41-a9da-4d68-9459-a03418eb7e0f\n&#39;
+
+&#39;temp_dir.exists()=False&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;from-clickhouse&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root from-clickhouse [OPTIONS]\n\n  Create and return a datablob that encapsulates the data from a ClickHouse\n  database.\n\n  If the database requires authentication, pass the username/password as\n  commandline arguments or store it in the **CLICKHOUSE_USERNAME** and\n  **CLICKHOUSE_PASSWORD** environment variables.\n\nOptions:\n  --host TEXT                 Remote database host name.  [required]\n  --database TEXT             Database name.  [required]\n  --table TEXT                Table name.  [required]\n  --protocol TEXT             Protocol to use. The valid values are &quot;native&quot; and\n                              &quot;http&quot;.  [required]\n  --index-column TEXT         The column to use as index (row labels).\n                              [required]\n  --timestamp-column TEXT     Timestamp column name in the tabel.  [required]\n  --port INTEGER              Host port number. If not passed, then the default\n                              value **0** will be used.  [default: 0]\n  -cp, --cloud-provider TEXT  The destination cloud storage provider\&#39;s name to\n                              store the datablob. Currently, the API only\n                              supports **aws** and **azure** as cloud storage\n                              providers. If **None** (default value), then\n                              **aws**  will be used as the cloud storage\n                              provider.\n  -r, --region TEXT           The destination cloud provider\&#39;s region to save\n                              your datablob. If **None** (default value) then\n                              the default region will be assigned based on the\n                              cloud provider. In the case of **aws**, **eu-\n                              west-1** will be used and in the case of\n                              **azure**, **westeurope** will be used. The\n                              supported AWS regions are: ap-northeast-1, ap-\n                              northeast-2, ap-south-1, ap-southeast-1, ap-\n                              southeast-2, ca-central-1, eu-central-1, eu-\n                              north-1, eu-west-1, eu-west-2, eu-west-3, sa-\n                              east-1, us-east-1, us-east-2, us-west-1, us-\n                              west-2. The supported Azure Blob Storage regions\n                              are: australiacentral, australiacentral2,\n                              australiaeast, australiasoutheast, brazilsouth,\n                              canadacentral, canadaeast, centralindia,\n                              centralus, eastasia, eastus, eastus2,\n                              francecentral, francesouth, germanynorth,\n                              germanywestcentral, japaneast, japanwest,\n                              koreacentral, koreasouth, northcentralus,\n                              northeurope, norwayeast, norwaywest,\n                              southafricanorth, southafricawest, southcentralus,\n                              southeastasia, southindia, switzerlandnorth,\n                              switzerlandwest, uaecentral, uaenorth, uksouth,\n                              ukwest, westcentralus, westeurope, westindia,\n                              westus, westus2.\n  -u, --username TEXT         Database username. If not passed, the default\n                              value \&#39;root\&#39; will be used unless the value is\n                              explicitly set in the environment variable\n                              **CLICKHOUSE_USERNAME**.\n  -p, --password TEXT         Database password. If not passed, the default\n                              value \&#39;\&#39; will be used unless the value is\n                              explicitly set in the environment variable\n                              **CLICKHOUSE_PASSWORD**.\n  -f, --filters-json TEXT     Additional parameters to be used when importing\n                              data. For example, if you want to filter and\n                              extract data only for a specific user_id, pass\n                              \&#39;{&quot;user_id&quot;: 1}\&#39;.\n  -t, --tag TEXT              A string to tag the datablob. If not passed, then\n                              the tag **latest** will be assigned to the\n                              datablob.\n  -q, --quiet                 Output datablob uuid only.\n  -d, --debug                 Set logger level to DEBUG and output everything.\n  --help                      Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for from-clickhouse. Testing positive scenario.</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;from-clickhouse&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--host&quot;</span><span class="p">,</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CLICKHOUSE_HOST&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;--database&quot;</span><span class="p">,</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CLICKHOUSE_DATABASE&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;--table&quot;</span><span class="p">,</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CLICKHOUSE_EVENTS_TABLE&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;--protocol&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;native&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--index-column&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PersonId&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--timestamp-column&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;OccurredTimeTicks&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--filters-json&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;{&quot;AccountId&quot;: 312571}&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="c1"># Without quiet (verbose)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot;Pulling datablob uuid: &quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">db_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">db_uuid</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">remove_hypens_from_id</span><span class="p">(</span><span class="n">db_uuid</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;details&quot;</span><span class="p">,</span> <span class="n">db_uuid</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="s2">&quot;eu-west-1&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;-cp&quot;</span><span class="p">,</span> <span class="s2">&quot;aws&quot;</span><span class="p">,</span> <span class="s2">&quot;--region&quot;</span><span class="p">,</span> <span class="s2">&quot;eu-west-3&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">db_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">db_uuid</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">remove_hypens_from_id</span><span class="p">(</span><span class="n">db_uuid</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;details&quot;</span><span class="p">,</span> <span class="n">db_uuid</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="s2">&quot;eu-west-3&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Pulling datablob uuid: a17b8b8f-74a7-4d8e-9f53-803c14ad726f\n\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r  0%|          | 0/1 [00:05&lt;?, ?it/s]\r  0%|          | 0/1 [00:10&lt;?, ?it/s]\r  0%|          | 0/1 [00:15&lt;?, ?it/s]\r  0%|          | 0/1 [00:20&lt;?, ?it/s]\r100%|██████████| 1/1 [00:25&lt;00:00,  5.06s/it]\r100%|██████████| 1/1 [00:25&lt;00:00, 25.40s/it]\n&#39;
+
+&#39;b3826d4f-852b-4676-af05-933316c4a56a&#39;
+
+&#39;datablob_uuid                         datasource_uuids    type    source                                                       region     cloud_provider    tags    pulled_on      folder_size    user_uuid                             error    disabled    ready\nb3826d4f-852b-4676-af05-933316c4a56a  &lt;none&gt;              db      clickhouse+native://20.73.247.24:0/infobip/airt_training_3m  eu-west-1  aws               latest  3 seconds ago  8.9 MB         4b5131a3-6562-413d-abf2-1103275bf945  &lt;none&gt;   False       True\n&#39;
+
+&#39;247e6345-8940-4d75-8845-576d2b652955&#39;
+
+&#39;datablob_uuid                         datasource_uuids    type    source                                                       region     cloud_provider    tags    pulled_on      folder_size    user_uuid                             error    disabled    ready\n247e6345-8940-4d75-8845-576d2b652955  &lt;none&gt;              db      clickhouse+native://20.73.247.24:0/infobip/airt_training_3m  eu-west-3  aws               latest  4 seconds ago  8.9 MB         4b5131a3-6562-413d-abf2-1103275bf945  &lt;none&gt;   False       True\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for from-clickhouse. Testing negative scenario.</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;from-clickhouse&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--host&quot;</span><span class="p">,</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CLICKHOUSE_HOST&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;--database&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fake-database&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--table&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fake-table&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--protocol&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;native&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--index-column&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PersonId&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--timestamp-column&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;OccurredTimeTicks&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-f&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;{&quot;AccountId&quot;: 312571}&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="k">with</span> <span class="n">set_airt_service_token_envvar</span><span class="p">():</span>
+    <span class="c1"># Without quiet (verbose)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;Pulling datablob uuid: b957e2c5-4527-41d8-90b2-46e0c1bada8f\n\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r  0%|          | 0/1 [00:00&lt;?, ?it/s]\r  0%|          | 0/1 [00:05&lt;?, ?it/s]\r  0%|          | 0/1 [00:10&lt;?, ?it/s]\nError: Orig exception: Code: 81.\nDB::Exception: Database `fake-database` doesn&#39;t exist. Stack trace:\n\n0. DB::Exception::Exception(DB::Exception::MessageMasked&amp;&amp;, int, bool) @ 0xddb0df5 in /usr/bin/clickhouse\n1. ? @ 0x883ade4 in /usr/bin/clickhouse\n2. DB::Databas\n&quot;
+</code></pre></div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022 onwards, airt.ai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    and 
+    <a href="https://nbdev-mkdocs.airt.ai/" target="_blank" rel="noopener">
+      Material for nbdev
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../overrides/js/extra.js"></script>
+        
+      
+        
+          <script src="../overrides/js/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>

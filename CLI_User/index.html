@@ -1,0 +1,1619 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python client for airt-service">
+      
+      
+        <meta name="author" content="airt.ai">
+      
+      
+        <link rel="canonical" href="https://airtai.github.io/airt-client/CLI_User/">
+      
+      
+      
+      <link rel="icon" href="../overrides/images/airt_icon_blue.svg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>CLI_User - airt</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../overrides/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-H6EV08GRK5"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-H6EV08GRK5",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-H6EV08GRK5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+  
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="airt - CLI_User" />
+  <meta property="og:description" content="Python client for airt-service" />
+  <meta property="og:url" content="https://airtai.github.io/airt-client/CLI_User/" />
+  <meta property="og:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="airt - CLI_User" />
+  <meta name="twitter:description" content="Python client for airt-service" />
+  <meta name="twitter:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cli_user" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="airt" class="md-header__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            airt
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CLI_User
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="airt" class="md-nav__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    airt
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Python client for airt service
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial/" class="md-nav__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_api_docs/airt/client/" class="md-nav__link">
+        airt.client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_cli_docs/airt/" class="md-nav__link">
+        airt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="cli_user">CLI_User<a class="headerlink" href="#cli_user" title="Permanent link">¤</a></h1>
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">airt._testing</span> <span class="kn">import</span> <span class="n">activate_by_import</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[INFO] airt._testing.activate_by_import: Testing environment activated.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">typer.testing</span> <span class="kn">import</span> <span class="n">CliRunner</span>
+
+<span class="kn">import</span> <span class="nn">airt._sanitizer</span>
+<span class="kn">from</span> <span class="nn">airt._constant</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">SERVICE_PASSWORD</span><span class="p">,</span>
+    <span class="n">SERVICE_SUPER_USER</span><span class="p">,</span>
+    <span class="n">SERVICE_TOKEN</span><span class="p">,</span>
+    <span class="n">SERVICE_USERNAME</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">airt.client</span> <span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">User</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">runner</span> <span class="o">=</span> <span class="n">CliRunner</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">set_level</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Testing logger settings</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">())</span>
+<span class="k">assert</span> <span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">()</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;This is a debug message&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;This is an info&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;This is a warning&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;This is an error&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>30
+
+[WARNING] __main__: This is a warning
+[ERROR] __main__: This is an error
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">INVALID_UUID_FOR_TESTING</span> <span class="o">=</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Helper context manager for testing</span>
+
+<span class="n">_airt_service_token</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">normal_user</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">_airt_service_token</span>
+    <span class="k">if</span> <span class="n">_airt_service_token</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">display</span><span class="p">(</span><span class="s2">&quot;_airt_service_token is None, getting a token...&quot;</span><span class="p">)</span>
+
+        <span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_USERNAME</span><span class="p">]</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_PASSWORD</span><span class="p">]</span>
+
+        <span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+        <span class="n">_airt_service_token</span> <span class="o">=</span> <span class="n">Client</span><span class="o">.</span><span class="n">auth_token</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span> <span class="o">=</span> <span class="n">_airt_service_token</span>
+
+        <span class="k">yield</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">normal_user</span><span class="p">():</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">((</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">])))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;_airt_service_token is None, getting a token...&#39;
+
+&#39;*******************************************************************************************************************************&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Helper context manager for testing</span>
+
+<span class="n">_airt_service_super_user_token</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">super_user</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">_airt_service_super_user_token</span>
+    <span class="k">if</span> <span class="n">_airt_service_super_user_token</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">display</span><span class="p">(</span><span class="s2">&quot;_airt_service_super_user_token is None, getting a token...&quot;</span><span class="p">)</span>
+
+        <span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_SUPER_USER</span><span class="p">]</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_PASSWORD</span><span class="p">]</span>
+
+        <span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+        <span class="n">_airt_service_super_user_token</span> <span class="o">=</span> <span class="n">Client</span><span class="o">.</span><span class="n">auth_token</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span> <span class="o">=</span> <span class="n">_airt_service_super_user_token</span>
+
+        <span class="k">yield</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="n">display</span><span class="p">(</span><span class="s2">&quot;*&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">((</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">])))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;_airt_service_super_user_token is None, getting a token...&#39;
+
+&#39;*******************************************************************************************************************************&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">assert_has_help</span><span class="p">(</span><span class="n">xs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">xs</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;details&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;Usage: details [OPTIONS]\n\n  Get user details\n\n  Please do not pass the optional &#39;user&#39; option unless you are a super user.\n  Only a super user can view details for other users.\n\nOptions:\n  -u, --user TEXT                 Account user_uuid/username to get details. If\n                                  not passed, then the currently logged-in\n                                  details will be returned.\n  -f, --format TEXT               Format output and show only the given\n                                  column(s) values.\n  -q, --quiet                     Output user uuid only.\n  --install-completion [bash|zsh|fish|powershell|pwsh]\n                                  Install completion for the specified shell.\n  --show-completion [bash|zsh|fish|powershell|pwsh]\n                                  Show completion for the specified shell, to\n                                  copy it or customize the installation.\n  --help                          Show this message and exit.\n&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">normal_user</span><span class="p">():</span>
+    <span class="c1"># Positive scenario: Normal user getting their details</span>
+    <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+    <span class="n">user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">user_uuid</span><span class="p">)</span>
+
+    <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--user&quot;</span><span class="p">,</span> <span class="n">user_uuid</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># Negative scenario: Normal user getting other user&#39;s details</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--user&quot;</span><span class="p">,</span> <span class="n">INVALID_UUID_FOR_TESTING</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot;Insufficient permission to access other user&#39;s data&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;d12065d3-48cb-4632-a4cc-db11b843399a\n&#39;
+
+&#39;d12065d3-48cb-4632-a4cc-db11b843399a&#39;
+
+&quot;Error: Insufficient permission to access other user&#39;s data\n&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Helper context manager for testing</span>
+
+<span class="n">_airt_service_super_user_token</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">super_user</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">_airt_service_super_user_token</span>
+    <span class="k">if</span> <span class="n">_airt_service_super_user_token</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">display</span><span class="p">(</span><span class="s2">&quot;_airt_service_super_user_token is None, getting a token...&quot;</span><span class="p">)</span>
+
+        <span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_SUPER_USER</span><span class="p">]</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_PASSWORD</span><span class="p">]</span>
+
+        <span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+        <span class="n">_airt_service_super_user_token</span> <span class="o">=</span> <span class="n">Client</span><span class="o">.</span><span class="n">auth_token</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span> <span class="o">=</span> <span class="n">_airt_service_super_user_token</span>
+
+        <span class="k">yield</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="c1"># Positive scenario: Super user getting their details</span>
+    <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="n">user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--user&quot;</span><span class="p">,</span> <span class="n">user_uuid</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># Positive scenario: Super user accessing others user&#39;s details</span>
+    <span class="n">other_user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">ls</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--user&quot;</span><span class="p">,</span> <span class="n">other_user</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--user&quot;</span><span class="p">,</span> <span class="n">other_user</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+    <span class="c1"># Negative scenario: Super user accessing invalid user&#39;s details</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--user&quot;</span><span class="p">,</span> <span class="n">INVALID_UUID_FOR_TESTING</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot;user uuid is incorrect&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+
+    <span class="n">invalid_user_name</span> <span class="o">=</span> <span class="s2">&quot;invalid_user_name&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--user&quot;</span><span class="p">,</span> <span class="n">invalid_user_name</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot;Incorrect username&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;_airt_service_super_user_token is None, getting a token...&#39;
+
+&#39;d12065d3-48cb-4632-a4cc-db11b843399a\n&#39;
+
+&#39;d12065d3-48cb-4632-a4cc-db11b843399a\n&#39;
+
+&#39;Error: The user uuid is incorrect. Please try again.\n&#39;
+
+&#39;Error: Incorrect username. Please try again.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for user create. Without -q</span>
+
+<span class="n">_user_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+<span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;phone_number&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_user_name</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ph&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;+44123456789&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--format&quot;</span><span class="p">,</span>
+    <span class="n">format_str</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">_user_name_q</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_email_q</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+
+<span class="n">cmd_with_otp</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_user_name_q</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email_q</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--otp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--format&quot;</span><span class="p">,</span>
+    <span class="n">format_str</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">_user_name</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot;44123456789&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+    <span class="c1"># Trying to create new user with existing email and username</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+
+    <span class="c1"># Negative Scenario. Non-MFA user passing otp</span>
+    <span class="n">random_otp</span> <span class="o">=</span> <span class="mi">123456</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd_with_otp</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;username               uuid                                    phone_number\nrandom_user_1772_2579  a3872746-c793-4c4a-864e-7d05a7d1e6ed     44123456789\n&#39;
+
+&#39;Error: The requested username or email already exists. Try another.\n&#39;
+
+&#39;Error: MFA is not activated for the account. Please pass the OTP only after activating the MFA for your account.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for user create. With -q</span>
+
+<span class="n">_user_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_user_name</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;393cc29c-2671-4fcd-941c-d0cb4c6f864b\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;ls&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root ls [OPTIONS]\n\n  Return the list of users available in the server.\n\nOptions:\n  -o, --offset INTEGER  The number of users to offset at the beginning. If\n                        **None**, then the default value **0** will be used.\n                        [default: 0]\n  -l, --limit INTEGER   The maximum number of users to return from the server.\n                        If None, then the default value 100 will be used.\n                        [default: 100]\n  --disabled            If set to **True**, then only the deleted users will be\n                        returned. Else, the default value **False** will be used\n                        to return only the list of active users.\n  -f, --format TEXT     Format output and show only the given column(s) values.\n  -q, --quiet           Output only user uuids separated by space\n  -d, --debug           Set logger level to DEBUG and output everything.\n  --help                Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for ls</span>
+<span class="c1"># Testing positive scenario. Saving the token in env variable</span>
+
+
+<span class="k">def</span> <span class="nf">get_uuids_from_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">uuid</span> <span class="k">for</span> <span class="n">uuid</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)]</span>
+
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="c1"># Without quiet</span>
+    <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="s2">&quot;username&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># With quiet</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="n">ids</span> <span class="o">=</span> <span class="n">get_uuids_from_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ids</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;d12065d3-48cb-4632-a4cc-db11b843399a\ne53369c4-f5ea-478d-a078-147c0df00093\n7f14fe1b-3c44-4bad-b1b8-e0da5a3429e8\n68eb0ff7-9004-4ee6-baa2-4e6bfc62b68a\n95c0ff28-4e0a-4be3-88ae-583bf1027ae7\n8b872c68-5a47-4d43-b565-c2215b5c144c\n8b8fee72-a02a-4b23-8eb4-6d438d67d5a8\n4130a386-a377-4ea1-9309-c62442a66637\na7b89f87-ceac-43ed-84c6-fc96ec0a52a1\n1b6b11a9-a5f3-4ba6-a244-e3ec8e917798\ne4c31874-a867-4fc6-8407-531fc4711c39\n45b58d1a-9716-4e39-8a2a-4fa34e64c681\nc2b6fa37-f439-48e9-9f60-d801ebd24920\nf0853c45-5b0e-4ee9-87bc-c92235a1651d\n90749653-705c-48ff-bfda-82eb3b7d840e\ncbe73708-4ebc-4a15-9920-c5bfe07dc4a6\n5f46973b-023d-4400-b2b3-4096aac0029a\n452a0458-c450-4eeb-a6e2-937ae6ad8e6a\nf04bd56a-2226-4a0d-ace3-fe9497736fb5\n274d569b-c202-45a9-8a24-13d9dc525d84\n6ef10bbe-fd24-4be2-bc21-7cf559979abd\n016a5fe5-db60-4ef6-bfa4-f779ac4e01dc\n07f88176-5fe1-4847-85d5-51e93aebff20\naf7e2314-6c56-4b4e-a90c-cfebdae0ea52\n2c4208d7-fdf8-48a9-bf54-ac72afaf6d3d\nd02dd242-31d4-40e4-99e3-2a49be006093\na3872746-c793-4c4a-864e-7d05a7d1e6ed\n393cc29c-2671-4fcd-941c-d0cb4c6f864b\n&#39;
+
+&quot;ids=[&#39;d12065d3-48cb-4632-a4cc-db11b843399a&#39;, &#39;e53369c4-f5ea-478d-a078-147c0df00093&#39;, &#39;7f14fe1b-3c44-4bad-b1b8-e0da5a3429e8&#39;, &#39;68eb0ff7-9004-4ee6-baa2-4e6bfc62b68a&#39;, &#39;95c0ff28-4e0a-4be3-88ae-583bf1027ae7&#39;, &#39;8b872c68-5a47-4d43-b565-c2215b5c144c&#39;, &#39;8b8fee72-a02a-4b23-8eb4-6d438d67d5a8&#39;, &#39;4130a386-a377-4ea1-9309-c62442a66637&#39;, &#39;a7b89f87-ceac-43ed-84c6-fc96ec0a52a1&#39;, &#39;1b6b11a9-a5f3-4ba6-a244-e3ec8e917798&#39;, &#39;e4c31874-a867-4fc6-8407-531fc4711c39&#39;, &#39;45b58d1a-9716-4e39-8a2a-4fa34e64c681&#39;, &#39;c2b6fa37-f439-48e9-9f60-d801ebd24920&#39;, &#39;f0853c45-5b0e-4ee9-87bc-c92235a1651d&#39;, &#39;90749653-705c-48ff-bfda-82eb3b7d840e&#39;, &#39;cbe73708-4ebc-4a15-9920-c5bfe07dc4a6&#39;, &#39;5f46973b-023d-4400-b2b3-4096aac0029a&#39;, &#39;452a0458-c450-4eeb-a6e2-937ae6ad8e6a&#39;, &#39;f04bd56a-2226-4a0d-ace3-fe9497736fb5&#39;, &#39;274d569b-c202-45a9-8a24-13d9dc525d84&#39;, &#39;6ef10bbe-fd24-4be2-bc21-7cf559979abd&#39;, &#39;016a5fe5-db60-4ef6-bfa4-f779ac4e01dc&#39;, &#39;07f88176-5fe1-4847-85d5-51e93aebff20&#39;, &#39;af7e2314-6c56-4b4e-a90c-cfebdae0ea52&#39;, &#39;2c4208d7-fdf8-48a9-bf54-ac72afaf6d3d&#39;, &#39;d02dd242-31d4-40e4-99e3-2a49be006093&#39;, &#39;a3872746-c793-4c4a-864e-7d05a7d1e6ed&#39;, &#39;393cc29c-2671-4fcd-941c-d0cb4c6f864b&#39;]&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for user ls</span>
+
+<span class="n">_user_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_user_name</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="c1"># creating a new user</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">created_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">created_user_uuid</span><span class="si">=}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># checking the user id is not there in the ls when --disabled is passed</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;--disabled&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">created_user_uuid</span><span class="si">}</span><span class="s2">&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;created_user_uuid=&#39;6d007a52-c15e-404c-945a-9396d38459e2&#39;\n&quot;
+
+&#39;9b4c8afb-8c8f-4e26-b3a3-094dc0a29cd3\na2b14123-0729-4194-a22d-8538facb7da1\n003a19ea-a7ce-4f17-b959-8f4e7b05b261\nc14e1d0c-cd19-4699-a9c6-cfe04b9b1df7\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;disable&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root disable [OPTIONS] USERS...\n\n  Disable a user in the server.\n\nArguments:\n  USERS...  user_uuid/username to disabled.  To disable multiple users, please\n            pass the uuids/names separated by space.  [required]\n\nOptions:\n  --otp TEXT         Dynamically generated six-digit verification code from the\n                     authenticator app. Please pass this optional argument only\n                     if you have activated the MFA for your account.\n  -f, --format TEXT  Format output and show only the given column(s) values.\n  -q, --quiet        Output user uuid only.\n  -d, --debug        Set logger level to DEBUG and output everything.\n  --help             Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for user disable</span>
+
+<span class="c1"># creating a new user</span>
+<span class="n">_user_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_user_name</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="c1"># Creating a new user with super user credentials</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">created_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># disabling the newly created user</span>
+    <span class="n">created_user_name</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;details&quot;</span><span class="p">,</span> <span class="s2">&quot;--user&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="n">created_user_name</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">disabled_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">disabled_user_uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># list disabled users only</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;--disabled&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">all_disabled_users</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">get_uuids_from_result</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">all_disabled_users</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">disabled_user_uuid</span> <span class="ow">in</span> <span class="n">all_disabled_users</span>
+
+    <span class="c1"># disabling already disabled user</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+
+    <span class="c1"># Negative Scenario. Non-MFA user passing otp</span>
+    <span class="n">random_otp</span> <span class="o">=</span> <span class="mi">123456</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">,</span> <span class="s2">&quot;--otp&quot;</span><span class="p">,</span> <span class="n">random_otp</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;disabled_user_uuid=&#39;c8e24693-2f7e-4e4a-bad0-0f2888d7216f&#39;&quot;
+
+&quot;all_disabled_users=[&#39;9b4c8afb-8c8f-4e26-b3a3-094dc0a29cd3&#39;, &#39;a2b14123-0729-4194-a22d-8538facb7da1&#39;, &#39;003a19ea-a7ce-4f17-b959-8f4e7b05b261&#39;, &#39;c14e1d0c-cd19-4699-a9c6-cfe04b9b1df7&#39;, &#39;c8e24693-2f7e-4e4a-bad0-0f2888d7216f&#39;]&quot;
+
+&#39;Error: The user has already been disabled.\n&#39;
+
+&#39;Error: MFA is not activated for the account. Please pass the OTP only after activating the MFA for your account.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># creating a new user</span>
+<span class="n">_user_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+<span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_user_name</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--format&quot;</span><span class="p">,</span>
+    <span class="n">format_str</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="c1"># Creating a new user with super user credentials</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">created_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;username               uuid\nrandom_user_7131_6824  989d1a2f-ea59-4171-b7b4-dc4dcbd97f8d\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;enable&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root enable [OPTIONS] USERS...\n\n  Enable a disabled user in the server.\n\nArguments:\n  USERS...  user_uuid/username to enable. To enable multiple users, please pass\n            the uuids/names separated by space.  [required]\n\nOptions:\n  --otp TEXT         Dynamically generated six-digit verification code from the\n                     authenticator app. Please pass this optional argument only\n                     if you have activated the MFA for your account.\n  -f, --format TEXT  Format output and show only the given column(s) values.\n  -q, --quiet        Output user uuid only.\n  -d, --debug        Set logger level to DEBUG and output everything.\n  --help             Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for user enable</span>
+
+<span class="c1"># creating a new user</span>
+<span class="n">_user_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_user_name</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="c1"># Creating a new user</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">created_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># disabling the newly created user</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">disabled_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># enabling the newly created user</span>
+    <span class="n">created_user_name</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;details&quot;</span><span class="p">,</span> <span class="s2">&quot;--user&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;enable&quot;</span><span class="p">,</span> <span class="n">created_user_name</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">enabled_user_id</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">enabled_user_id</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># list enabled users only</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;-l&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">])</span>
+    <span class="n">all_enabled_users</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">get_uuids_from_result</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">all_enabled_users</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">enabled_user_id</span> <span class="ow">in</span> <span class="n">all_enabled_users</span>
+
+    <span class="c1"># enabling already enabled user</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;enable&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+
+    <span class="c1"># Negative Scenario. Non-MFA user passing otp</span>
+    <span class="n">random_otp</span> <span class="o">=</span> <span class="mi">123456</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;enable&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">,</span> <span class="s2">&quot;--otp&quot;</span><span class="p">,</span> <span class="n">random_otp</span><span class="p">])</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;4984a628-ef22-453a-9433-9f11e7d054b0\n&#39;
+
+&quot;enabled_user_id=&#39;4984a628-ef22-453a-9433-9f11e7d054b0&#39;&quot;
+
+&quot;all_enabled_users=[&#39;d12065d3-48cb-4632-a4cc-db11b843399a&#39;, &#39;e53369c4-f5ea-478d-a078-147c0df00093&#39;, &#39;7f14fe1b-3c44-4bad-b1b8-e0da5a3429e8&#39;, &#39;68eb0ff7-9004-4ee6-baa2-4e6bfc62b68a&#39;, &#39;95c0ff28-4e0a-4be3-88ae-583bf1027ae7&#39;, &#39;8b872c68-5a47-4d43-b565-c2215b5c144c&#39;, &#39;8b8fee72-a02a-4b23-8eb4-6d438d67d5a8&#39;, &#39;4130a386-a377-4ea1-9309-c62442a66637&#39;, &#39;a7b89f87-ceac-43ed-84c6-fc96ec0a52a1&#39;, &#39;1b6b11a9-a5f3-4ba6-a244-e3ec8e917798&#39;, &#39;e4c31874-a867-4fc6-8407-531fc4711c39&#39;, &#39;45b58d1a-9716-4e39-8a2a-4fa34e64c681&#39;, &#39;c2b6fa37-f439-48e9-9f60-d801ebd24920&#39;, &#39;f0853c45-5b0e-4ee9-87bc-c92235a1651d&#39;, &#39;90749653-705c-48ff-bfda-82eb3b7d840e&#39;, &#39;cbe73708-4ebc-4a15-9920-c5bfe07dc4a6&#39;, &#39;5f46973b-023d-4400-b2b3-4096aac0029a&#39;, &#39;452a0458-c450-4eeb-a6e2-937ae6ad8e6a&#39;, &#39;f04bd56a-2226-4a0d-ace3-fe9497736fb5&#39;, &#39;274d569b-c202-45a9-8a24-13d9dc525d84&#39;, &#39;6ef10bbe-fd24-4be2-bc21-7cf559979abd&#39;, &#39;016a5fe5-db60-4ef6-bfa4-f779ac4e01dc&#39;, &#39;07f88176-5fe1-4847-85d5-51e93aebff20&#39;, &#39;af7e2314-6c56-4b4e-a90c-cfebdae0ea52&#39;, &#39;2c4208d7-fdf8-48a9-bf54-ac72afaf6d3d&#39;, &#39;d02dd242-31d4-40e4-99e3-2a49be006093&#39;, &#39;a3872746-c793-4c4a-864e-7d05a7d1e6ed&#39;, &#39;393cc29c-2671-4fcd-941c-d0cb4c6f864b&#39;, &#39;6d007a52-c15e-404c-945a-9396d38459e2&#39;, &#39;989d1a2f-ea59-4171-b7b4-dc4dcbd97f8d&#39;, &#39;4984a628-ef22-453a-9433-9f11e7d054b0&#39;]&quot;
+
+&#39;Error: The user has already been enabled.\n&#39;
+
+&#39;Error: MFA is not activated for the account. Please pass the OTP only after activating the MFA for your account.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for enabling muliple users</span>
+
+
+<span class="c1"># creating a new user</span>
+<span class="k">def</span> <span class="nf">get_cmd_to_create_user</span><span class="p">():</span>
+    <span class="n">random_user</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">random_user</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">random_user</span><span class="si">}</span><span class="s2">@email.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+    <span class="k">return</span> <span class="n">cmd</span>
+
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="c1"># Creating a new user</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">get_cmd_to_create_user</span><span class="p">())</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="n">user_1</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># Creating a new user</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">get_cmd_to_create_user</span><span class="p">())</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="n">user_2</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># disabling the newly created user</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="n">user_1</span><span class="p">,</span> <span class="n">user_2</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">disabled_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">disabled_user_1_uuid</span> <span class="o">=</span> <span class="n">disabled_user_uuid</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">disabled_user_2_uuid</span> <span class="o">=</span> <span class="n">disabled_user_uuid</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># enabling multiplee users</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;enable&quot;</span><span class="p">,</span> <span class="n">disabled_user_1_uuid</span><span class="p">,</span> <span class="n">disabled_user_2_uuid</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="n">disabled_user_1_uuid</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">disabled_user_2_uuid</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;44de0383-288a-4595-9331-ee5ad27dc0d2\n&#39;
+
+&#39;efb4f4ab-eee5-4c57-8e20-e0368bea0415\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># creating a new user</span>
+<span class="n">_user_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_user_name</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="c1"># Creating a new user with super user credentials</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">created_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># disabling the newly created user</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">disabled_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># enabling the newly created user</span>
+    <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;enable&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;username               uuid\nrandom_user_2376_4264  3be0acb4-fce8-4ae3-a004-ae3101617fe0\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># creating a new user</span>
+<span class="n">_user_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_user_name</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="c1"># Creating a new user with super user credentials</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">created_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># disabling the newly created user</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">])</span>
+    <span class="n">disabled_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># enabling the newly created user</span>
+    <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;username&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;enable&quot;</span><span class="p">,</span> <span class="n">created_user_uuid</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;--format&quot;</span><span class="p">,</span> <span class="n">format_str</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;username               uuid\nrandom_user_1820_2809  3685e5d0-9e51-4b9d-afb5-09a5e5293bf4\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">assert_has_help</span><span class="p">([</span><span class="s2">&quot;update&quot;</span><span class="p">])</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root update [OPTIONS]\n\n  Update existing user details in the server.\n\n  Please do not pass the optional user option unless you are a super user. Only\n  a super user can update details for other users.\n\nOptions:\n  --user TEXT             Account user_uuid/username to update. If not passed,\n                          then the default value None will be used to update the\n                          currently logged-in user details.\n  -un, --username TEXT    New username for the user.\n  -fn, --first_name TEXT  New first name for the user.\n  -ln, --last_name TEXT   New last name for the user.\n  -e, --email TEXT        New email for the user.\n  --otp TEXT              Dynamically generated six-digit verification code from\n                          the authenticator app. Please pass this optional\n                          argument only if you have activated the MFA for your\n                          account.\n  -f, --format TEXT       Format output and show only the given column(s)\n                          values.\n  -q, --quiet             Output user uuid only.\n  -d, --debug             Set logger level to DEBUG and output everything.\n  --help                  Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for user update</span>
+
+<span class="c1"># Testing positive scenario. Updating the user details as super user</span>
+
+<span class="n">_user_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_user_name</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="c1"># Creating a new user with super user credentials</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">created_user_uuid</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># updating the user details as super user</span>
+    <span class="n">format_str</span> <span class="o">=</span> <span class="s2">&quot;{&#39;first_name&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;, &#39;uuid&#39;: &#39;</span><span class="si">{}</span><span class="s2">&#39;}&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">app</span><span class="p">,</span>
+        <span class="p">[</span>
+            <span class="s2">&quot;update&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--user&quot;</span><span class="p">,</span>
+            <span class="n">created_user_uuid</span><span class="p">,</span>
+            <span class="s2">&quot;--first_name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;new_first_name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--format&quot;</span><span class="p">,</span>
+            <span class="n">format_str</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="s2">&quot;new_first_name&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+
+    <span class="c1"># Negative Scenario. Non-MFA user passing otp</span>
+    <span class="n">random_otp</span> <span class="o">=</span> <span class="mi">123456</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">app</span><span class="p">,</span>
+        <span class="p">[</span>
+            <span class="s2">&quot;update&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--user&quot;</span><span class="p">,</span>
+            <span class="n">created_user_uuid</span><span class="p">,</span>
+            <span class="s2">&quot;--first_name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;new_first_name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--format&quot;</span><span class="p">,</span>
+            <span class="n">format_str</span><span class="p">,</span>
+            <span class="s2">&quot;--otp&quot;</span><span class="p">,</span>
+            <span class="n">random_otp</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot;MFA is not activated for the account.&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;first_name      uuid\nnew_first_name  42a7aad7-0d01-4e40-9db4-a8fc5d9a3ee5\n&#39;
+
+&#39;Error: MFA is not activated for the account. Please pass the OTP only after activating the MFA for your account.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># tests for user update</span>
+
+<span class="c1"># Testing positive scenario: Normal user updating their details</span>
+
+<span class="n">_email</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">@email.com&quot;</span>
+
+<span class="n">_new_user_id</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">_new_user_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;random_user_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">randrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_new_user_password</span> <span class="o">=</span> <span class="s2">&quot;random_password&quot;</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-un&quot;</span><span class="p">,</span>
+    <span class="n">_new_user_name</span><span class="p">,</span>
+    <span class="s2">&quot;-fn&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_first_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;random_last_name&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-e&quot;</span><span class="p">,</span>
+    <span class="n">_email</span><span class="p">,</span>
+    <span class="s2">&quot;-p&quot;</span><span class="p">,</span>
+    <span class="n">_new_user_password</span><span class="p">,</span>
+    <span class="s2">&quot;-st&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;small&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-su&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-q&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">super_user</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">_new_user_id</span>
+
+    <span class="c1"># Creating a new user with super user credentials</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+    <span class="n">_new_user_id</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="c1"># Testing positive scenario: Normal user updating their details</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">_new_user_name</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">_new_user_password</span><span class="p">)</span>
+
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span> <span class="o">=</span> <span class="n">Client</span><span class="o">.</span><span class="n">auth_token</span>
+
+    <span class="c1"># Updating the user details</span>
+    <span class="n">_updated_first_name</span> <span class="o">=</span> <span class="s2">&quot;new_first_name&quot;</span>
+    <span class="n">_updated_last_name</span> <span class="o">=</span> <span class="s2">&quot;new_last_name&quot;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">app</span><span class="p">,</span>
+        <span class="p">[</span>
+            <span class="s2">&quot;update&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--first_name&quot;</span><span class="p">,</span>
+            <span class="n">_updated_first_name</span><span class="p">,</span>
+            <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+            <span class="n">_updated_last_name</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">_updated_first_name</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">_updated_last_name</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+
+    <span class="c1"># logging in with the new password</span>
+    <span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">_new_user_name</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">_new_user_password</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Masked token = </span><span class="si">{</span><span class="w"> </span><span class="s1">&#39;*&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Client</span><span class="o">.</span><span class="n">auth_token</span><span class="p">))</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">Client</span><span class="o">.</span><span class="n">auth_token</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">127</span>
+
+    <span class="c1"># Testing negative scenario: Updating other user details with normal user credentials</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">app</span><span class="p">,</span>
+        <span class="p">[</span>
+            <span class="s2">&quot;update&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--user&quot;</span><span class="p">,</span>
+            <span class="n">INVALID_UUID_FOR_TESTING</span><span class="p">,</span>
+            <span class="s2">&quot;--first_name&quot;</span><span class="p">,</span>
+            <span class="n">_updated_first_name</span><span class="p">,</span>
+            <span class="s2">&quot;-ln&quot;</span><span class="p">,</span>
+            <span class="n">_updated_last_name</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="k">finally</span><span class="p">:</span>
+    <span class="k">del</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_TOKEN</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;uuid                                  username               email                            super_user    is_mfa_active    disabled    created    subscription_type    first_name      last_name      phone_number    is_phone_number_verified\n88341c0c-eba0-4019-845b-de698a5b381a  random_user_4748_8390  random_user_4706_7056@email.com  True          False            False       now        small                new_first_name  new_last_name  &lt;none&gt;          False\n&#39;
+
+&#39;Masked token = *************************************************************************************************************************************************&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;register-phone-number&quot;</span><span class="p">,</span> <span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s2">&quot;register-phone-number&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;Usage: root register-phone-number [OPTIONS]\n\n  Register and validate a phone number\n\n  This is an interactive command, one called it will send an OTP via SMS to the\n  phone number. Please enter the OTP you have received in the interactive prompt\n  to complete the phone number registration process.\n\n  After ten invalid OTP attempts, you have to call this command again to\n  register the phone number.\n\nOptions:\n  -p, --phone-number TEXT  Phone number to register. The phone number should\n                           follow the pattern of the  country code followed by\n                           your phone number. For example, **440123456789,\n                           +440123456789, 00440123456789, +44 0123456789, and\n                           (+44) 012 345 6789** are all valid formats for\n                           registering a UK phone number. If the phone number is\n                           not passed in the arguments, then the OTP will be\n                           sent to the phone  number that was already registered\n                           to the user&#39;s account.\n  --otp TEXT               Dynamically generated six-digit verification code\n                           from the authenticator app. Please pass this optional\n                           argument only if you have activated the MFA for your\n                           account.\n  -d, --debug              Set logger level to DEBUG and output everything.\n  --help                   Show this message and exit.\n&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;reset-password&quot;</span><span class="p">,</span> <span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s2">&quot;reset-password&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;Usage: root reset-password [OPTIONS]\n\n  Reset the account password\n\n      We currently support two types of OTPs to reset the password for your\n      account and you don&#39;t have to be logged in to call this command\n\n\n\n  The command switches to interactive mode unless all arguments are passed. The\n  interactive mode will prompt you for the missing details and ask you to choose\n  a recovery option to reset your password. Currently, we only support resetting\n  the password either using a TOTP or SMS OTP.\n\n  If you have already activated the MFA for your account, then you can either\n  enter the dynamically generated six-digit verification code from the\n  authenticator app (TOTP) or request an OTP via SMS to your registered phone\n  number.\n\n  If the MFA is not activated already, then you can only request the OTP via SMS\n  to your registered phone number.\n\n  After selecting an option, please follow the on-screen instructions to reset\n  your password. In case, you don&#39;t have MFA enabled or don&#39;t have access to\n  your registered phone number, please contact your administrator.\n\nOptions:\n  -u, --username TEXT       Account username to reset the password\n  -np, --new-password TEXT  New password to set for the account\n  --otp TEXT                Dynamically generated six-digit verification code\n                            from the authenticator app\n  -d, --debug               Set logger level to DEBUG and output everything.\n  --help                    Show this message and exit.\n&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for reset_password: passing invalid totp</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;reset-password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-u&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;invalid_username&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-np&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;invalid_password&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--otp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s2">&quot;Something went wrong&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Something went wrong. The username or OTP you entered is incorrect. Please try again or contact your administrator.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">mfa_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s2">&quot;enable&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: enable [OPTIONS]\n\n  Enable Multi-Factor Authentication (MFA) for the user.\n\n  This is an interactive command and will generate a QR code. You can use an\n  authenticator app, such as Google Authenticator to scan the code and enter the\n  valid six-digit verification code from the authenticator app in the\n  interactive prompt to enable and activate MFA for your account.\n\n  After three invalid attempts, you have to call this command again to generate\n  a new QR code.\n\nOptions:\n  --otp TEXT                      Dynamically generated six-digit verification\n                                  code from the authenticator app. Please pass\n                                  this optional argument only if you have\n                                  activated the MFA for your account.\n  --install-completion [bash|zsh|fish|powershell|pwsh]\n                                  Install completion for the specified shell.\n  --show-completion [bash|zsh|fish|powershell|pwsh]\n                                  Show completion for the specified shell, to\n                                  copy it or customize the installation.\n  --help                          Show this message and exit.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">mfa_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s2">&quot;disable&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;Usage: root disable [OPTIONS]\n\n  Disable Multi-Factor Authentication (MFA) for the user.\n\n  The command switches to interactive mode unless the OTP argument is passed.\n  The interactive mode will prompt you to  choose an OTP option you want to use.\n  Currently, we only support disabling MFA either using a TOTP or SMS OTP.\n\n  If you have access to the authenticator application, then you can either enter\n  the dynamically generated six-digit  verification code from the authenticator\n  app (TOTP) or request an OTP via SMS to your registered phone number.\n\n  After selecting an option, please follow the on-screen instructions to disable\n  MFA for your account. In case,  you don&#39;t have access to the authenticator app\n  and your registered phone number, please contact your administrator.\n\n  Note: Please do not pass the user argument unless you are a super user. Only a\n  super user can disable MFA for other users.\n\nOptions:\n  -u, --user TEXT  Account user_uuid/username to disable MFA. If not passed,\n                   then the default value None will be used to disable MFA for\n                   the currently logged-in user.\n  --otp TEXT       Dynamically generated six-digit verification code from the\n                   authenticator app or the OTP you have received via SMS.\n  --help           Show this message and exit.\n&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">normal_user</span><span class="p">():</span>
+    <span class="n">random_otp</span> <span class="o">=</span> <span class="mi">123456</span>
+
+    <span class="c1"># Negative Scenario. Non-MFA user passing otp</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">mfa_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="s2">&quot;--otp&quot;</span><span class="p">,</span> <span class="n">random_otp</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="s2">&quot;Please pass the OTP only after activating the MFA&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="p">),</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Error: MFA is not activated for the account. Please pass the OTP only after activating the MFA for your account.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">normal_user</span><span class="p">():</span>
+    <span class="n">random_otp</span> <span class="o">=</span> <span class="mi">123456</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">mfa_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="s2">&quot;--user&quot;</span><span class="p">,</span> <span class="n">INVALID_UUID_FOR_TESTING</span><span class="p">,</span> <span class="s2">&quot;--otp&quot;</span><span class="p">,</span> <span class="n">random_otp</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="s2">&quot;Insufficient permission to access other user&#39;s data&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="p">),</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;Error: Insufficient permission to access other user&#39;s data\n&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s2">&quot;Commands for enabling and disabling Multi-Factor&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;mfa&quot;</span><span class="p">,</span> <span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+
+<span class="k">assert</span> <span class="s2">&quot;Disable Multi-Factor Authentication (MFA) for the user&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root [OPTIONS] COMMAND [ARGS]...\n\n  A set of commands for managing users and their authentication in the server.\n\nOptions:\n  --install-completion [bash|zsh|fish|powershell|pwsh]\n                                  Install completion for the specified shell.\n  --show-completion [bash|zsh|fish|powershell|pwsh]\n                                  Show completion for the specified shell, to\n                                  copy it or customize the installation.\n  --help                          Show this message and exit.\n\nCommands:\n  create                 Create a new user in the server.\n  details                Get user details\n  disable                Disable a user in the server.\n  enable                 Enable a disabled user in the server.\n  ls                     Return the list of users available in the server.\n  mfa                    Commands for enabling and disabling Multi-Factor...\n  register-phone-number  Register and validate a phone number\n  reset-password         Reset the account password\n  update                 Update existing user details in the server.\n&#39;
+
+&#39;Usage: root mfa [OPTIONS] COMMAND [ARGS]...\n\n  Commands for enabling and disabling Multi-Factor Authentication (MFA).\n\nOptions:\n  --help  Show this message and exit.\n\nCommands:\n  disable  Disable Multi-Factor Authentication (MFA) for the user.\n  enable   Enable Multi-Factor Authentication (MFA) for the user.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">normal_user</span><span class="p">():</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">sso_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;google&quot;</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+
+    <span class="c1"># Negative Scenario. Non-MFA user passing otp</span>
+    <span class="n">random_otp</span> <span class="o">=</span> <span class="mi">123456</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">sso_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;google&quot;</span><span class="p">,</span> <span class="s2">&quot;--otp&quot;</span><span class="p">,</span> <span class="n">random_otp</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="s2">&quot;Please pass the OTP only after activating the MFA for your account.&quot;</span>
+        <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="p">),</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Error: SSO is not enabled for the provider.\n&#39;
+
+&#39;Error: MFA is not activated for the account. Please pass the OTP only after activating the MFA for your account.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">sso_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s2">&quot;enable&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root [OPTIONS] COMMAND [ARGS]...\n\n  Commands for enabling and disabling Single sign-on (SSO).\n\nOptions:\n  --install-completion [bash|zsh|fish|powershell|pwsh]\n                                  Install completion for the specified shell.\n  --show-completion [bash|zsh|fish|powershell|pwsh]\n                                  Show completion for the specified shell, to\n                                  copy it or customize the installation.\n  --help                          Show this message and exit.\n\nCommands:\n  disable  Disable Single sign-on (SSO) for the user.\n  enable   Enable Single sign-on (SSO) for the user\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">normal_user</span><span class="p">():</span>
+    <span class="n">sso_email</span> <span class="o">=</span> <span class="s2">&quot;sso_email@mail.com&quot;</span>
+    <span class="n">new_sso_email</span> <span class="o">=</span> <span class="s2">&quot;new_sso_email@mail.com&quot;</span>
+    <span class="n">sso_provider</span> <span class="o">=</span> <span class="s2">&quot;google&quot;</span>
+
+    <span class="c1"># Positive scenario: Disabling SSO</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">sso_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="n">sso_provider</span><span class="p">])</span>
+
+    <span class="c1"># Positive scenario: Enabling SSO</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">sso_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;enable&quot;</span><span class="p">,</span> <span class="n">sso_provider</span><span class="p">,</span> <span class="s2">&quot;-e&quot;</span><span class="p">,</span> <span class="n">new_sso_email</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Single sign-on (SSO) is successfully enabled for </span><span class="si">{</span><span class="n">sso_provider</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="p">),</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">new_sso_email</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span>
+
+    <span class="c1"># Positive scenario: Disabling SSO</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">sso_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;disable&quot;</span><span class="p">,</span> <span class="n">sso_provider</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Single sign-on (SSO) is successfully disabled for </span><span class="si">{</span><span class="n">sso_provider</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="p">),</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span>
+
+    <span class="c1"># Negative Scenario. Non-MFA user passing otp</span>
+    <span class="n">random_otp</span> <span class="o">=</span> <span class="mi">123456</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span>
+        <span class="n">sso_app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;enable&quot;</span><span class="p">,</span> <span class="n">sso_provider</span><span class="p">,</span> <span class="s2">&quot;-e&quot;</span><span class="p">,</span> <span class="n">sso_email</span><span class="p">,</span> <span class="s2">&quot;--otp&quot;</span><span class="p">,</span> <span class="n">random_otp</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="s2">&quot;Please pass the OTP only after activating the MFA for your account&quot;</span>
+        <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="p">),</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+    <span class="k">assert</span> <span class="n">result</span><span class="o">.</span><span class="n">exit_code</span> <span class="o">==</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Single sign-on (SSO) is successfully enabled for google. Please use new_sso_email@mail.com as the email address while authenticating with google.\n&#39;
+
+&#39;Single sign-on (SSO) is successfully disabled for google.\n&#39;
+
+&#39;Error: MFA is not activated for the account. Please pass the OTP only after activating the MFA for your account.\n&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s2">&quot;Commands for enabling and disabling Single sign-on&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">runner</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;sso&quot;</span><span class="p">,</span> <span class="s2">&quot;--help&quot;</span><span class="p">])</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="k">assert</span> <span class="s2">&quot;Enable Single sign-on (SSO)&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">stdout</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;Usage: root [OPTIONS] COMMAND [ARGS]...\n\n  A set of commands for managing users and their authentication in the server.\n\nOptions:\n  --install-completion [bash|zsh|fish|powershell|pwsh]\n                                  Install completion for the specified shell.\n  --show-completion [bash|zsh|fish|powershell|pwsh]\n                                  Show completion for the specified shell, to\n                                  copy it or customize the installation.\n  --help                          Show this message and exit.\n\nCommands:\n  create                 Create a new user in the server.\n  details                Get user details\n  disable                Disable a user in the server.\n  enable                 Enable a disabled user in the server.\n  ls                     Return the list of users available in the server.\n  mfa                    Commands for enabling and disabling Multi-Factor...\n  register-phone-number  Register and validate a phone number\n  reset-password         Reset the account password\n  sso                    Commands for enabling and disabling Single sign-on...\n  update                 Update existing user details in the server.\n&#39;
+
+&#39;Usage: root sso [OPTIONS] COMMAND [ARGS]...\n\n  Commands for enabling and disabling Single sign-on (SSO).\n\nOptions:\n  --help  Show this message and exit.\n\nCommands:\n  disable  Disable Single sign-on (SSO) for the user.\n  enable   Enable Single sign-on (SSO) for the user\n&#39;
+</code></pre></div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022 onwards, airt.ai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    and 
+    <a href="https://nbdev-mkdocs.airt.ai/" target="_blank" rel="noopener">
+      Material for nbdev
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../overrides/js/extra.js"></script>
+        
+      
+        
+          <script src="../overrides/js/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>

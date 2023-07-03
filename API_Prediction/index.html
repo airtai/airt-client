@@ -1,0 +1,1742 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python client for airt-service">
+      
+      
+        <meta name="author" content="airt.ai">
+      
+      
+        <link rel="canonical" href="https://airtai.github.io/airt-client/API_Prediction/">
+      
+      
+      
+      <link rel="icon" href="../overrides/images/airt_icon_blue.svg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>API_Prediction - airt</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../overrides/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-H6EV08GRK5"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-H6EV08GRK5",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-H6EV08GRK5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+  
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="airt - API_Prediction" />
+  <meta property="og:description" content="Python client for airt-service" />
+  <meta property="og:url" content="https://airtai.github.io/airt-client/API_Prediction/" />
+  <meta property="og:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="airt - API_Prediction" />
+  <meta name="twitter:description" content="Python client for airt-service" />
+  <meta name="twitter:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api_prediction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="airt" class="md-header__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            airt
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API_Prediction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="airt" class="md-nav__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    airt
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Python client for airt service
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial/" class="md-nav__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_api_docs/airt/client/" class="md-nav__link">
+        airt.client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_cli_docs/airt/" class="md-nav__link">
+        airt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prediction" class="md-nav__link">
+    Prediction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictiondetails" class="md-nav__link">
+    Prediction.details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictiondelete" class="md-nav__link">
+    Prediction.delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictionto_pandas" class="md-nav__link">
+    Prediction.to_pandas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictionto_s3" class="md-nav__link">
+    Prediction.to_s3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictionto_azure_blob_storage" class="md-nav__link">
+    Prediction.to_azure_blob_storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictionto_local" class="md-nav__link">
+    Prediction.to_local
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictionto_mysql" class="md-nav__link">
+    Prediction.to_mysql
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predictionto_clickhouse" class="md-nav__link">
+    Prediction.to_clickhouse
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="api_prediction">API_Prediction<a class="headerlink" href="#api_prediction" title="Permanent link">¤</a></h1>
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+
+<p>Note:</p>
+<p>While writing doc strings, please use the below syntax for linking
+methods/classes. So that the methods/classes gets highlighted in the
+browser and clicking on it will take the user to the linked function</p>
+<div class="highlight"><pre><span></span><code>- To link a method from the class same file please use the `method_name` format.
+- To link a method from a different Class (can in a seperate file also) please use `Classname.method_name` format.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">airt._testing</span> <span class="kn">import</span> <span class="n">activate_by_import</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[INFO] airt.testing.activate_by_import: Testing environment activated.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">azure.identity</span> <span class="kn">import</span> <span class="n">DefaultAzureCredential</span>
+<span class="kn">from</span> <span class="nn">azure.mgmt.storage</span> <span class="kn">import</span> <span class="n">StorageManagementClient</span>
+
+<span class="kn">import</span> <span class="nn">airt._sanitizer</span>
+<span class="kn">from</span> <span class="nn">airt._components.datablob</span> <span class="kn">import</span> <span class="n">DataBlob</span>
+<span class="kn">from</span> <span class="nn">airt._components.datasource</span> <span class="kn">import</span> <span class="n">DataSource</span>
+<span class="kn">from</span> <span class="nn">airt._constant</span> <span class="kn">import</span> <span class="n">SERVICE_PASSWORD</span><span class="p">,</span> <span class="n">SERVICE_USERNAME</span>
+<span class="kn">from</span> <span class="nn">airt._docstring.helpers</span> <span class="kn">import</span> <span class="n">run_examples_from_docstring</span>
+<span class="kn">from</span> <span class="nn">airt.client</span> <span class="kn">import</span> <span class="n">User</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">display</span><span class="p">(</span><span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">())</span>
+<span class="k">assert</span> <span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">()</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;This is a debug message&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;This is an info&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;This is a warning&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;This is an error&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>20
+
+[INFO] __main__: This is an info
+[WARNING] __main__: This is a warning
+[ERROR] __main__: This is an error
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">TEST_S3_URI</span> <span class="o">=</span> <span class="s2">&quot;s3://test-airt-service/ecommerce_behavior_notebooks&quot;</span>
+<span class="n">TEST_AZURE_PUSH_URI</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;https://testairtservice.blob.core.windows.net/test-client-push-container&quot;</span>
+<span class="p">)</span>
+<span class="n">RANDOM_UUID_FOR_TESTING</span> <span class="o">=</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span>
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/prediction.py#L37"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="prediction">Prediction<a class="headerlink" href="#prediction" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Prediction (uuid:str, datasource:Optional[str]=None,
+             model:Optional[str]=None, created:Optional[str]=None,
+             total_steps:Optional[int]=None,
+             completed_steps:Optional[int]=None,
+             region:Optional[str]=None, cloud_provider:Optional[str]=None,
+             error:Optional[str]=None, disabled:Optional[bool]=None)
+</code></pre></div>
+</blockquote>
+<p>A class to manage and download the predictions.</p>
+<p>The <strong>Prediction</strong> class is automatically instantiated by calling the
+<a href="https://airtai.github.io/airt-client/api_model.html#model.predict"><code>Model.predict</code></a>
+method of a
+<a href="https://airtai.github.io/airt-client/api_model.html#model"><code>Model</code></a>
+instance. Currently, it is the only way to instantiate this class.</p>
+<p>At the moment, the prediction results can only be</p>
+<ul>
+<li>
+<p>downloaded to a local folder in parquet file format</p>
+</li>
+<li>
+<p>pushed to Azure Blob Storage or an AWS S3 bucket</p>
+</li>
+<li>
+<p>pushed to MySql or ClickHouse database</p>
+</li>
+</ul>
+<p>We intend to support additional databases and storage mediums in future
+releases.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a test s3 bucket for pushing predictions results</span>
+
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+
+<span class="n">user_details</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">details</span><span class="p">()</span>
+<span class="n">DEV_BUCKET_NAME</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;STORAGE_BUCKET_PREFIX&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">-eu-west-1&#39;</span>
+<span class="n">TEST_OBJECT_NAME</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">user_details</span><span class="p">[</span><span class="s1">&#39;uuid&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">/test_API_prediction_to_s3&quot;</span>
+<span class="n">PREDICTION_TO_S3_URL</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;s3://</span><span class="si">{</span><span class="n">DEV_BUCKET_NAME</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">TEST_OBJECT_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Create a new key in the s3 bucket</span>
+<span class="n">s3_client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s2">&quot;s3&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">s3_client</span><span class="o">.</span><span class="n">create_bucket</span><span class="p">(</span>
+        <span class="n">Bucket</span><span class="o">=</span><span class="n">DEV_BUCKET_NAME</span><span class="p">,</span>
+        <span class="n">CreateBucketConfiguration</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;LocationConstraint&quot;</span><span class="p">:</span> <span class="s2">&quot;eu-west-1&quot;</span><span class="p">},</span>
+    <span class="p">)</span>
+<span class="k">except</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">BucketAlreadyOwnedByYou</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Bucket already created&quot;</span><span class="p">)</span>
+
+<span class="n">s3_client</span><span class="o">.</span><span class="n">put_object</span><span class="p">(</span><span class="n">Bucket</span><span class="o">=</span><span class="n">DEV_BUCKET_NAME</span><span class="p">,</span> <span class="n">Key</span><span class="o">=</span><span class="p">(</span><span class="n">TEST_OBJECT_NAME</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span><span class="p">))</span>
+
+<span class="c1"># Run example for _docstring_example</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_USERNAME</span><span class="p">]</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_PASSWORD</span><span class="p">]</span>
+
+<span class="n">run_examples_from_docstring</span><span class="p">(</span>
+    <span class="n">_docstring_example</span><span class="p">,</span>
+    <span class="n">azure_subscription_id</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AZURE_SUBSCRIPTION_ID&quot;</span><span class="p">],</span>
+    <span class="n">azure_client_id</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AZURE_CLIENT_ID&quot;</span><span class="p">],</span>
+    <span class="n">azure_client_secret</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AZURE_CLIENT_SECRET&quot;</span><span class="p">],</span>
+    <span class="n">azure_tenant_id</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AZURE_TENANT_ID&quot;</span><span class="p">],</span>
+    <span class="n">azure_group_name</span><span class="o">=</span><span class="s2">&quot;test-airt-service&quot;</span><span class="p">,</span>
+    <span class="n">azure_storage_account_name</span><span class="o">=</span><span class="s2">&quot;testairtservice&quot;</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">uri</span><span class="o">=</span><span class="n">TEST_S3_URI</span><span class="p">,</span>
+    <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;parquet&quot;</span><span class="p">,</span>
+    <span class="n">index_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+    <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;event_time&quot;</span><span class="p">,</span>
+    <span class="n">client_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+    <span class="n">target_column</span><span class="o">=</span><span class="s2">&quot;category_code&quot;</span><span class="p">,</span>
+    <span class="n">s3_target_uri</span><span class="o">=</span><span class="n">PREDICTION_TO_S3_URL</span><span class="p">,</span>
+    <span class="n">azure_target_uri</span><span class="o">=</span><span class="n">TEST_AZURE_PUSH_URI</span><span class="p">,</span>
+    <span class="n">mysql_host</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_HOST&quot;</span><span class="p">],</span>
+    <span class="n">mysql_database</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_DATABASE&quot;</span><span class="p">],</span>
+    <span class="n">mysql_table</span><span class="o">=</span><span class="s2">&quot;prediction_to_mysql&quot;</span><span class="p">,</span>
+    <span class="n">mysql_db_username</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_USERNAME&quot;</span><span class="p">],</span>
+    <span class="n">mysql_db_password</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_PASSWORD&quot;</span><span class="p">],</span>
+    <span class="n">clickhouse_host</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CLICKHOUSE_HOST&quot;</span><span class="p">),</span>
+    <span class="n">clickhouse_database</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CLICKHOUSE_DATABASE&quot;</span><span class="p">),</span>
+    <span class="n">clickhouse_table</span><span class="o">=</span><span class="s2">&quot;test_clickhouse_push_prediction_airt_client&quot;</span><span class="p">,</span>
+    <span class="n">clickhouse_db_username</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CLICKHOUSE_USERNAME&quot;</span><span class="p">],</span>
+    <span class="n">clickhouse_db_password</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;CLICKHOUSE_PASSWORD&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[INFO] __main__: Bucket already created
+</code></pre></div>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Example:                                                                                                        │
+│                                                                                                                 │
+│     # Importing necessary libraries                                                                             │
+│     import os                                                                                                   │
+│     import tempfile                                                                                             │
+│     from datetime import timedelta                                                                              │
+│                                                                                                                 │
+│     from azure.identity import DefaultAzureCredential                                                           │
+│     from azure.mgmt.storage import StorageManagementClient                                                      │
+│                                                                                                                 │
+│     from  airt.client import Client, DataBlob, DataSource, Model, Prediction                                    │
+│                                                                                                                 │
+│     # Authenticate                                                                                              │
+│     Client.get_token(username="{fill in username}", password="{fill in password}")                              │
+│                                                                                                                 │
+│     # Create a datablob                                                                                         │
+│     # In this example, the datablob will be stored in an AWS S3 bucket. The                                     │
+│     # access_key and the secret_key are set in the AWS_ACCESS_KEY_ID and                                        │
+│     # AWS_SECRET_ACCESS_KEY environment variables, and the region is set to                                     │
+│     # eu-west-3; feel free to change the cloud provider and the region to                                       │
+│     # suit your needs.                                                                                          │
+│     db = DataBlob.from_s3(                                                                                      │
+│         uri="{fill in uri}",                                                                                    │
+│         cloud_provider="aws",                                                                                   │
+│         region="eu-west-3"                                                                                      │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Display the status in a progress bar                                                                      │
+│     db.progress_bar()                                                                                           │
+│                                                                                                                 │
+│     # Create a datasource                                                                                       │
+│     ds = db.to_datasource(                                                                                      │
+│         file_type="{fill in file_type}",                                                                        │
+│         index_column="{fill in index_column}",                                                                  │
+│         sort_by="{fill in sort_by}",                                                                            │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Display the status in a progress bar                                                                      │
+│     ds.progress_bar()                                                                                           │
+│                                                                                                                 │
+│     # Train a model to predicts which users will perform a purchase                                             │
+│     # event ("*purchase") three hours before they actually do it.                                               │
+│     model = ds.train(                                                                                           │
+│         client_column="{fill in client_column}",                                                                │
+│         target_column="{fill in target_column}",                                                                │
+│         target="*purchase",                                                                                     │
+│         predict_after=timedelta(hours=3)                                                                        │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Display the status in a progress bar                                                                      │
+│     model.progress_bar()                                                                                        │
+│                                                                                                                 │
+│     # Run predictions                                                                                           │
+│     prediction = model.predict()                                                                                │
+│     prediction.progress_bar()                                                                                   │
+│                                                                                                                 │
+│     # Print the details of the newly created prediction                                                         │
+│     print(prediction.details())                                                                                 │
+│                                                                                                                 │
+│     # Get the list of all prediction instances created by the currently logged-in user                          │
+│     predx = Prediction.ls()                                                                                     │
+│     print(predx)                                                                                                │
+│                                                                                                                 │
+│     # Display the details of the prediction instances in a pandas dataframe                                     │
+│     df = Prediction.as_df(predx)                                                                                │
+│     print(df)                                                                                                   │
+│                                                                                                                 │
+│     # Display the prediction results in a pandas DataFrame                                                      │
+│     print(prediction.to_pandas())                                                                               │
+│                                                                                                                 │
+│     # Push the prediction results to an AWS S3 bucket                                                           │
+│     s3_status = prediction.to_s3(uri="{fill in s3_target_uri}")                                                 │
+│                                                                                                                 │
+│     # Push the prediction results to an Azure Blob Storage                                                      │
+│     os.environ["AZURE_SUBSCRIPTION_ID"] = "{fill in azure_subscription_id}"                                     │
+│     os.environ["AZURE_CLIENT_ID"] = "{fill in azure_client_id}"                                                 │
+│     os.environ["AZURE_CLIENT_SECRET"] = "{fill in azure_client_secret}"                                         │
+│     os.environ["AZURE_TENANT_ID"]= "{fill in azure_tenant_id}"                                                  │
+│     azure_group_name = "{fill in azure_group_name}"                                                             │
+│     azure_storage_account_name = "{fill in azure_storage_account_name}"                                         │
+│     azure_storage_client = StorageManagementClient(                                                             │
+│         DefaultAzureCredential(), os.environ["AZURE_SUBSCRIPTION_ID"]                                           │
+│     )                                                                                                           │
+│     azure_storage_keys = azure_storage_client.storage_accounts.list_keys(                                       │
+│         azure_group_name, azure_storage_account_name                                                            │
+│     )                                                                                                           │
+│     azure_storage_keys = {v.key_name: v.value for v in azure_storage_keys.keys}                                 │
+│     azure_credential = azure_storage_keys['key1']                                                               │
+│                                                                                                                 │
+│     azure_status = prediction.to_azure_blob_storage(                                                            │
+│         uri="{fill in azure_target_uri}",                                                                       │
+│         credential=azure_credential                                                                             │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Push the prediction results to a MySQL database                                                           │
+│     mysql_status = prediction.to_mysql(                                                                         │
+│         username="{fill in mysql_db_username}",                                                                 │
+│         password="{fill in mysql_db_password}",                                                                 │
+│         host="{fill in mysql_host}",                                                                            │
+│         database="{fill in mysql_database}",                                                                    │
+│         table="{fill in mysql_table}",                                                                          │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Push the prediction results to a ClickHouse database                                                      │
+│     clickhouse_status = prediction.to_clickhouse(                                                               │
+│         username="{fill in clickhouse_db_username}",                                                            │
+│         password="{fill in clickhouse_db_password}",                                                            │
+│         host="{fill in clickhouse_host}",                                                                       │
+│         database="{fill in clickhouse_database}",                                                               │
+│         table="{fill in clickhouse_table}",                                                                     │
+│         protocol="native",                                                                                      │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Download the predictions to a local directory                                                             │
+│     # In this example, the prediction results are downloaded                                                    │
+│     # to a temporary directory                                                                                  │
+│     with tempfile.TemporaryDirectory(prefix="predictions_results_") as d:                                       │
+│         prediction.to_local(path=d)                                                                             │
+│         # Check the downloaded prediction files                                                                 │
+│         downloaded_files = sorted(list(os.listdir(d)))                                                          │
+│         print(downloaded_files)                                                                                 │
+│                                                                                                                 │
+│                                                                                                                 │
+│     # Check the status                                                                                          │
+│     s3_status.wait()                                                                                            │
+│     azure_status.progress_bar()                                                                                 │
+│     mysql_status.progress_bar()                                                                                 │
+│     clickhouse_status.progress_bar()                                                                            │
+│                                                                                                                 │
+│     # Delete the prediction                                                                                     │
+│     prediction.delete()                                                                                         │
+│                                                                                                                 │
+│ ╭────────────────────────────────────────────────── stdout ───────────────────────────────────────────────────╮ │
+│ │                         prediction_uuid              created  ... error ready                               │ │
+│ │ 0  497a1c21-ca14-414a-beb6-b1ab0e7b8749  2022-11-02T10:34:24  ...  None  True                               │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 8 columns]                                                                                        │ │
+│ │ [&lt;airt.client.Prediction object at 0x7fcb34c6aa60&gt;, &lt;airt.client.Prediction object at 0x7fcb34c6a7c0&gt;,      │ │
+│ │ &lt;airt.client.Prediction object at 0x7fcb34c6aa90&gt;, &lt;airt.client.Prediction object at 0x7fcb34c6ac70&gt;,       │ │
+│ │ &lt;airt.client.Prediction object at 0x7fcb34c6ad30&gt;, &lt;airt.client.Prediction object at 0x7fcb34c6af40&gt;,       │ │
+│ │ &lt;airt.client.Prediction object at 0x7fcb34c6aa00&gt;, &lt;airt.client.Prediction object at 0x7fcb34c6abe0&gt;,       │ │
+│ │ &lt;airt.client.Prediction object at 0x7fcb34c6ac10&gt;, &lt;airt.client.Prediction object at 0x7fcb34c6af10&gt;,       │ │
+│ │ &lt;airt.client.Prediction object at 0x7fcb34c6aee0&gt;, &lt;airt.client.Prediction object at 0x7fcb34c6a5b0&gt;]       │ │
+│ │                          prediction_uuid              created  ready                                        │ │
+│ │ 0   883bac83-1376-4139-8f2b-1a5d60b59043  2022-11-02T08:49:52   True                                        │ │
+│ │ 1   2713fc2c-8a46-4e46-8e4b-3f8c44ad1a3a  2022-11-02T08:50:55   True                                        │ │
+│ │ 2   f3ae698e-3a2a-4dc6-8eb8-cf358f8851a9  2022-11-02T08:50:56   True                                        │ │
+│ │ 3   cad071a7-6e6e-40fe-97db-1f3107665e4b  2022-11-02T08:51:07   True                                        │ │
+│ │ 4   07507373-c927-437d-9024-41cb928404a2  2022-11-02T08:52:32   True                                        │ │
+│ │ 5   4f017211-0b39-4666-b184-73f5b570a18a  2022-11-02T08:52:57   True                                        │ │
+│ │ 6   cbc2a3a6-75ca-478b-8871-85fcc677c47b  2022-11-02T08:53:03   True                                        │ │
+│ │ 7   272f3840-d43a-412c-b7e9-6583e57e4ce8  2022-11-02T08:53:32   True                                        │ │
+│ │ 8   eb3ebcec-0b24-49fe-b62d-2f7a85025d0f  2022-11-02T08:54:23   True                                        │ │
+│ │ 9   2187b579-9889-481b-b0aa-b682e79f7bad  2022-11-02T08:54:47   True                                        │ │
+│ │ 10  f32900e3-fb83-4ccf-96ed-aac2d9b48b25  2022-11-02T10:00:03   True                                        │ │
+│ │ 11  497a1c21-ca14-414a-beb6-b1ab0e7b8749  2022-11-02T10:34:24   True                                        │ │
+│ │               Score                                                                                         │ │
+│ │ user_id                                                                                                     │ │
+│ │ 520088904  0.979853                                                                                         │ │
+│ │ 530496790  0.979157                                                                                         │ │
+│ │ 561587266  0.979055                                                                                         │ │
+│ │ 518085591  0.978915                                                                                         │ │
+│ │ 558856683  0.977960                                                                                         │ │
+│ │ 520772685  0.004043                                                                                         │ │
+│ │ 514028527  0.003890                                                                                         │ │
+│ │ 518574284  0.001346                                                                                         │ │
+│ │ 532364121  0.001341                                                                                         │ │
+│ │ 532647354  0.001139                                                                                         │ │
+│ │ ['part.0.parquet']                                                                                          │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│ ╭────────────────────────────────────────────────── stderr ───────────────────────────────────────────────────╮ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/1 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:05&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:10&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 1/1 [00:15&lt;00:00,  5.05s/it]                                                               │ │
+│ │ 100%|██████████| 1/1 [00:15&lt;00:00, 15.19s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/1 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:05&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:10&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:15&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:20&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:25&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 1/1 [00:30&lt;00:00,  5.05s/it]                                                               │ │
+│ │ 100%|██████████| 1/1 [00:30&lt;00:00, 30.33s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/5 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 5/5 [00:00&lt;00:00, 149.65it/s]                                                              │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/3 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 3/3 [00:05&lt;00:00,  1.69s/it]                                                               │ │
+│ │ 100%|██████████| 3/3 [00:05&lt;00:00,  1.69s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/1 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 1/1 [00:02&lt;00:00,  2.82s/it]                                                               │ │
+│ │ 100%|██████████| 1/1 [00:02&lt;00:00,  2.82s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/1 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 1/1 [00:05&lt;00:00,  5.09s/it]                                                               │ │
+│ │ 100%|██████████| 1/1 [00:05&lt;00:00,  5.09s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/1 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:05&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:10&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:15&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:20&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:25&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:30&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:35&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:40&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:45&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:50&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 1/1 [00:55&lt;00:00,  5.06s/it]                                                               │ │
+│ │ 100%|██████████| 1/1 [00:55&lt;00:00, 55.58s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/1 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 1/1 [00:00&lt;00:00, 25.66it/s]                                                               │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Context manager for creating and a trained model id</span>
+
+<span class="c1"># Authentication</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+
+<span class="n">_prediction</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">generate_prediction</span><span class="p">(</span><span class="n">force_create</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">_prediction</span>
+
+    <span class="k">if</span> <span class="n">_prediction</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">force_create</span><span class="p">:</span>
+        <span class="c1"># Create a s3 datasource</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">DataBlob</span><span class="o">.</span><span class="n">from_s3</span><span class="p">(</span>
+            <span class="n">uri</span><span class="o">=</span><span class="n">TEST_S3_URI</span><span class="p">,</span>
+            <span class="n">access_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_ACCESS_KEY_ID&quot;</span><span class="p">],</span>
+            <span class="n">secret_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_SECRET_ACCESS_KEY&quot;</span><span class="p">],</span>
+            <span class="n">cloud_provider</span><span class="o">=</span><span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+            <span class="n">region</span><span class="o">=</span><span class="s2">&quot;eu-west-1&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">db</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">to_datasource</span><span class="p">(</span>
+            <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;parquet&quot;</span><span class="p">,</span> <span class="n">index_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span> <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;event_time&quot;</span>
+        <span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+        <span class="n">ds</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+        <span class="c1"># Train a model</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">train</span><span class="p">(</span>
+            <span class="n">client_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+            <span class="n">target_column</span><span class="o">=</span><span class="s2">&quot;category_code&quot;</span><span class="p">,</span>
+            <span class="n">target</span><span class="o">=</span><span class="s2">&quot;*checkout&quot;</span><span class="p">,</span>
+            <span class="n">predict_after</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+        <span class="p">)</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+        <span class="c1"># Run Predictions</span>
+        <span class="n">_prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+        <span class="n">_prediction</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="k">yield</span> <span class="n">_prediction</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction._download_prediction_file_to_local</span>
+<span class="c1"># Testing positive scenario</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="c1"># Get sample files URL to download</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">Client</span><span class="o">.</span><span class="n">_get_data</span><span class="p">(</span><span class="n">relative_url</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;/prediction/</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">}</span><span class="s2">/to_local&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryDirectory</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;test_to_local_&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">==</span> <span class="p">[]</span>
+        <span class="n">display</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">d</span><span class="p">)))</span>
+
+        <span class="k">for</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">display</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+            <span class="n">Prediction</span><span class="o">.</span><span class="n">_download_prediction_file_to_local</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+
+        <span class="n">downloaded_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">d</span><span class="p">)))</span>
+        <span class="k">assert</span> <span class="n">downloaded_files</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;part.0.parquet&quot;</span><span class="p">],</span> <span class="n">downloaded_files</span>
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">downloaded_files</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [00:15&lt;00:00, 15.21s/it]
+100%|██████████| 1/1 [00:30&lt;00:00, 30.34s/it]
+100%|██████████| 5/5 [00:00&lt;00:00, 125.26it/s]
+100%|██████████| 3/3 [00:10&lt;00:00,  3.38s/it]
+
+&quot;db.uuid=&#39;bc63fa44-0184-464a-8f47-ac6dbb2d5310&#39;&quot;
+
+&quot;ds.uuid=&#39;37a7513d-bc17-4b08-ad5e-906802728bc4&#39;&quot;
+
+{&#39;part.0.parquet&#39;: &#39;https://s3.eu-west-1.amazonaws.com/harish-airt-client-dev-eu-west-1/1/prediction/18/part.0.parquet?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=********************%2F20221102%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20221102T103650Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=06f499f5593177531237ab5d7dffa3ed6483e74031666b61d0ae81a92226ac2b&#39;}
+
+[]
+
+&#39;part.0.parquet&#39;
+
+&#39;https://s3.eu-west-1.amazonaws.com/harish-airt-client-dev-eu-west-1/1/prediction/18/part.0.parquet?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=********************%2F20221102%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20221102T103650Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=06f499f5593177531237ab5d7dffa3ed6483e74031666b61d0ae81a92226ac2b&#39;
+
+&quot;downloaded_files=[&#39;part.0.parquet&#39;]&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction._download_prediction_file_to_local</span>
+<span class="c1"># Testing negative scenario. Passing invalid url.</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="c1"># Get sample files URL to download</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;random-name&quot;</span><span class="p">:</span> <span class="s2">&quot;https://random-name.s3.amazonaws.com/random-object&quot;</span><span class="p">}</span>
+
+    <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryDirectory</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;test_to_local_&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">HTTPError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">Prediction</span><span class="o">.</span><span class="n">_download_prediction_file_to_local</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="s2">&quot;403 Client Error&quot;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;str(e.value)=&#39;403 Client Error: Forbidden for url: https://random-name.s3.amazonaws.com/random-object&#39;&quot;
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/prediction.py#L405"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="predictiondetails">Prediction.details<a class="headerlink" href="#predictiondetails" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Prediction.details ()
+</code></pre></div>
+</blockquote>
+<p>Return the details of a prediction.</p>
+<p>Returns: A pandas DataFrame encapsulating the details of the prediction.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction.details</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="c1"># getting the details</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">details</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">prediction_uuid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span>
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">Prediction</span><span class="o">.</span><span class="n">ALL_PRED_COLS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | prediction_uuid                      | created             | model_uuid                           | datasource_uuid                      | region    | cloud_provider | error | ready |
+|-----|--------------------------------------|---------------------|--------------------------------------|--------------------------------------|-----------|----------------|-------|-------|
+| 0   | a4f72526-c7be-4067-9d01-373c47082062 | 2022-11-02T10:36:40 | b6b5a9c2-3dc9-4bf5-933e-5a7e02fa155d | 37a7513d-bc17-4b08-ad5e-906802728bc4 | eu-west-1 | aws            | None  | True  |
+
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction.details</span>
+<span class="c1"># Testing negative scenario. Passing invalid data ID</span>
+
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">pred</span> <span class="o">=</span> <span class="n">Prediction</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">)</span>
+    <span class="n">pred</span><span class="o">.</span><span class="n">details</span><span class="p">()</span>
+
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;e.value=ValueError(&#39;The prediction uuid is incorrect. Please try again.&#39;)&quot;
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/prediction.py#L427"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="predictiondelete">Prediction.delete<a class="headerlink" href="#predictiondelete" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Prediction.delete ()
+</code></pre></div>
+</blockquote>
+<p>Delete a prediction from the server.</p>
+<p>Returns: A pandas DataFrame encapsulating the details of the deleted
+prediction.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction.delete</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">prediction_uuid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span>
+
+    <span class="c1"># Testing negative scenario. Deleting already deleted model</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">prediction</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | prediction_uuid                      | created             | ready |
+|-----|--------------------------------------|---------------------|-------|
+| 0   | a4f72526-c7be-4067-9d01-373c47082062 | 2022-11-02T10:36:40 | True  |
+
+</div>
+
+<div class="highlight"><pre><span></span><code>&quot;e.value=ValueError(&#39;The prediction has already been deleted.&#39;)&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction.ls</span>
+<span class="c1"># Testing with disabled flag</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">uuid</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span>
+
+    <span class="c1"># Passing disabled=False. Should show only the active predictions.</span>
+    <span class="n">predx</span> <span class="o">=</span> <span class="n">Prediction</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+    <span class="n">pred_uuid_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">pred</span><span class="o">.</span><span class="n">uuid</span> <span class="k">for</span> <span class="n">pred</span> <span class="ow">in</span> <span class="n">predx</span><span class="p">]</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pred_uuid_list</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">uuid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">pred_uuid_list</span>
+
+    <span class="c1"># Passing disabled=True. Should show only the deleted predictions.</span>
+    <span class="n">predx</span> <span class="o">=</span> <span class="n">Prediction</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">pred_uuid_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">pred</span><span class="o">.</span><span class="n">uuid</span> <span class="k">for</span> <span class="n">pred</span> <span class="ow">in</span> <span class="n">predx</span><span class="p">]</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pred_uuid_list</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">uuid</span> <span class="ow">in</span> <span class="n">pred_uuid_list</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;pred_uuid_list=[&#39;883bac83-1376-4139-8f2b-1a5d60b59043&#39;, &#39;2713fc2c-8a46-4e46-8e4b-3f8c44ad1a3a&#39;, &#39;f3ae698e-3a2a-4dc6-8eb8-cf358f8851a9&#39;, &#39;cad071a7-6e6e-40fe-97db-1f3107665e4b&#39;, &#39;07507373-c927-437d-9024-41cb928404a2&#39;, &#39;4f017211-0b39-4666-b184-73f5b570a18a&#39;, &#39;cbc2a3a6-75ca-478b-8871-85fcc677c47b&#39;, &#39;272f3840-d43a-412c-b7e9-6583e57e4ce8&#39;, &#39;eb3ebcec-0b24-49fe-b62d-2f7a85025d0f&#39;, &#39;2187b579-9889-481b-b0aa-b682e79f7bad&#39;, &#39;f32900e3-fb83-4ccf-96ed-aac2d9b48b25&#39;]&quot;
+
+&quot;pred_uuid_list=[&#39;7243b10c-c655-4833-983c-e0818a80f235&#39;, &#39;c1a7b2a0-6e8b-4663-9d52-a784bd4dd50e&#39;, &#39;ca9eac04-9a44-4568-8316-ac04f24cabe4&#39;, &#39;ee6714f5-e6c6-45a6-94eb-9dac2d1a8264&#39;, &#39;c66f06ef-c88f-4dcc-a80d-741fe528c503&#39;, &#39;497a1c21-ca14-414a-beb6-b1ab0e7b8749&#39;, &#39;a4f72526-c7be-4067-9d01-373c47082062&#39;]&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction ls</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">(</span><span class="n">force_create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="c1"># Testing list without offset and limit</span>
+    <span class="n">predx</span> <span class="o">=</span> <span class="n">Prediction</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">predx</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">predx</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
+
+    <span class="c1"># Testing list with offset and limit</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">predx</span> <span class="o">=</span> <span class="n">Prediction</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">predx</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">predx</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">limit</span>
+
+    <span class="c1"># Testing list with invalid offset and limit</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">1_000_000_000</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">predx</span> <span class="o">=</span> <span class="n">Prediction</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">predx</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">predx</span> <span class="o">==</span> <span class="p">[]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [00:15&lt;00:00, 15.19s/it]
+100%|██████████| 1/1 [00:30&lt;00:00, 30.34s/it]
+100%|██████████| 5/5 [00:00&lt;00:00, 118.23it/s]
+100%|██████████| 3/3 [00:10&lt;00:00,  3.38s/it]
+
+&quot;db.uuid=&#39;09276f4e-fa31-449d-955a-8a4105635620&#39;&quot;
+
+&quot;ds.uuid=&#39;ae398ccb-eaba-4570-8fc1-9c65dd7f3929&#39;&quot;
+
+&#39;len(predx)=12&#39;
+
+&#39;len(predx)=3&#39;
+
+&#39;len(predx)=0&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction.as_df:</span>
+
+<span class="n">predx</span> <span class="o">=</span> <span class="n">Prediction</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">Prediction</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">predx</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">predx</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">Prediction</span><span class="o">.</span><span class="n">BASIC_PRED_COLS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">df</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | prediction_uuid                      | created             | ready |
+|-----|--------------------------------------|---------------------|-------|
+| 0   | 883bac83-1376-4139-8f2b-1a5d60b59043 | 2022-11-02T08:49:52 | True  |
+| 1   | 2713fc2c-8a46-4e46-8e4b-3f8c44ad1a3a | 2022-11-02T08:50:55 | True  |
+| 2   | f3ae698e-3a2a-4dc6-8eb8-cf358f8851a9 | 2022-11-02T08:50:56 | True  |
+| 3   | cad071a7-6e6e-40fe-97db-1f3107665e4b | 2022-11-02T08:51:07 | True  |
+| 4   | 07507373-c927-437d-9024-41cb928404a2 | 2022-11-02T08:52:32 | True  |
+| 5   | 4f017211-0b39-4666-b184-73f5b570a18a | 2022-11-02T08:52:57 | True  |
+| 6   | cbc2a3a6-75ca-478b-8871-85fcc677c47b | 2022-11-02T08:53:03 | True  |
+| 7   | 272f3840-d43a-412c-b7e9-6583e57e4ce8 | 2022-11-02T08:53:32 | True  |
+| 8   | eb3ebcec-0b24-49fe-b62d-2f7a85025d0f | 2022-11-02T08:54:23 | True  |
+| 9   | 2187b579-9889-481b-b0aa-b682e79f7bad | 2022-11-02T08:54:47 | True  |
+| 10  | f32900e3-fb83-4ccf-96ed-aac2d9b48b25 | 2022-11-02T10:00:03 | True  |
+| 11  | 6ff64784-a5ab-4433-8cee-028905eb2e77 | 2022-11-02T10:37:58 | True  |
+
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction.as_df:</span>
+<span class="c1"># Passing empty predx list</span>
+
+<span class="n">predx</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">Prediction</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">predx</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">predx</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">Prediction</span><span class="o">.</span><span class="n">BASIC_PRED_COLS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">df</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | prediction_uuid | created | ready |
+|-----|-----------------|---------|-------|
+
+</div>
+
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/prediction.py#L449"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="predictionto_pandas">Prediction.to_pandas<a class="headerlink" href="#predictionto_pandas" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Prediction.to_pandas ()
+</code></pre></div>
+</blockquote>
+<p>Return the prediction results as a pandas DataFrame</p>
+<p>Returns: A pandas DataFrame encapsulating the results of the prediction.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for prediction.to_pandas:</span>
+<span class="c1"># Checking positive scenario. Passing all the required variables</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">prediction</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">())</span>
+    <span class="k">assert</span> <span class="n">prediction</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|           | Score    |
+|-----------|----------|
+| user_id   |          |
+| 520088904 | 0.979853 |
+| 530496790 | 0.979157 |
+| 561587266 | 0.979055 |
+| 518085591 | 0.978915 |
+| 558856683 | 0.977960 |
+| 520772685 | 0.004043 |
+| 514028527 | 0.003890 |
+| 518574284 | 0.001346 |
+| 532364121 | 0.001341 |
+| 532647354 | 0.001139 |
+
+</div>
+
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/prediction.py#L473"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="predictionto_s3">Prediction.to_s3<a class="headerlink" href="#predictionto_s3" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Prediction.to_s3 (uri:str, access_key:Optional[str]=None,
+                   secret_key:Optional[str]=None)
+</code></pre></div>
+</blockquote>
+<p>Push the prediction results to the target AWS S3 bucket.</p>
+<p>Args: uri: Target S3 bucket uri. access_key: Access key for the target
+S3 bucket. If <strong>None</strong> (default value), then the value from
+<strong>AWS_ACCESS_KEY_ID</strong> environment variable is used. secret_key: Secret
+key for the target S3 bucket. If <strong>None</strong> (default value), then the
+value from <strong>AWS_SECRET_ACCESS_KEY</strong> environment variable is used.</p>
+<p>Returns: An instance of
+<a href="https://airtai.github.io/airt-client/api_progressstatus.html#progressstatus"><code>ProgressStatus</code></a>
+class.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction.to_s3</span>
+<span class="c1"># Testing positive scenario</span>
+
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">status</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">to_s3</span><span class="p">(</span>
+        <span class="n">uri</span><span class="o">=</span><span class="n">PREDICTION_TO_S3_URL</span><span class="p">,</span>
+        <span class="n">access_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_ACCESS_KEY_ID&quot;</span><span class="p">],</span>
+        <span class="n">secret_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_SECRET_ACCESS_KEY&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="n">status</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="k">assert</span> <span class="n">status</span><span class="o">.</span><span class="n">is_ready</span><span class="p">()</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">status</span><span class="o">.</span><span class="n">is_ready</span><span class="p">()</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Check in s3 if the uploaded files are present</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">list_objects</span><span class="p">(</span><span class="n">Bucket</span><span class="o">=</span><span class="n">DEV_BUCKET_NAME</span><span class="p">,</span> <span class="n">Prefix</span><span class="o">=</span><span class="n">TEST_OBJECT_NAME</span><span class="p">)</span>
+<span class="n">actual_s3_contents</span> <span class="o">=</span> <span class="p">[</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Key&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Contents&quot;</span><span class="p">,</span> <span class="p">[])]</span>
+<span class="n">expected_s3_contents</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">TEST_OBJECT_NAME</span><span class="si">}</span><span class="s2">/&quot;</span><span class="p">,</span>
+    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">TEST_OBJECT_NAME</span><span class="si">}</span><span class="s2">/part.0.parquet&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">actual_s3_contents</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">actual_s3_contents</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">actual_s3_contents</span> <span class="o">==</span> <span class="n">expected_s3_contents</span><span class="p">,</span> <span class="n">actual_s3_contents</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">actual_s3_contents</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Finally, delete the object in s3</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">actual_s3_contents</span><span class="p">:</span>
+    <span class="n">s3_client</span><span class="o">.</span><span class="n">delete_object</span><span class="p">(</span><span class="n">Bucket</span><span class="o">=</span><span class="n">DEV_BUCKET_NAME</span><span class="p">,</span> <span class="n">Key</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">s3_client</span><span class="o">.</span><span class="n">list_objects</span><span class="p">(</span><span class="n">Bucket</span><span class="o">=</span><span class="n">DEV_BUCKET_NAME</span><span class="p">,</span> <span class="n">Prefix</span><span class="o">=</span><span class="n">TEST_OBJECT_NAME</span><span class="p">)</span>
+<span class="n">s3_contents</span> <span class="o">=</span> <span class="p">[</span><span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Key&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">content</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Contents&quot;</span><span class="p">,</span> <span class="p">[])]</span>
+
+<span class="k">assert</span> <span class="n">s3_contents</span> <span class="o">==</span> <span class="p">[],</span> <span class="n">s3_contents</span>
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">s3_contents</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;prediction.uuid=&#39;6ff64784-a5ab-4433-8cee-028905eb2e77&#39;&quot;
+
+100%|██████████| 1/1 [00:05&lt;00:00,  5.09s/it]
+
+&#39;status.is_ready()=True&#39;
+
+&quot;actual_s3_contents=[&#39;06a385d1-66a1-4ffc-8306-7f5821902fcc/test_API_prediction_to_s3/&#39;, &#39;06a385d1-66a1-4ffc-8306-7f5821902fcc/test_API_prediction_to_s3/part.0.parquet&#39;]&quot;
+
+&#39;s3_contents=[]&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction.to_s3</span>
+<span class="c1"># Testing negative scenario</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">status</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">to_s3</span><span class="p">(</span>
+        <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://random-bucket-name/random-object-name&quot;</span><span class="p">,</span>
+        <span class="n">access_key</span><span class="o">=</span><span class="s2">&quot;fake_access_key&quot;</span><span class="p">,</span>
+        <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;fake_secret_key&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">status</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;prediction.uuid=&#39;6ff64784-a5ab-4433-8cee-028905eb2e77&#39;&quot;
+
+  0%|          | 0/1 [00:05&lt;?, ?it/s]
+
+&quot;str(e.value)=&#39;An error occurred (InvalidAccessKeyId) when calling the ListObjects operation: The AWS Access Key Id you provided does not exist in our records.&#39;&quot;
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/prediction.py#L513"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="predictionto_azure_blob_storage">Prediction.to_azure_blob_storage<a class="headerlink" href="#predictionto_azure_blob_storage" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Prediction.to_azure_blob_storage (uri:str, credential:str)
+</code></pre></div>
+</blockquote>
+<p>Push the prediction results to the target Azure Blob Storage.</p>
+<p>Args: uri: Target Azure Blob Storage uri. credential: Credential to
+access the Azure Blob Storage.</p>
+<p>Returns: An instance of
+<a href="https://airtai.github.io/airt-client/api_progressstatus.html#progressstatus"><code>ProgressStatus</code></a>
+class.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for prediction.to_azure_blob_storage</span>
+<span class="c1"># Positive scenario: Passing the credential in the parameter</span>
+
+<span class="n">storage_client</span> <span class="o">=</span> <span class="n">StorageManagementClient</span><span class="p">(</span>
+    <span class="n">DefaultAzureCredential</span><span class="p">(),</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AZURE_SUBSCRIPTION_ID&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">keys</span> <span class="o">=</span> <span class="n">storage_client</span><span class="o">.</span><span class="n">storage_accounts</span><span class="o">.</span><span class="n">list_keys</span><span class="p">(</span><span class="s2">&quot;test-airt-service&quot;</span><span class="p">,</span> <span class="s2">&quot;testairtservice&quot;</span><span class="p">)</span>
+<span class="n">credential</span> <span class="o">=</span> <span class="n">keys</span><span class="o">.</span><span class="n">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">status</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">to_azure_blob_storage</span><span class="p">(</span>
+        <span class="n">uri</span><span class="o">=</span><span class="n">TEST_AZURE_PUSH_URI</span><span class="p">,</span>
+        <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">status</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;prediction.uuid=&#39;6ff64784-a5ab-4433-8cee-028905eb2e77&#39;&quot;
+
+100%|██████████| 1/1 [00:05&lt;00:00,  5.10s/it]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for prediction.to_azure_blob_storage</span>
+<span class="c1"># Testing negative scenario</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">status</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">to_azure_blob_storage</span><span class="p">(</span>
+        <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;https://invalid-blob-storage-path&quot;</span><span class="p">,</span>
+        <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">status</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;prediction.uuid=&#39;6ff64784-a5ab-4433-8cee-028905eb2e77&#39;&quot;
+
+  0%|          | 0/1 [00:05&lt;?, ?it/s]
+
+&quot;str(e.value)=&#39;Unable to determine account name for shared key credential.&#39;&quot;
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/prediction.py#L542"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="predictionto_local">Prediction.to_local<a class="headerlink" href="#predictionto_local" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Prediction.to_local (path:Union[str,pathlib.Path],
+                      show_progress:Optional[bool]=True)
+</code></pre></div>
+</blockquote>
+<p>Download the prediction results to a local directory.</p>
+<p>Args: path: Local directory path. show_progress: Flag to set the
+progressbar visibility. If not passed, then the default value <strong>True</strong>
+will be used.</p>
+<p>Raises: FileNotFoundError: If the <strong>path</strong> is invalid. HTTPError: If the
+presigned AWS s3 uri to download the prediction results are invalid or
+not reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction.to_local</span>
+<span class="c1"># Testing positive scenario</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryDirectory</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;test_to_local_&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">d</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="o">==</span> <span class="p">[]</span>
+        <span class="n">display</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">d</span><span class="p">)))</span>
+
+        <span class="n">r</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">to_local</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="n">downloaded_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">d</span><span class="p">)))</span>
+        <span class="k">assert</span> <span class="n">downloaded_files</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;part.0.parquet&quot;</span><span class="p">],</span> <span class="n">downloaded_files</span>
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">downloaded_files</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;prediction.uuid=&#39;6ff64784-a5ab-4433-8cee-028905eb2e77&#39;&quot;
+
+[]
+
+100%|██████████| 1/1 [00:00&lt;00:00,  1.45it/s]
+
+&quot;downloaded_files=[&#39;part.0.parquet&#39;]&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Prediction.to_local</span>
+<span class="c1"># Testing negative scenario</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">d</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;my-fake-path&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">FileNotFoundError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">prediction</span><span class="o">.</span><span class="n">to_local</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;prediction.uuid=&#39;6ff64784-a5ab-4433-8cee-028905eb2e77&#39;&quot;
+
+  0%|          | 0/1 [00:00&lt;?, ?it/s]
+
+&quot;e.value=FileNotFoundError(2, &#39;No such file or directory&#39;)&quot;
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/prediction.py#L573"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="predictionto_mysql">Prediction.to_mysql<a class="headerlink" href="#predictionto_mysql" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Prediction.to_mysql (host:str, database:str, table:str, port:int=3306,
+                      username:Optional[str]=None,
+                      password:Optional[str]=None)
+</code></pre></div>
+</blockquote>
+<p>Push the prediction results to a mysql database.</p>
+<p>If the database requires authentication, pass the username/password as
+parameters or store it in the <strong>AIRT_CLIENT_DB_USERNAME</strong> and
+<strong>AIRT_CLIENT_DB_PASSWORD</strong> environment variables.</p>
+<p>Args: host: Database host name. database: Database name. table: Table
+name. port: Host port number. If not passed, then the default value
+<strong>3306</strong> will be used. username: Database username. If not passed, then
+the value set in the environment variable <strong>AIRT_CLIENT_DB_USERNAME</strong>
+will be used else the default value “root” will be used. password:
+Database password. If not passed, then the value set in the environment
+variable <strong>AIRT_CLIENT_DB_PASSWORD</strong> will be used else the default value
+“” will be used.</p>
+<p>Returns: An instance of
+<a href="https://airtai.github.io/airt-client/api_progressstatus.html#progressstatus"><code>ProgressStatus</code></a>
+class.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for prediction.to_mysql</span>
+<span class="c1"># Testing positive scenario</span>
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">status</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">to_mysql</span><span class="p">(</span>
+        <span class="n">host</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_HOST&quot;</span><span class="p">],</span>
+        <span class="n">database</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_DATABASE&quot;</span><span class="p">],</span>
+        <span class="n">table</span><span class="o">=</span><span class="s2">&quot;prediction_to_mysql&quot;</span><span class="p">,</span>
+        <span class="n">username</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_USERNAME&quot;</span><span class="p">],</span>
+        <span class="n">password</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;DB_PASSWORD&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="n">status</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;prediction.uuid=&#39;6ff64784-a5ab-4433-8cee-028905eb2e77&#39;&quot;
+
+
+  0%|          | 0/1 [00:00&lt;?, ?it/s]
+  0%|          | 0/1 [00:05&lt;?, ?it/s]
+  0%|          | 0/1 [00:10&lt;?, ?it/s]
+  0%|          | 0/1 [00:15&lt;?, ?it/s]
+  0%|          | 0/1 [00:20&lt;?, ?it/s]
+  0%|          | 0/1 [00:25&lt;?, ?it/s]
+  0%|          | 0/1 [00:30&lt;?, ?it/s]
+  0%|          | 0/1 [00:35&lt;?, ?it/s]
+  0%|          | 0/1 [00:40&lt;?, ?it/s]
+  0%|          | 0/1 [00:45&lt;?, ?it/s]
+  0%|          | 0/1 [00:50&lt;?, ?it/s]
+  0%|          | 0/1 [00:55&lt;?, ?it/s]
+100%|██████████| 1/1 [01:00&lt;00:00, 60.67s/it]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for prediction.to_mysql</span>
+<span class="c1"># Testing negative scenario</span>
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">status</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">to_mysql</span><span class="p">(</span>
+        <span class="n">host</span><span class="o">=</span><span class="s2">&quot;fake-host-name&quot;</span><span class="p">,</span> <span class="n">database</span><span class="o">=</span><span class="s2">&quot;fake-database-name&quot;</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="s2">&quot;fake-table-name&quot;</span>
+    <span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">status</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;prediction.uuid=&#39;6ff64784-a5ab-4433-8cee-028905eb2e77&#39;&quot;
+
+  0%|          | 0/1 [01:01&lt;?, ?it/s]
+  0%|          | 0/1 [00:10&lt;?, ?it/s]
+
+&#39;str(e.value)=\&#39;(MySQLdb.OperationalError) (2005, &quot;Unknown MySQL server host \\\&#39;fake-host-name\\\&#39; (-3)&quot;)\\n(Background on this error at: https://sqlalche.me/e/14/e3q8)\&#39;&#39;
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/prediction.py#L632"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="predictionto_clickhouse">Prediction.to_clickhouse<a class="headerlink" href="#predictionto_clickhouse" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Prediction.to_clickhouse (host:str, database:str, table:str,
+                           protocol:str, port:int=0,
+                           username:Optional[str]=None,
+                           password:Optional[str]=None)
+</code></pre></div>
+</blockquote>
+<p>Push the prediction results to a clickhouse database.</p>
+<p>If the database requires authentication, pass the username/password as
+parameters or store it in the <strong>CLICKHOUSE_USERNAME</strong> and
+<strong>CLICKHOUSE_PASSWORD</strong> environment variables.</p>
+<p>Args: host: Remote database host name. database: Database name. table:
+Table name. protocol: Protocol to use (native/http). port: Host port
+number. If not passed, then the default value <strong>0</strong> will be used.
+username: Database username. If not passed, then the value set in the
+environment variable <strong>CLICKHOUSE_USERNAME</strong> will be used else the
+default value “root” will be used. password: Database password. If not
+passed, then the value set in the environment variable
+<strong>CLICKHOUSE_PASSWORD</strong> will be used else the default value “” will be
+used.</p>
+<p>Returns: An instance of
+<a href="https://airtai.github.io/airt-client/api_progressstatus.html#progressstatus"><code>ProgressStatus</code></a>
+class.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for prediction.to_clickhouse</span>
+<span class="c1"># Testing negative scenario</span>
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">status</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">to_clickhouse</span><span class="p">(</span>
+        <span class="n">host</span><span class="o">=</span><span class="s2">&quot;fake-host-name&quot;</span><span class="p">,</span>
+        <span class="n">database</span><span class="o">=</span><span class="s2">&quot;fake-database-name&quot;</span><span class="p">,</span>
+        <span class="n">table</span><span class="o">=</span><span class="s2">&quot;fake-table-name&quot;</span><span class="p">,</span>
+        <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;native&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">status</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;prediction.uuid=&#39;6ff64784-a5ab-4433-8cee-028905eb2e77&#39;&quot;
+
+  0%|          | 0/1 [00:05&lt;?, ?it/s]
+
+&quot;str(e.value)=&#39;Orig exception: Code: 210. Temporary failure in name resolution (fake-host-name:9000)&#39;&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for prediction.to_clickhouse</span>
+<span class="c1"># Testing positive scenario</span>
+
+<span class="k">with</span> <span class="n">generate_prediction</span><span class="p">()</span> <span class="k">as</span> <span class="n">prediction</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prediction</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">status</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">to_clickhouse</span><span class="p">(</span>
+        <span class="n">host</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CLICKHOUSE_HOST&quot;</span><span class="p">),</span>
+        <span class="n">database</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CLICKHOUSE_DATABASE&quot;</span><span class="p">),</span>
+        <span class="n">table</span><span class="o">=</span><span class="s2">&quot;test_clickhouse_push_prediction_airt_client&quot;</span><span class="p">,</span>
+        <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;native&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">status</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;prediction.uuid=&#39;6ff64784-a5ab-4433-8cee-028905eb2e77&#39;&quot;
+
+100%|██████████| 1/1 [00:05&lt;00:00,  5.08s/it]
+</code></pre></div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022 onwards, airt.ai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    and 
+    <a href="https://nbdev-mkdocs.airt.ai/" target="_blank" rel="noopener">
+      Material for nbdev
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../overrides/js/extra.js"></script>
+        
+      
+        
+          <script src="../overrides/js/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>

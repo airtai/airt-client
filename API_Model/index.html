@@ -1,0 +1,1200 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python client for airt-service">
+      
+      
+        <meta name="author" content="airt.ai">
+      
+      
+        <link rel="canonical" href="https://airtai.github.io/airt-client/API_Model/">
+      
+      
+      
+      <link rel="icon" href="../overrides/images/airt_icon_blue.svg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>API_Model - airt</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../overrides/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-H6EV08GRK5"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-H6EV08GRK5",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-H6EV08GRK5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+  
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="airt - API_Model" />
+  <meta property="og:description" content="Python client for airt-service" />
+  <meta property="og:url" content="https://airtai.github.io/airt-client/API_Model/" />
+  <meta property="og:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="airt - API_Model" />
+  <meta name="twitter:description" content="Python client for airt-service" />
+  <meta name="twitter:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api_model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="airt" class="md-header__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            airt
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API_Model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="airt" class="md-nav__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    airt
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Python client for airt service
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial/" class="md-nav__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_api_docs/airt/client/" class="md-nav__link">
+        airt.client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_cli_docs/airt/" class="md-nav__link">
+        airt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#model" class="md-nav__link">
+    Model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeldetails" class="md-nav__link">
+    Model.details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeldelete" class="md-nav__link">
+    Model.delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelevaluate" class="md-nav__link">
+    Model.evaluate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelpredict" class="md-nav__link">
+    Model.predict
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="api_model">API_Model<a class="headerlink" href="#api_model" title="Permanent link">¤</a></h1>
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+
+<p>Note:</p>
+<p>While writing doc strings, please use the below syntax for linking
+methods/classes. So that the methods/classes gets highlighted in the
+browser and clicking on it will take the user to the linked function</p>
+<div class="highlight"><pre><span></span><code>- To link a method from the class same file please use the `method_name` format.
+- To link a method from a different Class (can in a seperate file also) please use `Classname.method_name` format.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">airt._testing</span> <span class="kn">import</span> <span class="n">activate_by_import</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[INFO] airt.testing.activate_by_import: Testing environment activated.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">import</span> <span class="nn">airt._sanitizer</span>
+<span class="kn">from</span> <span class="nn">airt._components.datablob</span> <span class="kn">import</span> <span class="n">DataBlob</span>
+<span class="kn">from</span> <span class="nn">airt._constant</span> <span class="kn">import</span> <span class="n">SERVICE_PASSWORD</span><span class="p">,</span> <span class="n">SERVICE_USERNAME</span>
+<span class="kn">from</span> <span class="nn">airt._docstring.helpers</span> <span class="kn">import</span> <span class="n">run_examples_from_docstring</span>
+<span class="kn">from</span> <span class="nn">airt.client</span> <span class="kn">import</span> <span class="n">DataSource</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">()</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">()</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;This is a debug message&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;This is an info&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;This is a warning&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;This is an error&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;logger.getEffectiveLevel()=20&#39;
+
+[INFO] __main__: This is an info
+[WARNING] __main__: This is a warning
+[ERROR] __main__: This is an error
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">TEST_S3_URI</span> <span class="o">=</span> <span class="s2">&quot;s3://test-airt-service/ecommerce_behavior_notebooks&quot;</span>
+<span class="n">RANDOM_UUID_FOR_TESTING</span> <span class="o">=</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span>
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/model.py#L33"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="model">Model<a class="headerlink" href="#model" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Model (uuid:str, datasource:Optional[str]=None,
+        client_column:Optional[str]=None,
+        target_column:Optional[str]=None, target:Optional[str]=None,
+        predict_after:Optional[str]=None,
+        timestamp_column:Optional[str]=None,
+        total_steps:Optional[int]=None,
+        completed_steps:Optional[int]=None, region:Optional[str]=None,
+        cloud_provider:Optional[str]=None, error:Optional[str]=None,
+        disabled:Optional[bool]=None, created:Optional[str]=None,
+        user:Optional[str]=None)
+</code></pre></div>
+</blockquote>
+<p>A class for querying the model training, evaluation, and prediction
+status.</p>
+<p>The <strong>Model</strong> class is instantiated automatically when the
+<a href="https://airtai.github.io/airt-client/api_datasource.html#datasource.train"><code>DataSource.train</code></a>
+method is called on a datasource. Currently, it is the only way to
+instantiate the <strong>Model</strong> class.</p>
+<p>The model is trained to predict a specific event in the future and we
+assume the input data to have:</p>
+<ul>
+<li>a column identifying a client (<strong>client_column</strong>). E.g: person, car,
+  business, etc.,</li>
+<li>a column specifying a type of event to predict (<strong>target_column</strong>).
+  E.g: buy, checkout, etc.,</li>
+<li>a timestamp column (<strong>timestamp_column</strong>) specifying the time of an
+  occurred event.</li>
+</ul>
+<p>Along with the above mandatory columns, the input data can have
+additional columns of any type (int, category, float, datetime type,
+etc.,). These additional columns will be used in the model training for
+making more accurate predictions.</p>
+<p>Finally, we need to know how much ahead we wish to make predictions.
+This lead time varies widely for each use case and can be in minutes for
+a webshop or even several weeks for a banking product such as a loan.</p>
+<p>As always, the model training and prediction is an asynchronous process
+and can take a few hours to finish depending on the size of your
+dataset. The progress for the same can be checked by calling the
+<a href="https://airtai.github.io/airt-client/api_progressstatus.html#progressstatus.is_ready"><code>ProgressStatus.is_ready</code></a>
+method on the <strong>Model</strong> instance. Alternatively, you can call the
+<a href="https://airtai.github.io/airt-client/api_progressstatus.html#progressstatus.progress_bar"><code>ProgressStatus.progress_bar</code></a>
+method to monitor the status interactively.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run example for _docstring_example</span>
+
+<span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_USERNAME</span><span class="p">]</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_PASSWORD</span><span class="p">]</span>
+
+<span class="n">run_examples_from_docstring</span><span class="p">(</span>
+    <span class="n">_docstring_example</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">uri</span><span class="o">=</span><span class="n">TEST_S3_URI</span><span class="p">,</span>
+    <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;parquet&quot;</span><span class="p">,</span>
+    <span class="n">index_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+    <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;event_time&quot;</span><span class="p">,</span>
+    <span class="n">client_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+    <span class="n">target_column</span><span class="o">=</span><span class="s2">&quot;category_code&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Example:                                                                                                        │
+│                                                                                                                 │
+│     # Importing necessary libraries                                                                             │
+│     from datetime import timedelta                                                                              │
+│                                                                                                                 │
+│     from  airt.client import Client, DataBlob, Model                                                            │
+│                                                                                                                 │
+│     # Authenticate                                                                                              │
+│     Client.get_token(username="{fill in username}", password="{fill in password}")                              │
+│                                                                                                                 │
+│     # Create a datablob                                                                                         │
+│     # In this example, the datablob will be stored in an AWS S3 bucket. The                                     │
+│     # access_key and the secret_key are set in the AWS_ACCESS_KEY_ID and                                        │
+│     # AWS_SECRET_ACCESS_KEY environment variables, and the region is set to                                     │
+│     # eu-west-3; feel free to change the cloud provider and the region to                                       │
+│     # suit your needs.                                                                                          │
+│     db = DataBlob.from_s3(                                                                                      │
+│         uri="{fill in uri}",                                                                                    │
+│         cloud_provider="aws",                                                                                   │
+│         region="eu-west-3"                                                                                      │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Display the status in a progress bar                                                                      │
+│     db.progress_bar()                                                                                           │
+│                                                                                                                 │
+│     # Create a datasource                                                                                       │
+│     ds = db.to_datasource(                                                                                      │
+│         file_type="{fill in file_type}",                                                                        │
+│         index_column="{fill in index_column}",                                                                  │
+│         sort_by="{fill in sort_by}",                                                                            │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Display the status in a progress bar                                                                      │
+│     ds.progress_bar()                                                                                           │
+│                                                                                                                 │
+│     # Train a model to predicts which users will perform a purchase                                             │
+│     # event ("*purchase") three hours before they actually do it.                                               │
+│     model = ds.train(                                                                                           │
+│         client_column="{fill in client_column}",                                                                │
+│         target_column="{fill in target_column}",                                                                │
+│         target="*purchase",                                                                                     │
+│         predict_after=timedelta(hours=3)                                                                        │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Display the status in a progress bar                                                                      │
+│     model.progress_bar()                                                                                        │
+│                                                                                                                 │
+│     # Print the details of the newly created model                                                              │
+│     print(model.details())                                                                                      │
+│                                                                                                                 │
+│     # Display the details of all models created by the currently                                                │
+│     # logged-in user                                                                                            │
+│     print(Model.as_df(Model.ls()))                                                                              │
+│                                                                                                                 │
+│     # Evaluate the newly created model                                                                          │
+│     print(model.evaluate())                                                                                     │
+│                                                                                                                 │
+│     # Run predictions on the newly created model                                                                │
+│     prediction = model.predict()                                                                                │
+│                                                                                                                 │
+│     # Display the prediction status in a progress bar                                                           │
+│     prediction.progress_bar()                                                                                   │
+│                                                                                                                 │
+│     # Display details of the predictions                                                                        │
+│     print(prediction.details())                                                                                 │
+│                                                                                                                 │
+│     # Delete the newly created model                                                                            │
+│     print(model.delete())                                                                                       │
+│                                                                                                                 │
+│ ╭────────────────────────────────────────────────── stdout ───────────────────────────────────────────────────╮ │
+│ │                              model_uuid              created  ... disabled ready                            │ │
+│ │ 0  d6bb1704-8643-457d-8b87-ac09d575d936  2022-10-31T11:38:50  ...    False  True                            │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 14 columns]                                                                                       │ │
+│ │                              model_uuid              created  ready                                         │ │
+│ │ 0  b3b17f4c-2f00-4f51-9841-5dac52bfea61  2022-10-31T09:16:47   True                                         │ │
+│ │ 1  4b4b3909-671f-43f9-b868-d7d70a790e39  2022-10-31T09:17:58   True                                         │ │
+│ │ 2  5e80898d-a2a0-4341-8412-157086638d43  2022-10-31T11:14:02   True                                         │ │
+│ │ 3  5c9b02a4-23a0-4743-b163-ad74f217d685  2022-10-31T11:35:27   True                                         │ │
+│ │ 4  d6bb1704-8643-457d-8b87-ac09d575d936  2022-10-31T11:38:50   True                                         │ │
+│ │             eval                                                                                            │ │
+│ │ accuracy   0.985                                                                                            │ │
+│ │ recall     0.962                                                                                            │ │
+│ │ precision  0.934                                                                                            │ │
+│ │                         prediction_uuid              created  ... error ready                               │ │
+│ │ 0  46415528-0c1c-4d07-abef-2db40e33e45f  2022-10-31T11:38:50  ...  None  True                               │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 8 columns]                                                                                        │ │
+│ │                              model_uuid              created  ready                                         │ │
+│ │ 0  d6bb1704-8643-457d-8b87-ac09d575d936  2022-10-31T11:38:50   True                                         │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│ ╭────────────────────────────────────────────────── stderr ───────────────────────────────────────────────────╮ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/1 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:05&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:10&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 1/1 [00:15&lt;00:00,  5.05s/it]                                                               │ │
+│ │ 100%|██████████| 1/1 [00:15&lt;00:00, 15.19s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/1 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:05&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:10&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:15&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:20&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:25&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 1/1 [00:30&lt;00:00,  5.05s/it]                                                               │ │
+│ │ 100%|██████████| 1/1 [00:30&lt;00:00, 30.35s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/5 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 5/5 [00:00&lt;00:00, 130.40it/s]                                                              │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/3 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 3/3 [00:05&lt;00:00,  1.70s/it]                                                               │ │
+│ │ 100%|██████████| 3/3 [00:05&lt;00:00,  1.70s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+
+<div class="highlight"><pre><span></span><code><span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+
+<span class="c1"># Context manager for creating and a trained model id</span>
+
+<span class="n">_model</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">generate_model</span><span class="p">(</span><span class="n">force_create</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">_model</span>
+
+    <span class="k">if</span> <span class="n">_model</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">force_create</span><span class="p">:</span>
+        <span class="c1"># Create a s3 datasource</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">DataBlob</span><span class="o">.</span><span class="n">from_s3</span><span class="p">(</span>
+            <span class="n">uri</span><span class="o">=</span><span class="n">TEST_S3_URI</span><span class="p">,</span>
+            <span class="n">access_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_ACCESS_KEY_ID&quot;</span><span class="p">],</span>
+            <span class="n">secret_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_SECRET_ACCESS_KEY&quot;</span><span class="p">],</span>
+        <span class="p">)</span>
+
+        <span class="n">db</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">to_datasource</span><span class="p">(</span>
+            <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;parquet&quot;</span><span class="p">,</span> <span class="n">index_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span> <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;event_time&quot;</span>
+        <span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+        <span class="n">ds</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+        <span class="n">_model</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">train</span><span class="p">(</span>
+            <span class="n">client_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+            <span class="n">target_column</span><span class="o">=</span><span class="s2">&quot;category_code&quot;</span><span class="p">,</span>
+            <span class="n">target</span><span class="o">=</span><span class="s2">&quot;*purchase&quot;</span><span class="p">,</span>
+            <span class="n">predict_after</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+        <span class="p">)</span>
+
+        <span class="n">_model</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="k">yield</span> <span class="n">_model</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">generate_model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
+    <span class="c1"># Testing list without offset and limit</span>
+    <span class="n">mx</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">mx</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">mx</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+
+    <span class="c1"># Testing list with offset and limit</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">mx</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">mx</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mx</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">limit</span>
+
+    <span class="c1"># Testing list with invalid offset and limit</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">1_000_000_000</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">mx</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">mx</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">mx</span> <span class="o">==</span> <span class="p">[]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [00:15&lt;00:00, 15.19s/it]
+100%|██████████| 1/1 [00:30&lt;00:00, 30.35s/it]
+100%|██████████| 5/5 [00:00&lt;00:00, 119.98it/s]
+
+&quot;db.uuid=&#39;bed19d03-9f38-496f-addf-ca90e3829d2b&#39;&quot;
+
+&quot;ds.uuid=&#39;b81d1ba1-7beb-4fea-985c-6bbe244fb3ca&#39;&quot;
+
+&#39;len(mx)=5&#39;
+
+&#39;len(mx)=3&#39;
+
+&#39;len(mx)=0&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Model.as_df:</span>
+
+<span class="n">mx</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">mx</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mx</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">Model</span><span class="o">.</span><span class="n">BASIC_MODEL_COLS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">df</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | model_uuid                           | created             | ready |
+|-----|--------------------------------------|---------------------|-------|
+| 0   | b3b17f4c-2f00-4f51-9841-5dac52bfea61 | 2022-10-31T09:16:47 | True  |
+| 1   | 4b4b3909-671f-43f9-b868-d7d70a790e39 | 2022-10-31T09:17:58 | True  |
+| 2   | 5e80898d-a2a0-4341-8412-157086638d43 | 2022-10-31T11:14:02 | True  |
+| 3   | 5c9b02a4-23a0-4743-b163-ad74f217d685 | 2022-10-31T11:35:27 | True  |
+| 4   | 127e4018-cdb5-4141-8c41-3f7db667367d | 2022-10-31T11:39:47 | True  |
+
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Model.as_df:</span>
+<span class="c1"># Passing empty mx list</span>
+
+<span class="n">mx</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">mx</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mx</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">Model</span><span class="o">.</span><span class="n">BASIC_MODEL_COLS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">df</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | model_uuid | created | ready |
+|-----|------------|---------|-------|
+
+</div>
+
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/model.py#L306"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="modeldetails">Model.details<a class="headerlink" href="#modeldetails" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Model.details ()
+</code></pre></div>
+</blockquote>
+<p>Return the details of a model.</p>
+<p>Returns: A pandas DataFrame encapsulating the details of the model.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Model.details</span>
+
+<span class="k">with</span> <span class="n">generate_model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">details</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">model_uuid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">model</span><span class="o">.</span><span class="n">uuid</span>
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">Model</span><span class="o">.</span><span class="n">ALL_MODEL_COLS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | model_uuid                           | created             | datasource_uuid                      | user_uuid                            | client_column | target_column | target     | predict_after | timestamp_column | region    | cloud_provider | error | disabled | ready |
+|-----|--------------------------------------|---------------------|--------------------------------------|--------------------------------------|---------------|---------------|------------|---------------|------------------|-----------|----------------|-------|----------|-------|
+| 0   | 127e4018-cdb5-4141-8c41-3f7db667367d | 2022-10-31T11:39:47 | b81d1ba1-7beb-4fea-985c-6bbe244fb3ca | c68991a4-0b78-47c6-857d-9a22514f9f09 | user_id       | category_code | \*purchase | 10800.0       | None             | eu-west-3 | aws            | None  | False    | True  |
+
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Model.details</span>
+<span class="c1"># Testing negative scenario. Passing invalid data ID</span>
+
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">details</span><span class="p">()</span>
+
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;e.value=ValueError(&#39;The model uuid is incorrect. Please try again.&#39;)&quot;
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/model.py#L329"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="modeldelete">Model.delete<a class="headerlink" href="#modeldelete" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Model.delete ()
+</code></pre></div>
+</blockquote>
+<p>Delete a model from the server.</p>
+<p>Returns: A pandas DataFrame encapsulating the details of the deleted
+model.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for model.delete</span>
+
+<span class="k">with</span> <span class="n">generate_model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">model_uuid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">model</span><span class="o">.</span><span class="n">uuid</span>
+
+    <span class="c1"># Passing disabled=False. Should show only the active models.</span>
+    <span class="n">mx</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+    <span class="n">model_uuid_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">m</span><span class="o">.</span><span class="n">uuid</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">mx</span><span class="p">]</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model_uuid_list</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">model</span><span class="o">.</span><span class="n">uuid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">model_uuid_list</span>
+
+    <span class="c1"># Passing disabled=True. Should show only the deleted models.</span>
+    <span class="n">mx</span> <span class="o">=</span> <span class="n">Model</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">model_uuid_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">uuid</span> <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">mx</span><span class="p">]</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model_uuid_list</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">model</span><span class="o">.</span><span class="n">uuid</span> <span class="ow">in</span> <span class="n">model_uuid_list</span>
+
+    <span class="c1"># Testing negative scenario. Deleting already deleted model</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">model</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | model_uuid                           | created             | ready |
+|-----|--------------------------------------|---------------------|-------|
+| 0   | 127e4018-cdb5-4141-8c41-3f7db667367d | 2022-10-31T11:39:47 | True  |
+
+</div>
+
+<div class="highlight"><pre><span></span><code>&quot;model_uuid_list=[&#39;b3b17f4c-2f00-4f51-9841-5dac52bfea61&#39;, &#39;4b4b3909-671f-43f9-b868-d7d70a790e39&#39;, &#39;5e80898d-a2a0-4341-8412-157086638d43&#39;, &#39;5c9b02a4-23a0-4743-b163-ad74f217d685&#39;]&quot;
+
+&quot;model_uuid_list=[&#39;0ed30646-9ce7-4529-8d3e-ca8e97750182&#39;, &#39;8ae5e31c-a77e-4d67-95f4-5bda6aee8685&#39;, &#39;39112b6f-8c74-41f8-a39b-3ce8859a5ca1&#39;, &#39;6e1800a4-8e23-4958-b63d-6bbad4a6c0b8&#39;, &#39;d6bb1704-8643-457d-8b87-ac09d575d936&#39;, &#39;127e4018-cdb5-4141-8c41-3f7db667367d&#39;]&quot;
+
+&quot;e.value=ValueError(&#39;The model has already been deleted.&#39;)&quot;
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/model.py#L352"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="modelevaluate">Model.evaluate<a class="headerlink" href="#modelevaluate" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Model.evaluate ()
+</code></pre></div>
+</blockquote>
+<p>Return the evaluation metrics of the trained model.</p>
+<p>Currently, this method returns the model’s accuracy, precision, and
+recall. In the future, more performance metrics will be added.</p>
+<p>Returns: The performance metrics of the trained model as a pandas
+series.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for model.evaluate:</span>
+<span class="k">with</span> <span class="n">generate_model</span><span class="p">(</span><span class="n">force_create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">()</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [00:10&lt;00:00, 10.14s/it]
+100%|██████████| 1/1 [00:30&lt;00:00, 30.34s/it]
+100%|██████████| 5/5 [00:00&lt;00:00, 138.69it/s]
+
+&quot;db.uuid=&#39;9253d82e-582b-47c6-b5c0-fc21d1f04dd3&#39;&quot;
+
+&quot;ds.uuid=&#39;fa18ebdf-5357-4f78-8610-21160c3c4280&#39;&quot;
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|           | eval  |
+|-----------|-------|
+| accuracy  | 0.985 |
+| recall    | 0.962 |
+| precision | 0.934 |
+
+</div>
+
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/model.py#L372"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="modelpredict">Model.predict<a class="headerlink" href="#modelpredict" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> Model.predict (data_uuid:Optional[int]=0)
+</code></pre></div>
+</blockquote>
+<p>Run predictions against the trained model.</p>
+<p>The progress for the same can be checked by calling the <code>is_ready</code>
+method on the
+<a href="https://airtai.github.io/airt-client/api_model.html#model"><code>Model</code></a>
+instance. Alternatively, you can call the <code>progress_bar</code> method to
+monitor the status interactively.</p>
+<p>Args: data_uuid: The datasource uuid to run the predictions. If not set,
+then the datasource used for training the model will be used for
+prediction aswell.</p>
+<p>Returns: An instance of the
+<a href="https://airtai.github.io/airt-client/api_prediction.html#prediction"><code>Prediction</code></a>
+class.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for model.predict:</span>
+<span class="c1"># Positive scenario. Taking the training data for prediction (not passing data_id in the params)</span>
+
+<span class="k">with</span> <span class="n">generate_model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">predictions</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2"> </span><span class="se">\n</span><span class="si">{</span><span class="n">predictions</span><span class="o">.</span><span class="n">datasource</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">predictions</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;predictions.uuid=&#39;31f03b0b-401d-48f4-baf0-91cf89267993&#39; \npredictions.datasource=&#39;fa18ebdf-5357-4f78-8610-21160c3c4280&#39;&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for model.predict:</span>
+<span class="c1"># Positive scenario. Explicitely passing a data_uuid in the params</span>
+
+<span class="k">with</span> <span class="n">generate_model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
+    <span class="c1"># Create a s3 datasource</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">DataBlob</span><span class="o">.</span><span class="n">from_s3</span><span class="p">(</span>
+        <span class="n">uri</span><span class="o">=</span><span class="n">TEST_S3_URI</span><span class="p">,</span>
+        <span class="n">access_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_ACCESS_KEY_ID&quot;</span><span class="p">],</span>
+        <span class="n">secret_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_SECRET_ACCESS_KEY&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="n">db</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+    <span class="n">ds</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">to_datasource</span><span class="p">(</span>
+        <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;parquet&quot;</span><span class="p">,</span> <span class="n">index_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span> <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;event_time&quot;</span>
+    <span class="p">)</span>
+
+    <span class="n">ds</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="c1"># Predicting the trained model with the newly created data source</span>
+    <span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data_uuid</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+
+    <span class="n">predictions</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">predictions</span><span class="o">.</span><span class="n">is_ready</span><span class="p">()</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">predictions</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2"> </span><span class="se">\n</span><span class="si">{</span><span class="n">predictions</span><span class="o">.</span><span class="n">datasource</span><span class="si">=}</span><span class="s2"> </span><span class="se">\n</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">predictions</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+    <span class="k">assert</span> <span class="n">predictions</span><span class="o">.</span><span class="n">datasource</span> <span class="o">==</span> <span class="n">ds</span><span class="o">.</span><span class="n">uuid</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [00:15&lt;00:00, 15.18s/it]
+100%|██████████| 1/1 [00:30&lt;00:00, 30.35s/it]
+100%|██████████| 3/3 [00:05&lt;00:00,  1.70s/it]
+
+&quot;db.uuid=&#39;2faec7cf-95e9-4777-bba1-29f597075c9e&#39;&quot;
+
+&#39;predictions.is_ready()=True&#39;
+
+&quot;predictions.uuid=&#39;d9473bcb-5a1d-4b39-ad89-9d3370eb92cb&#39; \npredictions.datasource=&#39;a33630b1-8380-44fd-903a-4ec18a2ff0c3&#39; \nds.uuid=&#39;a33630b1-8380-44fd-903a-4ec18a2ff0c3&#39;&quot;
+</code></pre></div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022 onwards, airt.ai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    and 
+    <a href="https://nbdev-mkdocs.airt.ai/" target="_blank" rel="noopener">
+      Material for nbdev
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../overrides/js/extra.js"></script>
+        
+      
+        
+          <script src="../overrides/js/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>

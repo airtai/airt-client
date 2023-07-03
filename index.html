@@ -1,0 +1,923 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python client for airt-service">
+      
+      
+        <meta name="author" content="airt.ai">
+      
+      
+        <link rel="canonical" href="https://airtai.github.io/airt-client/">
+      
+      
+      
+        <link rel="next" href="Tutorial/">
+      
+      <link rel="icon" href="overrides/images/airt_icon_blue.svg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>airt</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="overrides/css/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-H6EV08GRK5"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-H6EV08GRK5",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-H6EV08GRK5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="airt" />
+  <meta property="og:description" content="Python client for airt-service" />
+  <meta property="og:url" content="https://airtai.github.io/airt-client/" />
+  <meta property="og:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="airt" />
+  <meta name="twitter:description" content="Python client for airt-service" />
+  <meta name="twitter:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-client-for-airt-service" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="airt" class="md-header__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            airt
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python client for airt service
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="airt" class="md-nav__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    airt
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Python client for airt service
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Python client for airt service
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docs" class="md-nav__link">
+    Docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install" class="md-nav__link">
+    How to install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-get-token" class="md-nav__link">
+    0. Get token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-connect-data" class="md-nav__link">
+    1. Connect data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-train" class="md-nav__link">
+    2. Train
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-predict" class="md-nav__link">
+    3. Predict
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Tutorial/" class="md-nav__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="airt_api_docs/airt/client/" class="md-nav__link">
+        airt.client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="airt_cli_docs/airt/" class="md-nav__link">
+        airt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CHANGELOG/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docs" class="md-nav__link">
+    Docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install" class="md-nav__link">
+    How to install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+    <nav class="md-nav" aria-label="How to use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-get-token" class="md-nav__link">
+    0. Get token
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-connect-data" class="md-nav__link">
+    1. Connect data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-train" class="md-nav__link">
+    2. Train
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-predict" class="md-nav__link">
+    3. Predict
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="python-client-for-airt-service">Python client for airt service<a class="headerlink" href="#python-client-for-airt-service" title="Permanent link">¤</a></h1>
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+
+<h2 id="docs">Docs<a class="headerlink" href="#docs" title="Permanent link">¤</a></h2>
+<p>For full documentation, Please follow the below link:</p>
+<ul>
+<li><a href="https://docs.airt.ai" target="_blank"><a href="https://docs.airt.ai/">https://docs.airt.ai/</a></a></li>
+</ul>
+<h2 id="how-to-install">How to install<a class="headerlink" href="#how-to-install" title="Permanent link">¤</a></h2>
+<p>If you don’t have the airt library already installed, please install it
+using pip.</p>
+<div class="highlight"><pre><span></span><code><span class="go">pip install airt-client</span>
+</code></pre></div>
+<h2 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permanent link">¤</a></h2>
+<p>To access the airt service, you must first create a developer account.
+Please fill out the signup form below to get one:</p>
+<ul>
+<li><a href="https://bit.ly/3hbXQLY">https://bit.ly/3hbXQLY</a></li>
+</ul>
+<p>After successful verification, you will receive an email with the
+username and password for the developer account.</p>
+<p>Once you have the credentials, use them to get an access token by
+calling
+<a href="https://airtai.github.io/airt-client/api_client.html#client.get_token"><code>Client.get_token</code></a>
+method. It is necessary to get an access token; otherwise, you won’t be
+able to access all of the airt service’s APIs. You can either pass the
+username, password, and server address as parameters to the
+<a href="https://airtai.github.io/airt-client/api_client.html#client.get_token"><code>Client.get_token</code></a>
+method or store them in the environment variables
+<strong>AIRT_SERVICE_USERNAME</strong>, <strong>AIRT_SERVICE_PASSWORD</strong>, and
+<strong>AIRT_SERVER_URL</strong></p>
+<p>In addition to the regular authentication with credentials, you can also
+enable multi-factor authentication (MFA) and single sign-on (SSO) for
+generating tokens.</p>
+<p>To help protect your account, we recommend that you enable multi-factor
+authentication (MFA). MFA provides additional security by requiring you
+to provide unique verification code (OTP) in addition to your regular
+sign-in credentials when performing critical operations.</p>
+<p>Your account can be configured for MFA in just two easy steps:</p>
+<ol>
+<li>
+<p>To begin, you need to enable MFA for your account by calling the
+    <a href="https://airtai.github.io/airt-client/api_user.html#user.enable_mfa"><code>User.enable_mfa</code></a>
+    method, which will generate a QR code. You can then scan the QR code
+    with an authenticator app, such as Google Authenticator and follow
+    the on-device instructions to finish the setup in your smartphone.</p>
+</li>
+<li>
+<p>Finally, activate MFA for your account by calling
+    <a href="https://airtai.github.io/airt-client/api_user.html#user.activate_mfa"><code>User.activate_mfa</code></a>
+    and passing the dynamically generated six-digit verification code
+    from your smartphone’s authenticator app.</p>
+</li>
+</ol>
+<p>You can also disable MFA for your account at any time by calling the
+method
+<a href="https://airtai.github.io/airt-client/api_user.html#user.disable_mfa"><code>User.disable_mfa</code></a>
+method.</p>
+<p>Single sign-on (SSO) can be enabled for your account in three simple
+steps:</p>
+<ol>
+<li>
+<p>Enable the SSO for a provider by calling the
+    <a href="https://airtai.github.io/airt-client/api_user.html#user.enable_sso"><code>User.enable_sso</code></a>
+    method with the SSO provider name and an email address. At the
+    moment, we only support <strong>“google”</strong> and <strong>“github”</strong> as SSO
+    providers. We intend to support additional SSO providers in future
+    releases.</p>
+</li>
+<li>
+<p>Before you can start generating new tokens with SSO, you must first
+    authenticate with the SSO provider. Call the
+    <a href="https://airtai.github.io/airt-client/api_client.html#client.get_token"><code>Client.get_token</code></a>
+    with the same SSO provider you have enabled in the step above to
+    generate an SSO authorization URL. Please copy and paste it into
+    your preferred browser and complete the authentication process with
+    the SSO provider.</p>
+</li>
+<li>
+<p>After successfully authenticating with the SSO provider, call the
+    <a href="https://airtai.github.io/airt-client/api_client.html#client.set_sso_token"><code>Client.set_sso_token</code></a>
+    method to generate a new token and use it automatically in all
+    future interactions with the airt server.</p>
+</li>
+</ol>
+<p>For more information, please check:</p>
+<ul>
+<li>
+<p><a href="https://docs.airt.ai/Tutorial/">Tutorial</a> with more elaborate
+  example, and</p>
+</li>
+<li>
+<p><a href="https://docs.airt.ai/API/client/Client/">API</a> with reference
+  documentation.</p>
+</li>
+</ul>
+<p>Here’s a minimal example showing how to use airt services to train a
+model and make predictions.</p>
+<p>In the below example, the username, password, and server address are
+stored in <strong>AIRT_SERVICE_USERNAME</strong>, <strong>AIRT_SERVICE_PASSWORD</strong>, and
+<strong>AIRT_SERVER_URL</strong> environment variables.</p>
+<h3 id="0-get-token">0. Get token<a class="headerlink" href="#0-get-token" title="Permanent link">¤</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Importing necessary libraries</span>
+<span class="kn">from</span> <span class="nn">airt.client</span> <span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">DataBlob</span><span class="p">,</span> <span class="n">DataSource</span>
+
+<span class="c1"># Authenticate</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="1-connect-data">1. Connect data<a class="headerlink" href="#1-connect-data" title="Permanent link">¤</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># The input data in this case is a CSV file stored in an AWS S3 bucket. Before</span>
+<span class="c1"># you can use the data to train a model, it must be uploaded to the airt server.</span>
+<span class="c1"># Run the following command to upload the data to the airt server for further</span>
+<span class="c1"># processing.</span>
+<span class="n">data_blob</span> <span class="o">=</span> <span class="n">DataBlob</span><span class="o">.</span><span class="n">from_s3</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://test-airt-service/ecommerce_behavior_csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Display the upload progress</span>
+<span class="n">data_blob</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+<span class="c1"># Once the upload is complete, run the following command to preprocess and</span>
+<span class="c1"># prepare the data for training.</span>
+<span class="n">data_source</span> <span class="o">=</span> <span class="n">data_blob</span><span class="o">.</span><span class="n">to_datasource</span><span class="p">(</span>
+    <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;csv&quot;</span><span class="p">,</span> <span class="n">index_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span> <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;event_time&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Display the data preprocessing progress</span>
+<span class="n">data_source</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+<span class="c1"># When the preprocessing is finished, you can run the following command to</span>
+<span class="c1"># display the head of the data to ensure everything is fine.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data_source</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [01:00&lt;00:00, 60.62s/it]
+100%|██████████| 1/1 [00:35&lt;00:00, 35.39s/it]
+
+                          event_time event_type  product_id  \
+user_id                                                       
+10300217   2019-11-06 06:51:52+00:00       view    26300219   
+253299396  2019-11-05 21:25:44+00:00       view     2400724   
+253299396  2019-11-05 21:27:43+00:00       view     2400724   
+272811580  2019-11-05 19:38:48+00:00       view     3601406   
+272811580  2019-11-05 19:40:21+00:00       view     3601406   
+288929779  2019-11-06 05:39:21+00:00       view    15200134   
+288929779  2019-11-06 05:39:34+00:00       view    15200134   
+310768124  2019-11-05 20:25:52+00:00       view     1005106   
+315309190  2019-11-05 23:13:43+00:00       view    31501222   
+339186405  2019-11-06 07:00:32+00:00       view     1005115
+
+                   category_id              category_code  \
+user_id                                                     
+10300217   2053013563424899933                       None   
+253299396  2053013563743667055    appliances.kitchen.hood   
+253299396  2053013563743667055    appliances.kitchen.hood   
+272811580  2053013563810775923  appliances.kitchen.washer   
+272811580  2053013563810775923  appliances.kitchen.washer   
+288929779  2053013553484398879                       None   
+288929779  2053013553484398879                       None   
+310768124  2053013555631882655     electronics.smartphone   
+315309190  2053013558031024687                       None   
+339186405  2053013555631882655     electronics.smartphone
+
+                               brand    price  \
+user_id                                         
+10300217                     sokolov    40.54   
+253299396                      bosch   246.85   
+253299396                      bosch   246.85   
+272811580                       beko   195.60   
+272811580                       beko   195.60   
+288929779                      racer    55.86   
+288929779                      racer    55.86   
+310768124                      apple  1422.31   
+315309190  dobrusskijfarforovyjzavod   115.18   
+339186405                      apple   915.69
+
+                                   user_session  
+user_id                                          
+10300217   d1fdcbf1-bb1f-434b-8f1a-4b77f29a84a0  
+253299396  b097b84d-cfb8-432c-9ab0-a841bb4d727f  
+253299396  b097b84d-cfb8-432c-9ab0-a841bb4d727f  
+272811580  d18427ab-8f2b-44f7-860d-a26b9510a70b  
+272811580  d18427ab-8f2b-44f7-860d-a26b9510a70b  
+288929779  fc582087-72f8-428a-b65a-c2f45d74dc27  
+288929779  fc582087-72f8-428a-b65a-c2f45d74dc27  
+310768124  79d8406f-4aa3-412c-8605-8be1031e63d6  
+315309190  e3d5a1a4-f8fd-4ac3-acb7-af6ccd1e3fa9  
+339186405  15197c7e-aba0-43b4-9f3a-a815e31ade40
+</code></pre></div>
+<h3 id="2-train">2. Train<a class="headerlink" href="#2-train" title="Permanent link">¤</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># We assume that the input data for training a model includes the client_column</span>
+<span class="c1"># target_column, and timestamp column, which specify the time of an event.</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">data_source</span><span class="o">.</span><span class="n">train</span><span class="p">(</span>
+    <span class="n">client_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+    <span class="n">target_column</span><span class="o">=</span><span class="s2">&quot;event_type&quot;</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="s2">&quot;*purchase&quot;</span><span class="p">,</span>
+    <span class="n">predict_after</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="c1"># Display model training progress</span>
+<span class="n">model</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+<span class="c1"># Once the model training is complete, call the following method to display</span>
+<span class="c1"># multiple evaluation metrics to evaluate the model&#39;s performance.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 5/5 [00:00&lt;00:00, 126.62it/s]
+
+            eval
+accuracy   0.985
+recall     0.962
+precision  0.934
+</code></pre></div>
+<h3 id="3-predict">3. Predict<a class="headerlink" href="#3-predict" title="Permanent link">¤</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Finally, you can use the trained model to make predictions by calling the</span>
+<span class="c1"># method below.</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">()</span>
+
+<span class="c1"># Display model prediction progress</span>
+<span class="n">predictions</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+<span class="c1"># If the dataset is small enough, you can use the following method to download</span>
+<span class="c1"># the prediction results as a pandas DataFrame.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">predictions</span><span class="o">.</span><span class="n">to_pandas</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 3/3 [00:10&lt;00:00,  3.38s/it]
+
+              Score
+user_id            
+520088904  0.979853
+530496790  0.979157
+561587266  0.979055
+518085591  0.978915
+558856683  0.977960
+</code></pre></div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022 onwards, airt.ai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    and 
+    <a href="https://nbdev-mkdocs.airt.ai/" target="_blank" rel="noopener">
+      Material for nbdev
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="overrides/js/extra.js"></script>
+        
+      
+        
+          <script src="overrides/js/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>

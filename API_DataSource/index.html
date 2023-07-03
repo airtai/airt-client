@@ -1,0 +1,1474 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Python client for airt-service">
+      
+      
+        <meta name="author" content="airt.ai">
+      
+      
+        <link rel="canonical" href="https://airtai.github.io/airt-client/API_DataSource/">
+      
+      
+      
+      <link rel="icon" href="../overrides/images/airt_icon_blue.svg">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>API_DataSource - airt</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../overrides/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-H6EV08GRK5"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-H6EV08GRK5",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-H6EV08GRK5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+  
+  
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="airt - API_DataSource" />
+  <meta property="og:description" content="Python client for airt-service" />
+  <meta property="og:url" content="https://airtai.github.io/airt-client/API_DataSource/" />
+  <meta property="og:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="airt - API_DataSource" />
+  <meta name="twitter:description" content="Python client for airt-service" />
+  <meta name="twitter:image" content="https://opengraph.githubassets.com/1671820337.584456/airtai/airt-client" />
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api_datasource" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="airt" class="md-header__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            airt
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API_DataSource
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="airt" class="md-nav__button md-logo" aria-label="airt" data-md-component="logo">
+      
+  <img src="../overrides/images/airt_icon_blue.svg" alt="logo">
+
+    </a>
+    airt
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/airtai/airt-client" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    airt-client
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Python client for airt service
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial/" class="md-nav__link">
+        Tutorial
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_api_docs/airt/client/" class="md-nav__link">
+        airt.client
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../airt_cli_docs/airt/" class="md-nav__link">
+        airt
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CHANGELOG/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#datasource" class="md-nav__link">
+    DataSource
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasourceis_ready" class="md-nav__link">
+    DataSource.is_ready
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasourceprogress_bar" class="md-nav__link">
+    DataSource.progress_bar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasourcewait" class="md-nav__link">
+    DataSource.wait
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasourcedelete" class="md-nav__link">
+    DataSource.delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasourcedetails" class="md-nav__link">
+    DataSource.details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasourcetag" class="md-nav__link">
+    DataSource.tag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasourcehead" class="md-nav__link">
+    DataSource.head
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datasourcetrain" class="md-nav__link">
+    DataSource.train
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="api_datasource">API_DataSource<a class="headerlink" href="#api_datasource" title="Permanent link">¤</a></h1>
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+
+<p>Note:</p>
+<p>While writing doc strings, please use the below syntax for linking
+methods/classes. So that the methods/classes gets highlighted in the
+browser and clicking on it will take the user to the linked function</p>
+<div class="highlight"><pre><span></span><code>- To link a method from the class same file please use the `method_name` format.
+- To link a method from a different Class (can in a seperate file also) please use `Classname.method_name` format.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">airt._testing</span> <span class="kn">import</span> <span class="n">activate_by_import</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[INFO] airt.testing.activate_by_import: Testing environment activated.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">import</span> <span class="nn">airt._sanitizer</span>
+<span class="kn">from</span> <span class="nn">airt._components.datablob</span> <span class="kn">import</span> <span class="n">DataBlob</span>
+<span class="kn">from</span> <span class="nn">airt._constant</span> <span class="kn">import</span> <span class="n">SERVICE_PASSWORD</span><span class="p">,</span> <span class="n">SERVICE_USERNAME</span>
+<span class="kn">from</span> <span class="nn">airt._docstring.helpers</span> <span class="kn">import</span> <span class="n">run_examples_from_docstring</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">display</span><span class="p">(</span><span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">())</span>
+<span class="k">assert</span> <span class="n">logger</span><span class="o">.</span><span class="n">getEffectiveLevel</span><span class="p">()</span> <span class="o">==</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;This is a debug message&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;This is an info&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;This is a warning&quot;</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;This is an error&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>20
+
+[INFO] __main__: This is an info
+[WARNING] __main__: This is a warning
+[ERROR] __main__: This is an error
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">TEST_S3_URI</span> <span class="o">=</span> <span class="s2">&quot;s3://test-airt-service/ecommerce_behavior_notebooks&quot;</span>
+<span class="n">RANDOM_UUID_FOR_TESTING</span> <span class="o">=</span> <span class="s2">&quot;00000000-0000-0000-0000-000000000000&quot;</span>
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/datasource.py#L37"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="datasource">DataSource<a class="headerlink" href="#datasource" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> DataSource (uuid:str, datablob:Optional[str]=None,
+             folder_size:Optional[int]=None,
+             no_of_rows:Optional[int]=None, error:Optional[str]=None,
+             disabled:Optional[bool]=None, created:Optional[str]=None,
+             pulled_on:Optional[str]=None, user:Optional[str]=None,
+             hash:Optional[str]=None, region:Optional[str]=None,
+             cloud_provider:Optional[str]=None,
+             tags:Optional[List[Dict[str,str]]]=None,
+             total_steps:Optional[int]=None,
+             completed_steps:Optional[int]=None)
+</code></pre></div>
+</blockquote>
+<p>A class for managing datasources and training ML models on them.</p>
+<p>To instantiate the <strong>DataSource</strong> class, please call
+<a href="https://airtai.github.io/airt-client/api_datablob.html#datablob.to_datasource"><code>DataBlob.to_datasource</code></a>
+method of the
+<a href="https://airtai.github.io/airt-client/api_datablob.html#datablob"><code>DataBlob</code></a>
+class.</p>
+<p>The <strong>DataSource</strong> class has two categories of methods,</p>
+<ul>
+<li>Methods for managing the datasources.</li>
+<li>Method for training a model against a datasource.</li>
+</ul>
+<p>Methods such as <code>delete</code>,
+<a href="https://airtai.github.io/airt-client/cli_user.html#ls"><code>ls</code></a>,
+<a href="https://airtai.github.io/airt-client/cli_user.html#details"><code>details</code></a>,
+<a href="https://airtai.github.io/airt-client/cli_datasource.html#head"><code>head</code></a>,
+etc., can be used to manage and obtain additional information from a
+datasource instance.</p>
+<p>And, the
+<a href="https://airtai.github.io/airt-client/cli_datasource.html#train"><code>train</code></a>
+method can be used to train a new model against a datasource instance.</p>
+<p>All the function calls to the library are asynchronous and they return
+immediately. To manage completion, methods inside the returned object
+will return a status object indicating the completion status and a
+method to display an interactive progress bar that can be called to
+check the progress.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run example for _docstring_example</span>
+
+<span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_USERNAME</span><span class="p">]</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="n">SERVICE_PASSWORD</span><span class="p">]</span>
+
+<span class="n">run_examples_from_docstring</span><span class="p">(</span>
+    <span class="n">_docstring_example</span><span class="p">,</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">uri</span><span class="o">=</span><span class="n">TEST_S3_URI</span><span class="p">,</span>
+    <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;parquet&quot;</span><span class="p">,</span>
+    <span class="n">index_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+    <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;event_time&quot;</span><span class="p">,</span>
+    <span class="n">client_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+    <span class="n">target_column</span><span class="o">=</span><span class="s2">&quot;category_code&quot;</span><span class="p">,</span>
+    <span class="n">tag_name</span><span class="o">=</span><span class="s2">&quot;v1.0&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Example:                                                                                                        │
+│                                                                                                                 │
+│     # Importing necessary libraries                                                                             │
+│     from datetime import timedelta                                                                              │
+│                                                                                                                 │
+│     from  airt.client import Client, DataBlob, DataSource                                                       │
+│                                                                                                                 │
+│     # Authenticate                                                                                              │
+│     Client.get_token(username="{fill in username}", password="{fill in password}")                              │
+│                                                                                                                 │
+│     # Create a datablob                                                                                         │
+│     # In this example, the datablob will be stored in an AWS S3 bucket. The                                     │
+│     # access_key and the secret_key are set in the AWS_ACCESS_KEY_ID and                                        │
+│     # AWS_SECRET_ACCESS_KEY environment variables, and the region is set to                                     │
+│     # eu-west-3; feel free to change the cloud provider and the region to                                       │
+│     # suit your needs.                                                                                          │
+│     db = DataBlob.from_s3(                                                                                      │
+│         uri="{fill in uri}",                                                                                    │
+│         cloud_provider="aws",                                                                                   │
+│         region="eu-west-3"                                                                                      │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Display the status in a progress bar                                                                      │
+│     db.progress_bar()                                                                                           │
+│                                                                                                                 │
+│     # Create a datasource                                                                                       │
+│     ds = db.to_datasource(                                                                                      │
+│         file_type="{fill in file_type}",                                                                        │
+│         index_column="{fill in index_column}",                                                                  │
+│         sort_by="{fill in sort_by}",                                                                            │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Display the status in a progress bar                                                                      │
+│     # Call the wait method to wait for the progress to finish but                                               │
+│     # without displaying an interactive progress bar.                                                           │
+│     ds.progress_bar()                                                                                           │
+│                                                                                                                 │
+│     # Display the ready status                                                                                  │
+│     print(ds.is_ready())                                                                                        │
+│                                                                                                                 │
+│     # Display the data types of the datasource's columns.                                                       │
+│     print(ds.dtypes)                                                                                            │
+│                                                                                                                 │
+│     # Display the details of the datasource                                                                     │
+│     print(ds.details())                                                                                         │
+│                                                                                                                 │
+│     # Display the details of all datasource created by the currently                                            │
+│     # logged-in user                                                                                            │
+│     print(DataSource.as_df(DataSource.ls()))                                                                    │
+│                                                                                                                 │
+│     # Display the first few records of the datasource                                                           │
+│     print(ds.head())                                                                                            │
+│                                                                                                                 │
+│     # Train a model against the datasource.                                                                     │
+│     # This example predicts which users will perform a purchase                                                 │
+│     # event ("*purchase") three hours before they actually do it.                                               │
+│     model = ds.train(                                                                                           │
+│         client_column="{fill in client_column}",                                                                │
+│         target_column="{fill in target_column}",                                                                │
+│         target="*purchase",                                                                                     │
+│         predict_after=timedelta(hours=3)                                                                        │
+│     )                                                                                                           │
+│                                                                                                                 │
+│     # Display the training status in a progress bar                                                             │
+│     model.progress_bar()                                                                                        │
+│                                                                                                                 │
+│     # Display the details of the newly created model                                                            │
+│     print(model.details())                                                                                      │
+│                                                                                                                 │
+│     # Tag the datasource                                                                                        │
+│     print(ds.tag(name="{fill in tag_name}"))                                                                    │
+│                                                                                                                 │
+│     # Delete the datasource                                                                                     │
+│     print(ds.delete())                                                                                          │
+│                                                                                                                 │
+│ ╭────────────────────────────────────────────────── stdout ───────────────────────────────────────────────────╮ │
+│ │ True                                                                                                        │ │
+│ │             event_time event_type product_id  ...   brand    price user_session                             │ │
+│ │ 0  datetime64     object      int64  ...  object  float64       object                                      │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 8 columns]                                                                                        │ │
+│ │                         datasource_uuid  ... ready                                                          │ │
+│ │ 0  0430fb36-f6c7-41ab-acfe-ecbcf82b866f  ...  True                                                          │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 12 columns]                                                                                       │ │
+│ │                          datasource_uuid  ... ready                                                         │ │
+│ │ 0   b6124d8d-3eba-4a73-8817-671e300f0298  ...  True                                                         │ │
+│ │ 1   9de6c9bb-181d-4d6e-80d6-8c650b621998  ...  True                                                         │ │
+│ │ 2   9633eee6-e8f4-4595-aa97-abea58446032  ...  True                                                         │ │
+│ │ 3   d7c0d49e-cb01-4fa4-86db-a32705b9341a  ...  True                                                         │ │
+│ │ 4   691ca6b4-3a83-479b-a7c1-5114c5444678  ...  True                                                         │ │
+│ │ 5   6c44323d-0453-4a21-9aaa-d7ae4a9e0916  ...  True                                                         │ │
+│ │ 6   574b0458-a1fc-4dd9-a5b4-f0a7a5a57003  ...  True                                                         │ │
+│ │ 7   8509ad7f-f971-4ec1-8a55-af775223df83  ...  True                                                         │ │
+│ │ 8   cae91cb2-24ae-4afb-8f2f-b2aaec5de724  ...  True                                                         │ │
+│ │ 9   455c89d2-6781-46bf-a7eb-15e3efd09362  ...  True                                                         │ │
+│ │ 10  e067d1db-3781-4c3c-8ae0-d3825c273b12  ...  True                                                         │ │
+│ │ 11  05272168-d830-424e-b623-8508df42d9dd  ...  True                                                         │ │
+│ │ 12  b81d1ba1-7beb-4fea-985c-6bbe244fb3ca  ...  True                                                         │ │
+│ │ 13  fa18ebdf-5357-4f78-8610-21160c3c4280  ...  True                                                         │ │
+│ │ 14  5c48dd20-56d7-467b-a914-4f9d7f8e60f2  ...  True                                                         │ │
+│ │ 15  a33630b1-8380-44fd-903a-4ec18a2ff0c3  ...  True                                                         │ │
+│ │ 16  3b2c3145-ac09-40f1-ac08-d4808e7e6684  ...  True                                                         │ │
+│ │ 17  78ae4260-1839-4265-9c22-042dc2ccc9a3  ...  True                                                         │ │
+│ │ 18  7cfe03dd-15c4-48ff-b3cf-941cb2d90a9f  ...  True                                                         │ │
+│ │ 19  262c9639-7ffb-42d4-a732-4a76750b3e67  ...  True                                                         │ │
+│ │ 20  a49d9bb8-da21-403e-b59e-70420aec4b4c  ...  True                                                         │ │
+│ │ 21  c083cf06-4bdf-44e0-ab4f-7bd780670c1a  ...  True                                                         │ │
+│ │ 22  6d23b7ce-aabe-4867-98eb-1391f796873e  ...  True                                                         │ │
+│ │ 23  905b0592-ab66-47bf-8778-24db6288bbe8  ...  True                                                         │ │
+│ │ 24  86962325-070e-4ee3-be05-d6487586f73f  ...  True                                                         │ │
+│ │ 25  a7f8fe2d-3cc9-42ac-9d60-01c6e8497b8e  ...  True                                                         │ │
+│ │ 26  acaef8a8-83f6-455a-9fed-fdad335e679c  ...  True                                                         │ │
+│ │ 27  e0659fab-7794-47a9-9d51-2843242027e4  ...  True                                                         │ │
+│ │ 28  a2a63f8a-06f1-49e4-bb22-15979ecaf59a  ...  True                                                         │ │
+│ │ 29  3ddc9384-c153-483c-89b3-7c74ddb05e36  ...  True                                                         │ │
+│ │ 30  e9103626-e10d-4e54-9965-ed04400b21c7  ...  True                                                         │ │
+│ │ 31  cec66f84-4387-43e6-8cbb-e931d8a0b4ab  ...  True                                                         │ │
+│ │ 32  3b8dc332-a4eb-4de1-b6ed-496502332761  ...  True                                                         │ │
+│ │ 33  276c68f6-e01a-477d-bd59-ab7303aa1b34  ...  True                                                         │ │
+│ │ 34  840822c3-6c45-46e6-978c-eb7ced958534  ...  True                                                         │ │
+│ │ 35  61233e55-c49b-4c84-bcba-b2e1e6e76f24  ...  True                                                         │ │
+│ │ 36  f91e481f-7ff8-4d7f-be74-0cecbd33677e  ...  True                                                         │ │
+│ │ 37  3bab7c57-3f74-48d2-8e17-26e62e14d0a1  ...  True                                                         │ │
+│ │ 38  0430fb36-f6c7-41ab-acfe-ecbcf82b866f  ...  True                                                         │ │
+│ │                                                                                                             │ │
+│ │ [39 rows x 9 columns]                                                                                       │ │
+│ │                          event_time  ...                          user_session                              │ │
+│ │ user_id                              ...                                                                    │ │
+│ │ 253624608 2019-11-03 14:26:26+00:00  ...  6c1f98d8-064e-4688-a8db-d261d9f94979                              │ │
+│ │ 253624608 2019-11-03 14:26:38+00:00  ...  6c1f98d8-064e-4688-a8db-d261d9f94979                              │ │
+│ │ 253624608 2019-11-04 05:56:10+00:00  ...  6718074b-3058-41c2-a082-970cdeeb4a8e                              │ │
+│ │ 275256741 2019-11-01 02:23:03+00:00  ...  48b5b9c0-3d1b-4380-94f8-dcadb9dd7b5c                              │ │
+│ │ 280194708 2019-11-06 15:23:02+00:00  ...  4c51d9d1-8000-4050-a921-3b6fc29db8e9                              │ │
+│ │ 280194708 2019-11-06 15:23:43+00:00  ...  4c51d9d1-8000-4050-a921-3b6fc29db8e9                              │ │
+│ │ 280194708 2019-11-06 15:23:55+00:00  ...  4c51d9d1-8000-4050-a921-3b6fc29db8e9                              │ │
+│ │ 301823874 2019-11-02 08:09:20+00:00  ...  4d2cb750-093f-413a-ba27-ba862507d22d                              │ │
+│ │ 301823874 2019-11-02 08:10:59+00:00  ...  4d2cb750-093f-413a-ba27-ba862507d22d                              │ │
+│ │ 301823874 2019-11-02 08:14:46+00:00  ...  4d2cb750-093f-413a-ba27-ba862507d22d                              │ │
+│ │                                                                                                             │ │
+│ │ [10 rows x 8 columns]                                                                                       │ │
+│ │                              model_uuid              created  ... disabled ready                            │ │
+│ │ 0  547724d5-d117-4c92-b73f-a8c6e0432fed  2022-10-31T13:00:25  ...    False  True                            │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 14 columns]                                                                                       │ │
+│ │                         datasource_uuid  ... ready                                                          │ │
+│ │ 0  0430fb36-f6c7-41ab-acfe-ecbcf82b866f  ...  True                                                          │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 9 columns]                                                                                        │ │
+│ │                         datasource_uuid  ... ready                                                          │ │
+│ │ 0  0430fb36-f6c7-41ab-acfe-ecbcf82b866f  ...  True                                                          │ │
+│ │                                                                                                             │ │
+│ │ [1 rows x 9 columns]                                                                                        │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+│ ╭────────────────────────────────────────────────── stderr ───────────────────────────────────────────────────╮ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/1 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:05&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:10&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 1/1 [00:15&lt;00:00,  5.05s/it]                                                               │ │
+│ │ 100%|██████████| 1/1 [00:15&lt;00:00, 15.19s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/1 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:05&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:10&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:15&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:20&lt;?, ?it/s]                                                                       │ │
+│ │   0%|          | 0/1 [00:25&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 1/1 [00:30&lt;00:00,  5.04s/it]                                                               │ │
+│ │ 100%|██████████| 1/1 [00:30&lt;00:00, 30.31s/it]                                                               │ │
+│ │                                                                                                             │ │
+│ │   0%|          | 0/5 [00:00&lt;?, ?it/s]                                                                       │ │
+│ │ 100%|██████████| 5/5 [00:00&lt;00:00, 128.48it/s]                                                              │ │
+│ │                                                                                                             │ │
+│ ╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────╯ │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+</pre>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Context manager for creating a Datasource</span>
+
+<span class="c1"># Authenticate</span>
+<span class="n">Client</span><span class="o">.</span><span class="n">get_token</span><span class="p">()</span>
+
+<span class="n">_ds</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">generate_ds</span><span class="p">(</span><span class="n">force_create</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">pull_ds</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">_ds</span>
+
+    <span class="k">if</span> <span class="n">_ds</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">force_create</span><span class="p">:</span>
+        <span class="c1"># Create a s3 datasource</span>
+        <span class="n">db</span> <span class="o">=</span> <span class="n">DataBlob</span><span class="o">.</span><span class="n">from_s3</span><span class="p">(</span>
+            <span class="n">uri</span><span class="o">=</span><span class="n">TEST_S3_URI</span><span class="p">,</span>
+            <span class="n">access_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_ACCESS_KEY_ID&quot;</span><span class="p">],</span>
+            <span class="n">secret_key</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;AWS_SECRET_ACCESS_KEY&quot;</span><span class="p">],</span>
+            <span class="n">cloud_provider</span><span class="o">=</span><span class="s2">&quot;aws&quot;</span><span class="p">,</span>
+            <span class="n">region</span><span class="o">=</span><span class="s2">&quot;eu-west-1&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">db</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+        <span class="n">_ds</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">to_datasource</span><span class="p">(</span>
+            <span class="n">file_type</span><span class="o">=</span><span class="s2">&quot;parquet&quot;</span><span class="p">,</span> <span class="n">index_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span> <span class="n">sort_by</span><span class="o">=</span><span class="s2">&quot;event_time&quot;</span>
+        <span class="p">)</span>
+
+        <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">_ds</span><span class="o">.</span><span class="n">uuid</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">_ds</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+
+        <span class="k">if</span> <span class="n">pull_ds</span><span class="p">:</span>
+            <span class="n">_ds</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="k">yield</span> <span class="n">_ds</span>
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/datasource.py#L346"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="datasourceis_ready">DataSource.is_ready<a class="headerlink" href="#datasourceis_ready" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> DataSource.is_ready ()
+</code></pre></div>
+</blockquote>
+<p>Check if the method’s progress is complete.</p>
+<p>Returns: <strong>True</strong> if the progress is completed, else <strong>False</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for DataBlob.is_ready:</span>
+
+<span class="k">with</span> <span class="n">generate_ds</span><span class="p">()</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+    <span class="n">ready_status</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">is_ready</span><span class="p">()</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ready_status</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ready_status</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [00:15&lt;00:00, 15.16s/it]
+100%|██████████| 1/1 [00:30&lt;00:00, 30.33s/it]
+
+&quot;db.uuid=&#39;797886d0-5d3a-4f78-a381-e13eb87f1281&#39;&quot;
+
+&quot;_ds.uuid=&#39;4d0ce6e5-751f-4aa5-a389-aae7d0660fcb&#39;&quot;
+
+&#39;ready_status=True&#39;
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/datasource.py#L363"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="datasourceprogress_bar">DataSource.progress_bar<a class="headerlink" href="#datasourceprogress_bar" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> DataSource.progress_bar (sleep_for:Union[int,float]=5, timeout:int=0)
+</code></pre></div>
+</blockquote>
+<p>Blocks the execution and displays a progress bar showing the remote
+action progress.</p>
+<p>Args: sleep_for: The time interval in seconds between successive API
+calls. timeout: The maximum time allowed in seconds for the asynchronous
+call to complete. If not the progressbar will be terminated.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable. TimeoutError: in case of connection timeout.</p>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/datasource.py#L386"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="datasourcewait">DataSource.wait<a class="headerlink" href="#datasourcewait" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> DataSource.wait (sleep_for:Union[int,float]=1, timeout:int=0)
+</code></pre></div>
+</blockquote>
+<p>Blocks execution while waiting for the remote action to complete.</p>
+<p>Args: sleep_for: The time interval in seconds between successive API
+calls. timeout: The maximum time allowed in seconds for the asynchronous
+call to complete. If not the progressbar will be terminated.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable. TimeoutError: in case of timeout.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for DataSource ls</span>
+<span class="c1"># Testing offset and limit parameters</span>
+
+<span class="c1"># Testing list without offset and limit</span>
+
+<span class="k">with</span> <span class="n">generate_ds</span><span class="p">()</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+    <span class="n">ds_list</span> <span class="o">=</span> <span class="n">DataSource</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">_ds</span> <span class="ow">in</span> <span class="n">ds_list</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">_ds</span><span class="p">,</span> <span class="n">DataSource</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ds_list</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds_list</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span>
+
+    <span class="c1"># Testing list with offset and limit</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">ds_list</span> <span class="o">=</span> <span class="n">DataSource</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ds_list</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds_list</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">limit</span>
+
+    <span class="c1"># Testing list with invalid offset and limit</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="mi">1_000_000_000</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">ds_list</span> <span class="o">=</span> <span class="n">DataSource</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">ds_list</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ds_list</span> <span class="o">==</span> <span class="p">[]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&#39;len(ds_list)=39&#39;
+
+&#39;len(ds_list)=3&#39;
+
+&#39;len(ds_list)=0&#39;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for DataSource ls</span>
+<span class="c1"># Testing the completed parameter</span>
+<span class="k">with</span> <span class="n">generate_ds</span><span class="p">(</span><span class="n">force_create</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pull_ds</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+    <span class="c1"># Passing Fasle to completed flag. Should show all the data sources including the one&#39;s that are yet to be processed and pulled</span>
+    <span class="n">ds_list</span> <span class="o">=</span> <span class="n">DataSource</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">completed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+    <span class="n">ds_uuid_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ds</span><span class="o">.</span><span class="n">uuid</span> <span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">ds_list</span><span class="p">]</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds_uuid_list</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ds</span><span class="o">.</span><span class="n">uuid</span> <span class="ow">in</span> <span class="n">ds_uuid_list</span>
+
+    <span class="c1"># Passing True to completed flag. Should only the pulled data sources</span>
+    <span class="n">ds_list</span> <span class="o">=</span> <span class="n">DataSource</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">completed</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+    <span class="n">ds_uuid_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ds</span><span class="o">.</span><span class="n">uuid</span> <span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">ds_list</span><span class="p">]</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds_uuid_list</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ds</span><span class="o">.</span><span class="n">uuid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ds_uuid_list</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [00:15&lt;00:00, 15.18s/it]
+
+&quot;db.uuid=&#39;4533d8ac-b2ab-489b-933d-d751bec289a2&#39;&quot;
+
+&quot;_ds.uuid=&#39;70d2e95d-7708-4042-a095-65164f2d8afb&#39;&quot;
+
+&quot;ds_uuid_list=[&#39;b6124d8d-3eba-4a73-8817-671e300f0298&#39;, &#39;9de6c9bb-181d-4d6e-80d6-8c650b621998&#39;, &#39;9633eee6-e8f4-4595-aa97-abea58446032&#39;, &#39;d7c0d49e-cb01-4fa4-86db-a32705b9341a&#39;, &#39;691ca6b4-3a83-479b-a7c1-5114c5444678&#39;, &#39;6c44323d-0453-4a21-9aaa-d7ae4a9e0916&#39;, &#39;574b0458-a1fc-4dd9-a5b4-f0a7a5a57003&#39;, &#39;8509ad7f-f971-4ec1-8a55-af775223df83&#39;, &#39;cae91cb2-24ae-4afb-8f2f-b2aaec5de724&#39;, &#39;455c89d2-6781-46bf-a7eb-15e3efd09362&#39;, &#39;e067d1db-3781-4c3c-8ae0-d3825c273b12&#39;, &#39;05272168-d830-424e-b623-8508df42d9dd&#39;, &#39;b81d1ba1-7beb-4fea-985c-6bbe244fb3ca&#39;, &#39;fa18ebdf-5357-4f78-8610-21160c3c4280&#39;, &#39;5c48dd20-56d7-467b-a914-4f9d7f8e60f2&#39;, &#39;a33630b1-8380-44fd-903a-4ec18a2ff0c3&#39;, &#39;3b2c3145-ac09-40f1-ac08-d4808e7e6684&#39;, &#39;78ae4260-1839-4265-9c22-042dc2ccc9a3&#39;, &#39;7cfe03dd-15c4-48ff-b3cf-941cb2d90a9f&#39;, &#39;262c9639-7ffb-42d4-a732-4a76750b3e67&#39;, &#39;a49d9bb8-da21-403e-b59e-70420aec4b4c&#39;, &#39;c083cf06-4bdf-44e0-ab4f-7bd780670c1a&#39;, &#39;6d23b7ce-aabe-4867-98eb-1391f796873e&#39;, &#39;905b0592-ab66-47bf-8778-24db6288bbe8&#39;, &#39;86962325-070e-4ee3-be05-d6487586f73f&#39;, &#39;a7f8fe2d-3cc9-42ac-9d60-01c6e8497b8e&#39;, &#39;acaef8a8-83f6-455a-9fed-fdad335e679c&#39;, &#39;e0659fab-7794-47a9-9d51-2843242027e4&#39;, &#39;a2a63f8a-06f1-49e4-bb22-15979ecaf59a&#39;, &#39;3ddc9384-c153-483c-89b3-7c74ddb05e36&#39;, &#39;e9103626-e10d-4e54-9965-ed04400b21c7&#39;, &#39;cec66f84-4387-43e6-8cbb-e931d8a0b4ab&#39;, &#39;3b8dc332-a4eb-4de1-b6ed-496502332761&#39;, &#39;276c68f6-e01a-477d-bd59-ab7303aa1b34&#39;, &#39;840822c3-6c45-46e6-978c-eb7ced958534&#39;, &#39;61233e55-c49b-4c84-bcba-b2e1e6e76f24&#39;, &#39;f91e481f-7ff8-4d7f-be74-0cecbd33677e&#39;, &#39;3bab7c57-3f74-48d2-8e17-26e62e14d0a1&#39;, &#39;4d0ce6e5-751f-4aa5-a389-aae7d0660fcb&#39;, &#39;70d2e95d-7708-4042-a095-65164f2d8afb&#39;]&quot;
+
+&quot;ds_uuid_list=[&#39;b6124d8d-3eba-4a73-8817-671e300f0298&#39;, &#39;9de6c9bb-181d-4d6e-80d6-8c650b621998&#39;, &#39;9633eee6-e8f4-4595-aa97-abea58446032&#39;, &#39;d7c0d49e-cb01-4fa4-86db-a32705b9341a&#39;, &#39;691ca6b4-3a83-479b-a7c1-5114c5444678&#39;, &#39;6c44323d-0453-4a21-9aaa-d7ae4a9e0916&#39;, &#39;574b0458-a1fc-4dd9-a5b4-f0a7a5a57003&#39;, &#39;8509ad7f-f971-4ec1-8a55-af775223df83&#39;, &#39;cae91cb2-24ae-4afb-8f2f-b2aaec5de724&#39;, &#39;455c89d2-6781-46bf-a7eb-15e3efd09362&#39;, &#39;e067d1db-3781-4c3c-8ae0-d3825c273b12&#39;, &#39;05272168-d830-424e-b623-8508df42d9dd&#39;, &#39;b81d1ba1-7beb-4fea-985c-6bbe244fb3ca&#39;, &#39;fa18ebdf-5357-4f78-8610-21160c3c4280&#39;, &#39;5c48dd20-56d7-467b-a914-4f9d7f8e60f2&#39;, &#39;a33630b1-8380-44fd-903a-4ec18a2ff0c3&#39;, &#39;3b2c3145-ac09-40f1-ac08-d4808e7e6684&#39;, &#39;78ae4260-1839-4265-9c22-042dc2ccc9a3&#39;, &#39;7cfe03dd-15c4-48ff-b3cf-941cb2d90a9f&#39;, &#39;262c9639-7ffb-42d4-a732-4a76750b3e67&#39;, &#39;a49d9bb8-da21-403e-b59e-70420aec4b4c&#39;, &#39;c083cf06-4bdf-44e0-ab4f-7bd780670c1a&#39;, &#39;6d23b7ce-aabe-4867-98eb-1391f796873e&#39;, &#39;905b0592-ab66-47bf-8778-24db6288bbe8&#39;, &#39;86962325-070e-4ee3-be05-d6487586f73f&#39;, &#39;a7f8fe2d-3cc9-42ac-9d60-01c6e8497b8e&#39;, &#39;acaef8a8-83f6-455a-9fed-fdad335e679c&#39;, &#39;e0659fab-7794-47a9-9d51-2843242027e4&#39;, &#39;a2a63f8a-06f1-49e4-bb22-15979ecaf59a&#39;, &#39;3ddc9384-c153-483c-89b3-7c74ddb05e36&#39;, &#39;e9103626-e10d-4e54-9965-ed04400b21c7&#39;, &#39;cec66f84-4387-43e6-8cbb-e931d8a0b4ab&#39;, &#39;3b8dc332-a4eb-4de1-b6ed-496502332761&#39;, &#39;276c68f6-e01a-477d-bd59-ab7303aa1b34&#39;, &#39;840822c3-6c45-46e6-978c-eb7ced958534&#39;, &#39;61233e55-c49b-4c84-bcba-b2e1e6e76f24&#39;, &#39;f91e481f-7ff8-4d7f-be74-0cecbd33677e&#39;, &#39;3bab7c57-3f74-48d2-8e17-26e62e14d0a1&#39;, &#39;4d0ce6e5-751f-4aa5-a389-aae7d0660fcb&#39;]&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for DataSource.as_df:</span>
+
+
+<span class="n">dsx</span> <span class="o">=</span> <span class="n">DataSource</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">DataSource</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">dsx</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;datasource_uuid&quot;</span><span class="p">,</span> <span class="s2">&quot;datablob_uuid&quot;</span><span class="p">]:</span>
+    <span class="k">assert</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dsx</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">DataSource</span><span class="o">.</span><span class="n">BASIC_DS_COLS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">df</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | datasource_uuid                      | datablob_uuid                        | region    | cloud_provider | tags           | pulled_on           | no_of_rows | folder_size | ready |
+|-----|--------------------------------------|--------------------------------------|-----------|----------------|----------------|---------------------|------------|-------------|-------|
+| 0   | b6124d8d-3eba-4a73-8817-671e300f0298 | b47d59f2-ab15-4d98-a791-b195da2b8662 | eu-west-1 | aws            | latest         | 2022-10-31T09:16:24 | 294599.0   | 6166138.0   | True  |
+| 1   | 9de6c9bb-181d-4d6e-80d6-8c650b621998 | 16afd522-2a93-4762-970d-8fcd0032fde4 | eu-west-1 | aws            | latest         | 2022-10-31T09:17:35 | 294599.0   | 6166131.0   | True  |
+| 2   | 9633eee6-e8f4-4595-aa97-abea58446032 | ef058c0c-96c0-42e5-86cf-b0c9d1e82749 | eu-west-3 | aws            | latest         | 2022-10-31T11:13:39 | 294599.0   | 6166146.0   | True  |
+| 3   | d7c0d49e-cb01-4fa4-86db-a32705b9341a | d3732a6d-25d6-4be6-be95-ecbf412ad1c3 | eu-west-3 | aws            | latest         | 2022-10-31T11:15:14 | 294599.0   | 6166146.0   | True  |
+| 4   | 691ca6b4-3a83-479b-a7c1-5114c5444678 | aed0a6ff-9865-4356-85b2-21ad8b0d1c1d | eu-west-3 | aws            | latest         | 2022-10-31T11:15:42 | 294599.0   | 6166141.0   | True  |
+| 5   | 6c44323d-0453-4a21-9aaa-d7ae4a9e0916 | 51822544-72b4-4962-942a-75d2864b96b1 | eu-west-3 | aws            | latest         | 2022-10-31T11:22:17 | 294599.0   | 6166145.0   | True  |
+| 6   | 574b0458-a1fc-4dd9-a5b4-f0a7a5a57003 | 93c29721-cb54-4f94-94ad-378c536e6511 | eu-west-3 | aws            | latest         | 2022-10-31T11:24:23 | 294599.0   | 6166133.0   | True  |
+| 7   | 8509ad7f-f971-4ec1-8a55-af775223df83 | 45d4926c-540f-447e-bf1b-b6c37d87c112 | eu-west-3 | aws            | latest         | 2022-10-31T11:30:46 | 294599.0   | 6166142.0   | True  |
+| 8   | cae91cb2-24ae-4afb-8f2f-b2aaec5de724 | 14f80b29-43fe-4233-8462-d1451d0e7e15 | eu-west-3 | aws            | latest         | 2022-10-31T11:32:00 | 294599.0   | 6166131.0   | True  |
+| 9   | 455c89d2-6781-46bf-a7eb-15e3efd09362 | 5adbfd8a-c100-4e61-9f9c-5d39909d0df2 | eu-west-3 | aws            | latest         | 2022-10-31T11:35:03 | 294599.0   | 6166141.0   | True  |
+| 10  | e067d1db-3781-4c3c-8ae0-d3825c273b12 | 3fc405e4-8b6d-486c-a2d5-35549a174235 | eu-west-3 | aws            | latest         | 2022-10-31T11:36:07 | 294599.0   | 6166138.0   | True  |
+| 11  | 05272168-d830-424e-b623-8508df42d9dd | 167e2b94-473c-4246-9743-3977edac7269 | eu-west-3 | aws            | latest         | 2022-10-31T11:38:25 | 294599.0   | 6166144.0   | True  |
+| 12  | b81d1ba1-7beb-4fea-985c-6bbe244fb3ca | bed19d03-9f38-496f-addf-ca90e3829d2b | eu-west-3 | aws            | latest         | 2022-10-31T11:39:24 | 294599.0   | 6166140.0   | True  |
+| 13  | fa18ebdf-5357-4f78-8610-21160c3c4280 | 9253d82e-582b-47c6-b5c0-fc21d1f04dd3 | eu-west-3 | aws            | \<none\>       | 2022-10-31T11:40:25 | 294599.0   | 6166134.0   | True  |
+| 14  | 5c48dd20-56d7-467b-a914-4f9d7f8e60f2 | 374eb683-c538-46ae-90ed-677197902f4c | eu-west-3 | aws            | latest         | 2022-10-31T11:40:48 | 294599.0   | 6166141.0   | True  |
+| 15  | a33630b1-8380-44fd-903a-4ec18a2ff0c3 | 2faec7cf-95e9-4777-bba1-29f597075c9e | eu-west-3 | aws            | latest         | 2022-10-31T11:41:30 | 294599.0   | 6166147.0   | True  |
+| 16  | 3b2c3145-ac09-40f1-ac08-d4808e7e6684 | 60f3d38d-a40d-4244-ac37-66032d2bfffd | eu-west-1 | aws            | latest         | 2022-10-31T11:42:56 | 294599.0   | 6166138.0   | True  |
+| 17  | 78ae4260-1839-4265-9c22-042dc2ccc9a3 | 93f6c5c2-b408-4fc5-9095-9a0ed2be7bb3 | eu-west-1 | aws            | \<none\>       | 2022-10-31T11:44:00 | 294599.0   | 6166133.0   | True  |
+| 18  | 7cfe03dd-15c4-48ff-b3cf-941cb2d90a9f | 34592ccb-4f59-49c1-95a4-be393aa67401 | eu-west-3 | aws            | latest         | 2022-10-31T11:44:20 | 294599.0   | 6166139.0   | True  |
+| 19  | 262c9639-7ffb-42d4-a732-4a76750b3e67 | fe44cccc-8978-4ba3-b9fa-1cc36204cc00 | eu-west-3 | aws            | latest         | 2022-10-31T11:44:44 | 294599.0   | 6166132.0   | True  |
+| 20  | a49d9bb8-da21-403e-b59e-70420aec4b4c | 9fc0c99d-7642-4d6b-adbc-2a588b06f6f6 | eu-west-3 | aws            | latest         | 2022-10-31T11:45:21 | 294599.0   | 6166133.0   | True  |
+| 21  | c083cf06-4bdf-44e0-ab4f-7bd780670c1a | 9afff184-91c8-4369-9ac9-a2d6c0bde7ee | eu-west-3 | aws            | latest         | 2022-10-31T11:45:48 | 294599.0   | 6166137.0   | True  |
+| 22  | 6d23b7ce-aabe-4867-98eb-1391f796873e | 038651b3-6f70-410a-8f4e-c205b5b69994 | eu-west-3 | aws            | \<none\>       | 2022-10-31T11:46:47 | 294599.0   | 6166140.0   | True  |
+| 23  | 905b0592-ab66-47bf-8778-24db6288bbe8 | dbf1e543-ef78-4c41-93da-25187df10992 | eu-west-3 | aws            | latest         | 2022-10-31T11:47:06 | 294599.0   | 6166139.0   | True  |
+| 24  | 86962325-070e-4ee3-be05-d6487586f73f | 323695bd-804d-4a00-b833-3a7f0c138174 | eu-west-3 | aws            | latest         | 2022-10-31T11:47:48 | 294599.0   | 6166139.0   | True  |
+| 25  | a7f8fe2d-3cc9-42ac-9d60-01c6e8497b8e | 85bffc07-0cd9-4bab-8d80-063da0163884 | eu-west-3 | aws            | latest         | 2022-10-31T11:48:35 | 294599.0   | 6166145.0   | True  |
+| 26  | acaef8a8-83f6-455a-9fed-fdad335e679c | d546f45d-fc8d-4a19-8863-84111f1d27da | eu-west-3 | aws            | latest         | 2022-10-31T11:56:48 | 294599.0   | 6166138.0   | True  |
+| 27  | e0659fab-7794-47a9-9d51-2843242027e4 | 104cc3fb-24f5-4d8c-86e7-bcdf46c2f0c0 | eu-west-3 | aws            | latest         | 2022-10-31T12:01:46 | 294599.0   | 6166144.0   | True  |
+| 28  | a2a63f8a-06f1-49e4-bb22-15979ecaf59a | 275bc5b8-1b28-4aae-95be-15a7539d22e5 | eu-west-3 | aws            | \<none\>       | 2022-10-31T12:03:59 | 294599.0   | 6166138.0   | True  |
+| 29  | 3ddc9384-c153-483c-89b3-7c74ddb05e36 | 479101f7-c74c-4818-a0ca-32b8ebb1a18d | eu-west-3 | aws            | latest         | 2022-10-31T12:04:11 | 294599.0   | 6166137.0   | True  |
+| 30  | e9103626-e10d-4e54-9965-ed04400b21c7 | 0d0d07af-d061-44ff-88ac-ea39b9edb696 | eu-west-3 | aws            | \<none\>       | 2022-10-31T12:04:58 | 294599.0   | 6166148.0   | True  |
+| 31  | cec66f84-4387-43e6-8cbb-e931d8a0b4ab | e5218232-7917-4efc-b64e-a564bb976c59 | eu-west-3 | aws            | latest         | 2022-10-31T12:05:22 | 294599.0   | 6166140.0   | True  |
+| 32  | 3b8dc332-a4eb-4de1-b6ed-496502332761 | 27a76f1b-d5cb-4e9a-9c32-5259fd5b3374 | eu-west-3 | aws            | latest         | 2022-10-31T12:13:20 | 294599.0   | 6166140.0   | True  |
+| 33  | 276c68f6-e01a-477d-bd59-ab7303aa1b34 | 71535790-74cc-44d8-a83d-fded0e66c3f2 | eu-west-1 | aws            | latest         | 2022-10-31T12:15:22 | 294599.0   | 6166139.0   | True  |
+| 34  | 840822c3-6c45-46e6-978c-eb7ced958534 | db1d3aa4-0864-45c9-bb4c-59313e40158f | eu-west-1 | aws            | latest         | 2022-10-31T12:16:27 | 294599.0   | 6166137.0   | True  |
+| 35  | 61233e55-c49b-4c84-bcba-b2e1e6e76f24 | 0f9a72eb-0ec1-490f-9697-c499127d4b56 | eu-west-3 | aws            | latest         | 2022-10-31T12:23:21 | 294599.0   | 6166140.0   | True  |
+| 36  | f91e481f-7ff8-4d7f-be74-0cecbd33677e | fa8f3f1a-387c-49be-933e-6f9b13c7f890 | eu-west-1 | aws            | latest         | 2022-10-31T12:46:17 | 294599.0   | 6166138.0   | True  |
+| 37  | 3bab7c57-3f74-48d2-8e17-26e62e14d0a1 | e027dd69-a344-4ac5-861b-18fd7a5bf2d0 | eu-west-1 | aws            | latest, v1.1.0 | 2022-10-31T12:57:25 | 294599.0   | 6166134.0   | True  |
+| 38  | 4d0ce6e5-751f-4aa5-a389-aae7d0660fcb | 797886d0-5d3a-4f78-a381-e13eb87f1281 | eu-west-1 | aws            | latest         | 2022-10-31T13:01:00 | 294599.0   | 6166141.0   | True  |
+| 39  | 70d2e95d-7708-4042-a095-65164f2d8afb | 4533d8ac-b2ab-489b-933d-d751bec289a2 | eu-west-1 | aws            | latest         | None                | NaN        | NaN         | False |
+
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for DataSource.as_df:</span>
+<span class="c1"># Testing with empty response</span>
+
+<span class="n">dsx</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">DataSource</span><span class="o">.</span><span class="n">as_df</span><span class="p">(</span><span class="n">dsx</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;datasource_uuid&quot;</span><span class="p">,</span> <span class="s2">&quot;datablob_uuid&quot;</span><span class="p">]:</span>
+    <span class="k">assert</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dsx</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">DataSource</span><span class="o">.</span><span class="n">BASIC_DS_COLS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">df</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | datasource_uuid | datablob_uuid | region | cloud_provider | tags | pulled_on | no_of_rows | folder_size | ready |
+|-----|-----------------|---------------|--------|----------------|------|-----------|------------|-------------|-------|
+
+</div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for DataSource.dtypes:</span>
+
+<span class="k">with</span> <span class="n">generate_ds</span><span class="p">()</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+    <span class="n">ds</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="n">dtypes</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">dtypes</span>
+    <span class="s2">&quot;int64&quot;</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">dtypes</span><span class="p">[</span><span class="s2">&quot;product_id&quot;</span><span class="p">])</span>
+    <span class="s2">&quot;datetime64[ns, UTC]&quot;</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">dtypes</span><span class="p">[</span><span class="s2">&quot;event_time&quot;</span><span class="p">])</span>
+    <span class="s2">&quot;object&quot;</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">dtypes</span><span class="p">[</span><span class="s2">&quot;category_code&quot;</span><span class="p">])</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">dtypes</span><span class="o">.</span><span class="n">shape</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ds</span><span class="o">.</span><span class="n">dtypes</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">dtypes</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [00:30&lt;00:00, 30.35s/it]
+
+&#39;ds.dtypes.shape=(1, 8)&#39;
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | event_time            | event_type | product_id | category_id | category_code | brand  | price   | user_session |
+|-----|-----------------------|------------|------------|-------------|---------------|--------|---------|--------------|
+| 0   | datetime64\[ns, UTC\] | object     | int64      | int64       | object        | object | float64 | object       |
+
+</div>
+
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/datasource.py#L410"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="datasourcedelete">DataSource.delete<a class="headerlink" href="#datasourcedelete" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> DataSource.delete ()
+</code></pre></div>
+</blockquote>
+<p>Delete a datasource from the server.</p>
+<p>Returns: A pandas DataFrame encapsulating the details of the deleted
+datasource.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for DataSource.delete</span>
+<span class="c1"># Testing positive scenario</span>
+
+<span class="k">with</span> <span class="n">generate_ds</span><span class="p">()</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ds</span><span class="o">.</span><span class="n">uuid</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">datasource_uuid</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">DataSource</span><span class="o">.</span><span class="n">BASIC_DS_COLS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+
+    <span class="c1"># Passing False to disabled flag. Should show all the active data sources</span>
+    <span class="n">ds_list</span> <span class="o">=</span> <span class="n">DataSource</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+    <span class="n">ds_uuid_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ds</span><span class="o">.</span><span class="n">uuid</span> <span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">ds_list</span><span class="p">]</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds_uuid_list</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">ds</span><span class="o">.</span><span class="n">uuid</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ds_uuid_list</span>
+
+    <span class="c1"># Passing True to disabled flag. Should show all the deleted data sources</span>
+    <span class="n">ds_list</span> <span class="o">=</span> <span class="n">DataSource</span><span class="o">.</span><span class="n">ls</span><span class="p">(</span><span class="n">disabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+    <span class="n">ds_uuid_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">ds</span><span class="o">.</span><span class="n">uuid</span> <span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">ds_list</span><span class="p">]</span>
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds_uuid_list</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ds</span><span class="o">.</span><span class="n">uuid</span> <span class="ow">in</span> <span class="n">ds_uuid_list</span>
+
+    <span class="c1"># Testing negative scenario. Deleting already deleted datasource</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">ds</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | datasource_uuid                      | datablob_uuid                        | region    | cloud_provider | tags   | pulled_on           | no_of_rows | folder_size | ready |
+|-----|--------------------------------------|--------------------------------------|-----------|----------------|--------|---------------------|------------|-------------|-------|
+| 0   | 70d2e95d-7708-4042-a095-65164f2d8afb | 4533d8ac-b2ab-489b-933d-d751bec289a2 | eu-west-1 | aws            | latest | 2022-10-31T13:02:05 | 294599     | 6166142     | True  |
+
+</div>
+
+<div class="highlight"><pre><span></span><code>&quot;ds_uuid_list=[&#39;b6124d8d-3eba-4a73-8817-671e300f0298&#39;, &#39;9de6c9bb-181d-4d6e-80d6-8c650b621998&#39;, &#39;9633eee6-e8f4-4595-aa97-abea58446032&#39;, &#39;d7c0d49e-cb01-4fa4-86db-a32705b9341a&#39;, &#39;691ca6b4-3a83-479b-a7c1-5114c5444678&#39;, &#39;6c44323d-0453-4a21-9aaa-d7ae4a9e0916&#39;, &#39;574b0458-a1fc-4dd9-a5b4-f0a7a5a57003&#39;, &#39;8509ad7f-f971-4ec1-8a55-af775223df83&#39;, &#39;cae91cb2-24ae-4afb-8f2f-b2aaec5de724&#39;, &#39;455c89d2-6781-46bf-a7eb-15e3efd09362&#39;, &#39;e067d1db-3781-4c3c-8ae0-d3825c273b12&#39;, &#39;05272168-d830-424e-b623-8508df42d9dd&#39;, &#39;b81d1ba1-7beb-4fea-985c-6bbe244fb3ca&#39;, &#39;fa18ebdf-5357-4f78-8610-21160c3c4280&#39;, &#39;5c48dd20-56d7-467b-a914-4f9d7f8e60f2&#39;, &#39;a33630b1-8380-44fd-903a-4ec18a2ff0c3&#39;, &#39;3b2c3145-ac09-40f1-ac08-d4808e7e6684&#39;, &#39;78ae4260-1839-4265-9c22-042dc2ccc9a3&#39;, &#39;7cfe03dd-15c4-48ff-b3cf-941cb2d90a9f&#39;, &#39;262c9639-7ffb-42d4-a732-4a76750b3e67&#39;, &#39;a49d9bb8-da21-403e-b59e-70420aec4b4c&#39;, &#39;c083cf06-4bdf-44e0-ab4f-7bd780670c1a&#39;, &#39;6d23b7ce-aabe-4867-98eb-1391f796873e&#39;, &#39;905b0592-ab66-47bf-8778-24db6288bbe8&#39;, &#39;86962325-070e-4ee3-be05-d6487586f73f&#39;, &#39;a7f8fe2d-3cc9-42ac-9d60-01c6e8497b8e&#39;, &#39;acaef8a8-83f6-455a-9fed-fdad335e679c&#39;, &#39;e0659fab-7794-47a9-9d51-2843242027e4&#39;, &#39;a2a63f8a-06f1-49e4-bb22-15979ecaf59a&#39;, &#39;3ddc9384-c153-483c-89b3-7c74ddb05e36&#39;, &#39;e9103626-e10d-4e54-9965-ed04400b21c7&#39;, &#39;cec66f84-4387-43e6-8cbb-e931d8a0b4ab&#39;, &#39;3b8dc332-a4eb-4de1-b6ed-496502332761&#39;, &#39;276c68f6-e01a-477d-bd59-ab7303aa1b34&#39;, &#39;840822c3-6c45-46e6-978c-eb7ced958534&#39;, &#39;61233e55-c49b-4c84-bcba-b2e1e6e76f24&#39;, &#39;f91e481f-7ff8-4d7f-be74-0cecbd33677e&#39;, &#39;3bab7c57-3f74-48d2-8e17-26e62e14d0a1&#39;, &#39;4d0ce6e5-751f-4aa5-a389-aae7d0660fcb&#39;]&quot;
+
+&quot;ds_uuid_list=[&#39;4c344a80-9bc8-4ede-8746-0524dbed6dac&#39;, &#39;137881dd-f3a7-413d-b762-6fa638203842&#39;, &#39;59c2d437-17fb-4af8-9e9d-378a885defc7&#39;, &#39;8a5e38d8-457b-4092-8680-3c7b83a9d457&#39;, &#39;0430fb36-f6c7-41ab-acfe-ecbcf82b866f&#39;, &#39;70d2e95d-7708-4042-a095-65164f2d8afb&#39;]&quot;
+
+&quot;e.value=ValueError(&#39;The datasource has already been deleted.&#39;)&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for DataSource.delete</span>
+<span class="c1"># Testing negative scenario. Deleting invalid DataSource ID</span>
+
+
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">DataSource</span><span class="p">(</span><span class="n">uuid</span><span class="o">=</span><span class="n">RANDOM_UUID_FOR_TESTING</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+
+<span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">value</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>&quot;e.value=ValueError(&#39;The datasource uuid is incorrect. Please try again.&#39;)&quot;
+</code></pre></div>
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/datasource.py#L435"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="datasourcedetails">DataSource.details<a class="headerlink" href="#datasourcedetails" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> DataSource.details ()
+</code></pre></div>
+</blockquote>
+<p>Return details of a datasource.</p>
+<p>Returns: The datasource details as a pandas dataframe.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Datasource.details</span>
+
+<span class="k">with</span> <span class="n">generate_ds</span><span class="p">(</span><span class="n">force_create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">details</span><span class="p">()</span>
+
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">datasource_uuid</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">ds</span><span class="o">.</span><span class="n">uuid</span>
+    <span class="k">assert</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">DataSource</span><span class="o">.</span><span class="n">ALL_DS_COLS</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 1/1 [00:15&lt;00:00, 15.19s/it]
+100%|██████████| 1/1 [00:30&lt;00:00, 30.33s/it]
+
+&quot;db.uuid=&#39;7df27562-bfbb-4492-a05b-0951225e748d&#39;&quot;
+
+&quot;_ds.uuid=&#39;48dd8838-1ee0-405b-a718-3a4781b2b37d&#39;&quot;
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | datasource_uuid                      | datablob_uuid                        | region    | cloud_provider | tags   | pulled_on           | no_of_rows | folder_size | user_uuid                            | error | disabled | ready |
+|-----|--------------------------------------|--------------------------------------|-----------|----------------|--------|---------------------|------------|-------------|--------------------------------------|-------|----------|-------|
+| 0   | 48dd8838-1ee0-405b-a718-3a4781b2b37d | 7df27562-bfbb-4492-a05b-0951225e748d | eu-west-1 | aws            | latest | 2022-10-31T13:03:05 | 294599     | 6166135     | c68991a4-0b78-47c6-857d-9a22514f9f09 | None  | False    | True  |
+
+</div>
+
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/datasource.py#L460"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="datasourcetag">DataSource.tag<a class="headerlink" href="#datasourcetag" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> DataSource.tag (name:str)
+</code></pre></div>
+</blockquote>
+<p>Tag an existing datasource in server.</p>
+<p>Args: name: A string to tag the datasource.</p>
+<p>Returns: A pandas dataframe with the details of the tagged datasource.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for DataSource.tag</span>
+
+<span class="k">with</span> <span class="n">generate_ds</span><span class="p">()</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+    <span class="c1"># getting the details of the data source</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">tag</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;v1.1.0&quot;</span><span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="s2">&quot;v1.1.0&quot;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">df</span><span class="o">.</span><span class="n">tags</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|     | datasource_uuid                      | datablob_uuid                        | region    | cloud_provider | tags           | pulled_on           | no_of_rows | folder_size | ready |
+|-----|--------------------------------------|--------------------------------------|-----------|----------------|----------------|---------------------|------------|-------------|-------|
+| 0   | 48dd8838-1ee0-405b-a718-3a4781b2b37d | 7df27562-bfbb-4492-a05b-0951225e748d | eu-west-1 | aws            | latest, v1.1.0 | 2022-10-31T13:03:05 | 294599     | 6166135     | True  |
+
+</div>
+
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/datasource.py#L488"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="datasourcehead">DataSource.head<a class="headerlink" href="#datasourcehead" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> DataSource.head ()
+</code></pre></div>
+</blockquote>
+<p>Return the first few rows of the datasource.</p>
+<p>Returns: The first few rows of the datasource as a pandas dataframe.</p>
+<p>Raises: ConnectionError: If the server address is invalid or not
+reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">generate_ds</span><span class="p">()</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+    <span class="n">ds_head</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+    <span class="k">assert</span> <span class="n">ds_head</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ds_head</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;user_id&quot;</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_frame_equal</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span> <span class="n">ds_head</span><span class="o">.</span><span class="n">dtypes</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">ds_head</span><span class="p">)</span>
+</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&#10;    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&#10;    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+|           | event_time                | event_type | product_id | category_id         | category_code      | brand  | price   | user_session                         |
+|-----------|---------------------------|------------|------------|---------------------|--------------------|--------|---------|--------------------------------------|
+| user_id   |                           |            |            |                     |                    |        |         |                                      |
+| 253624608 | 2019-11-03 14:26:26+00:00 | view       | 1304297    | 2053013558920217191 | computers.notebook | apple  | 1029.09 | 6c1f98d8-064e-4688-a8db-d261d9f94979 |
+| 253624608 | 2019-11-03 14:26:38+00:00 | view       | 1306310    | 2053013558920217191 | computers.notebook | apple  | 1389.74 | 6c1f98d8-064e-4688-a8db-d261d9f94979 |
+| 253624608 | 2019-11-04 05:56:10+00:00 | view       | 1306310    | 2053013558920217191 | computers.notebook | apple  | 1389.74 | 6718074b-3058-41c2-a082-970cdeeb4a8e |
+| 275256741 | 2019-11-01 02:23:03+00:00 | view       | 1306265    | 2053013558920217191 | computers.notebook | hp     | 1415.48 | 48b5b9c0-3d1b-4380-94f8-dcadb9dd7b5c |
+| 280194708 | 2019-11-06 15:23:02+00:00 | view       | 1306952    | 2053013558920217191 | computers.notebook | apple  | 2084.74 | 4c51d9d1-8000-4050-a921-3b6fc29db8e9 |
+| 280194708 | 2019-11-06 15:23:43+00:00 | view       | 1306952    | 2053013558920217191 | computers.notebook | apple  | 2084.74 | 4c51d9d1-8000-4050-a921-3b6fc29db8e9 |
+| 280194708 | 2019-11-06 15:23:55+00:00 | view       | 1307053    | 2053013558920217191 | computers.notebook | apple  | 1773.02 | 4c51d9d1-8000-4050-a921-3b6fc29db8e9 |
+| 301823874 | 2019-11-02 08:09:20+00:00 | view       | 1307345    | 2053013558920217191 | computers.notebook | acer   | 1029.60 | 4d2cb750-093f-413a-ba27-ba862507d22d |
+| 301823874 | 2019-11-02 08:10:59+00:00 | view       | 1306609    | 2053013558920217191 | computers.notebook | lenovo | 720.71  | 4d2cb750-093f-413a-ba27-ba862507d22d |
+| 301823874 | 2019-11-02 08:14:46+00:00 | view       | 1307354    | 2053013558920217191 | computers.notebook | asus   | 926.64  | 4d2cb750-093f-413a-ba27-ba862507d22d |
+
+</div>
+
+<hr />
+<p><a
+href="https://github.com/airtai/airt-client/blob/main/airt/_components/datasource.py#L507"
+target="_blank" style="float:right; font-size:smaller">source</a></p>
+<h3 id="datasourcetrain">DataSource.train<a class="headerlink" href="#datasourcetrain" title="Permanent link">¤</a></h3>
+<blockquote>
+<div class="highlight"><pre><span></span><code> DataSource.train (client_column:str, timestamp_column:Optional[str]=None,
+                   target_column:str, target:str,
+                   predict_after:datetime.timedelta)
+</code></pre></div>
+</blockquote>
+<p>Train a model against the datasource.</p>
+<p>This method trains the model for predicting which clients are most
+likely to have a specified event in the future.</p>
+<p>The call to this method is asynchronous and the progress can be checked
+using the progress bar method or the status flag attribute available in
+the
+<a href="https://airtai.github.io/airt-client/api_datasource.html#datasource"><code>DataSource</code></a>
+class.</p>
+<p>For more model specific information, please check the documentation of
+<a href="https://airtai.github.io/airt-client/api_model.html#model"><code>Model</code></a>
+class.</p>
+<p>Args: client_column: The column name that uniquely identifies the
+users/clients. timestamp_column: The timestamp column indicating the
+time of an event. If not passed, then the default value <strong>None</strong> will be
+used. target_column: Target column name that indicates the type of the
+event. target: Target event name to train and make predictions. You can
+pass the target event as a string or as a regular expression for
+predicting more than one event. For example, passing *<strong>checkout</strong> will
+train a model to predict any checkout event. predict_after: Time delta
+in hours of the expected target event.</p>
+<p>Returns: An instance of the
+<a href="https://airtai.github.io/airt-client/api_model.html#model"><code>Model</code></a>
+class.</p>
+<p>Raises: ValueError: If the input parameters to the API are invalid.
+ConnectionError: If the server address is invalid or not reachable.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Tests for Train:</span>
+<span class="c1"># Checking positive scenario.</span>
+
+<span class="k">with</span> <span class="n">generate_ds</span><span class="p">()</span> <span class="k">as</span> <span class="n">ds</span><span class="p">:</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">train</span><span class="p">(</span>
+        <span class="n">client_column</span><span class="o">=</span><span class="s2">&quot;user_id&quot;</span><span class="p">,</span>
+        <span class="n">target_column</span><span class="o">=</span><span class="s2">&quot;category_code&quot;</span><span class="p">,</span>
+        <span class="n">target</span><span class="o">=</span><span class="s2">&quot;*checkout&quot;</span><span class="p">,</span>
+        <span class="n">predict_after</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">progress_bar</span><span class="p">()</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">is_ready</span><span class="p">()</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">model</span><span class="o">.</span><span class="n">is_ready</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">uuid</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">32</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>100%|██████████| 5/5 [00:00&lt;00:00, 119.60it/s]
+
+&#39;model.is_ready()=True&#39;
+</code></pre></div>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2022 onwards, airt.ai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+    and 
+    <a href="https://nbdev-mkdocs.airt.ai/" target="_blank" rel="noopener">
+      Material for nbdev
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "search.share"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+        
+          <script src="../overrides/js/extra.js"></script>
+        
+      
+        
+          <script src="../overrides/js/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+    
+  </body>
+</html>
